@@ -45,7 +45,7 @@ describe PRXImporter do
                :headers => {'Accept'=>'application/vnd.collection.doc+json', 'Authorization'=>'Bearer thisisnotanaccesstokenno', 'Content-Type'=>'application/vnd.collection.doc+json', 'Host'=>'publish-sandbox.pmp.io:443'}).
           to_return(:status => 200, :body => '{"url":"https://api-sandbox.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b3"}', :headers => {})
 
-
+        # stub the guid to a predictable value
         PMPGuidMapping.class_eval do 
           def self.new_guid
             '9ff6db7a-93e6-4987-9313-4d70d74051b3'
