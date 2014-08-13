@@ -1,0 +1,197 @@
+{
+    "_embedded": {
+        "prx:account": {
+            "_embedded": {
+                "prx:address": {
+                    "_links": {
+                        "self": {
+                            "href": "/api/v1/addresses/136184",
+                            "profile": "http://meta.prx.org/model/address"
+                        }
+                    },
+                    "city": "New York",
+                    "country": "United States",
+                    "id": 136184,
+                    "postalCode": "10018",
+                    "state": "New York",
+                    "street1": "481 Broadway, Third Floor"
+                },
+                "prx:image": {
+                    "_links": {
+                        "enclosure": {
+                            "href": "/pub/d8835c49efa9bc2578f47607fe4aa768/0/web/account_image/5092/medium/mothradiohr-web_medium.jpg",
+                            "type": "image/jpeg"
+                        },
+                        "self": {
+                            "href": "/api/v1/account_images/5092",
+                            "profile": "http://meta.prx.org/model/image/account"
+                        }
+                    },
+                    "filename": "mothradiohr-web_medium.jpg",
+                    "id": 5092,
+                    "size": 152775
+                }
+            },
+            "_links": {
+                "prx:address": {
+                    "href": "/api/v1/addresses/136184"
+                },
+                "prx:image": {
+                    "href": "/api/v1/account_images/5092",
+                    "profile": "http://meta.prx.org/model/image/account/min",
+                    "title": "mothradiohr-web_medium.jpg"
+                },
+                "prx:opener": {
+                    "href": "/api/v1/users/35533",
+                    "title": "themoth"
+                },
+                "prx:stories": {
+                    "href": "/api/v1/accounts/45139/stories"
+                },
+                "self": {
+                    "href": "/api/v1/accounts/45139",
+                    "profile": "http://meta.prx.org/model/account/group/min"
+                }
+            },
+            "id": 45139,
+            "name": "The Moth",
+            "path": "Moth",
+            "shortName": "The Moth",
+            "type": "GroupAccount"
+        },
+        "prx:audio": [
+            {
+                "_links": {
+                    "enclosure": {
+                        "href": "/pub/9c905776937e8754cafad27fa0fe6c37/0/web/audio_file/716108/broadcast/Moth1006BounceRev14.mp3",
+                        "type": "audio/mpeg"
+                    },
+                    "self": {
+                        "href": "/api/v1/audio_files/716108",
+                        "profile": "http://meta.prx.org/model/audio-file"
+                    }
+                },
+                "duration": 3180,
+                "filename": "Moth1006BounceRev14.mp2",
+                "id": 716108,
+                "label": "Moth 1006 Single file",
+                "size": 101645385
+            }
+        ],
+        "prx:image": {
+            "_links": {
+                "enclosure": {
+                    "href": "/pub/c551e29897209a6b3af355e6e2698bfa/0/web/story_image/232470/medium/Daisy_Rosario.jpg",
+                    "type": "image/jpeg"
+                },
+                "self": {
+                    "href": "/api/v1/story_images/232470",
+                    "profile": "http://meta.prx.org/model/image/story"
+                }
+            },
+            "caption": "Daisy Rosario",
+            "credit": "Daisy Rosario",
+            "filename": "Daisy_Rosario.jpg",
+            "id": 232470,
+            "size": 152242
+        },
+        "prx:series": {
+            "_embedded": {
+                "prx:image": {
+                    "_links": {
+                        "enclosure": {
+                            "href": "/pub/309f04252d0479d3d063a7fed5c318b4/0/web/series_image/10408/medium/mothradiohr-web.jpg",
+                            "type": "image/jpeg"
+                        },
+                        "self": {
+                            "href": "/api/v1/series_images/10408",
+                            "profile": "http://meta.prx.org/model/image/series"
+                        }
+                    },
+                    "caption": "",
+                    "credit": "",
+                    "filename": "mothradiohr-web.jpg",
+                    "id": 10408,
+                    "size": 152775
+                }
+            },
+            "_links": {
+                "prx:account": {
+                    "href": "/api/v1/accounts/45139",
+                    "profile": "http://meta.prx.org/model/account/group/min",
+                    "title": "The Moth"
+                },
+                "prx:image": {
+                    "href": "/api/v1/series_images/10408"
+                },
+                "prx:stories": {
+                    "href": "/api/v1/series/32832/stories"
+                },
+                "self": {
+                    "href": "/api/v1/series/32832",
+                    "profile": "http://meta.prx.org/model/series/min"
+                }
+            },
+            "id": 32832,
+            "shortDescription": "The Moth Radio Hour is a weekly series featuring true stories told live on stage without scripts, notes, props, or accompaniment. Each Moth Radio Hour mixes humorous, heartbreaking, and poignant tales that captivate, surprise, and delight audiences with their honesty, bravery and humor.",
+            "storyCount": 72,
+            "title": "The Moth Radio Hour"
+        }
+    },
+    "_links": {
+        "curies": [
+            {
+                "href": "http://meta.prx.org/relation/{rel}",
+                "name": "prx",
+                "templated": true
+            }
+        ],
+        "prx:account": {
+            "href": "/api/v1/accounts/45139",
+            "profile": "http://meta.prx.org/model/account/group",
+            "title": "The Moth"
+        },
+        "prx:audio": [
+            {
+                "href": "/api/v1/audio_files/716108",
+                "title": "Moth 1006 Single file"
+            }
+        ],
+        "prx:audio-versions": [
+            {
+                "href": "/api/v1/audio_versions/218731",
+                "title": "Piece Audio"
+            },
+            {
+                "href": "/api/v1/audio_versions/218733",
+                "title": "Single File"
+            }
+        ],
+        "prx:image": {
+            "href": "/api/v1/story_images/232470",
+            "profile": "http://meta.prx.org/model/image/story"
+        },
+        "prx:musical-works": {
+            "href": "/api/v1/stories/97474/musical_works"
+        },
+        "prx:series": {
+            "href": "/api/v1/series/32832",
+            "title": "The Moth Radio Hour"
+        },
+        "self": {
+            "href": "/api/v1/stories/97474",
+            "profile": "http://meta.prx.org/model/story"
+        }
+    },
+    "broadcastHistory": "",
+    "contentAdvisory": "",
+    "description": "<div>Josh Axelrad - A blackjack player faces his demons.<br />&nbsp;</div>\n<div>Daisy Rosario - A young woman meets her brother for the first time at their father's funeral.&nbsp;<br />&nbsp;</div>\n<div>Colin Quinn - Is hired to do comedy at Robert Deniro's birthday party...and bombs.<br />&nbsp;</div>\n<div>Hosted by comic, author and Moth regular, Mike Birbiglia.&nbsp;</div>",
+    "duration": 3180,
+    "id": 97474,
+    "points": 270,
+    "publishedAt": "2014-08-11T16:26:31.000Z",
+    "relatedWebsite": "http://www.themoth.org",
+    "shortDescription": "A professional blackjack player faces down his gambling demons; a young woman meets her brother for the first time at their father's funeral;  and Colin Quinn (Weekend Update, SNL) is hired to do comedy for Robert DeNiro's birthday party...and bombs.\n\nHosted by comic and author Mike Birbiglia (\"Sleepwalk with Me\"). The Moth Radio Hour is produced by The Moth and Jay Allison of Atlantic Public Media.",
+    "timingAndCues": "",
+    "title": "Gambling and Long Lost Dads"
+}

@@ -33,6 +33,7 @@ gem 'hyperresource'
 group :test do
   gem 'minitest-spec-rails'
   gem 'factory_girl_rails'
+  gem 'webmock', github: 'bblimke/webmock'
   gem 'minitest-reporters', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'simplecov', require: false
