@@ -1,3 +1,7 @@
+def use_webmock?
+  ENV['PMP_IMPORTER_WEBMOCK'].nil? || (ENV['PMP_IMPORTER_WEBMOCK'] == 'true')
+end
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
@@ -6,6 +10,9 @@ require 'minitest/reporters'
 require 'minitest/autorun'
 require 'minitest/spec'
 require 'minitest/pride'
+require 'webmock/minitest'
+
+WebMock.allow_net_connect! unless use_webmock?
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
@@ -13,9 +20,8 @@ end
 
 class MiniTest::Spec
   include FactoryGirl::Syntax::Methods
+end
 
-  def extract_filename(uri)
-    URI.parse(uri).path.split('?')[0].split('/').last
-  end
-
+def json_file(name)
+  File.read( File.dirname(__FILE__) + "/fixtures/#{name}.json")
 end

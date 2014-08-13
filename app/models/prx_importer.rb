@@ -14,8 +14,7 @@ class PRXImporter < ApplicationImporter
 
     # expect a prx story id as an option
     self.story = retrieve_story(options[:prx_story_id])
-
-    self.doc = new_story_doc 
+    self.doc   = retrieve_doc(options[:prx_story_id])
 
     set_identity
     set_attributes
@@ -27,14 +26,9 @@ class PRXImporter < ApplicationImporter
 
     # if story save fails, delete audio and images (rollback)
     # can probably keep guid mappings?
-
     doc.save
-  end
 
-  def new_story_doc
-    d = pmp.doc_of_type('story')
-    d.tags = ['prx_test'] unless Rails.env.production?
-    d
+    return doc
   end
 
   def set_identity
@@ -70,12 +64,18 @@ class PRXImporter < ApplicationImporter
   end
 
   def set_tags
+    doc.tags = doc.tags || []
+    doc.tags << 'prx_test' unless Rails.env.production?
   end
 
   def retrieve_story(prx_story_id)
     story = prx.get.story.first.where(id: prx_story_id).body
     raise "PRX Story id does not match: '#{prx_story_id}' != '#{story['id']}'" if (prx_story_id.to_s != story['id'].to_s)
     story
+  end
+
+  def retrieve_doc(prx_story_id)
+    pmp.doc_of_type('story')
   end
 
   def prx
