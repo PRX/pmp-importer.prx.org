@@ -30,4 +30,18 @@ class ApplicationImporter
     options[:pmp_endpoint] || ENV['PMP_ENDPOINT'] || 'https://api-sandbox.pmp.io/'
   end
 
+  def pmp_doc_find_first(conditions)
+    pmp.query["urn:collectiondoc:query:docs"].where(conditions.merge(limit: 1)).items.first
+  end
+
+  def add_tag_to_doc(tag, doc)
+    doc.tags = doc.tags || []
+    return if doc.tags.include?(tag)
+    doc.tags << tag
+  end
+
+  def strip_tags(text)
+    ActionController::Base.helpers.strip_tags(text)
+  end
+
 end

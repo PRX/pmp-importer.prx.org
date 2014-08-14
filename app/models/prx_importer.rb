@@ -61,11 +61,12 @@ class PRXImporter < ApplicationImporter
 
   def set_attributes
     doc.title = story['title']
+    doc.desciption = strip_tags(story['description'])
   end
 
   def set_tags
-    doc.tags = doc.tags || []
-    doc.tags << 'prx_test' unless Rails.env.production?
+    add_tag_to_doc('prx_test', doc) unless Rails.env.production?
+    add_tag_to_doc(tag_for_prx_id('Story', story['id']), doc)
   end
 
   def retrieve_story(prx_story_id)
@@ -75,7 +76,19 @@ class PRXImporter < ApplicationImporter
   end
 
   def retrieve_doc(prx_story_id)
-    pmp.doc_of_type('story')
+    doc = nil
+
+    # first see if there is a guid already stored for it, and if so, go get it.
+    guid = PMPGuidMapping.find_guid(source_name, 'Story', prx_story_id)
+    doc = pmp_doc_find_first(guid: guid) if !doc && guid
+
+    # no guid yet? look to see if the prx story id is tagging a doc    
+    doc = pmp_doc_find_first(tag: tag_for_prx_id('Story', prx_story_id)) if (!doc && prx_story_id)
+
+    # still can't find it? make a new one
+    doc = pmp.doc_of_type('story') unless doc
+
+    doc
   end
 
   def prx
@@ -84,6 +97,10 @@ class PRXImporter < ApplicationImporter
 
   def prx_endpoint
     options[:prx_endpoint] || 'https://hal.prx.org/api/v1'
+  end
+
+  def tag_for_prx_id(type, id)
+    "__prx_#{type.downcase}_#{id.to_i}_"
   end
 
 end
