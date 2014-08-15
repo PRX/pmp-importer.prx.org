@@ -13,8 +13,10 @@ class PRXImporter < ApplicationImporter
     super
 
     # expect a prx story id as an option
-    self.story = retrieve_story(options[:prx_story_id])
-    self.doc   = retrieve_doc(options[:prx_story_id])
+    prx_story_id = options[:prx_story_id]
+
+    self.story = retrieve_story(prx_story_id)
+    self.doc   = retrieve_doc(prx_story_id)
 
     set_identity
     set_attributes
@@ -48,6 +50,7 @@ class PRXImporter < ApplicationImporter
 
   def find_or_create_account
     # assume it will have a tag for the id?
+    
   end
 
   def set_series
@@ -70,9 +73,7 @@ class PRXImporter < ApplicationImporter
   end
 
   def retrieve_story(prx_story_id)
-    story = prx.get.story.first.where(id: prx_story_id).body
-    raise "PRX Story id does not match: '#{prx_story_id}' != '#{story['id']}'" if (prx_story_id.to_s != story['id'].to_s)
-    story
+    prx.get.story.first.where(id: prx_story_id).body
   end
 
   def retrieve_doc(prx_story_id)
