@@ -30,14 +30,29 @@ class ApplicationImporter
     options[:pmp_endpoint] || ENV['PMP_ENDPOINT'] || 'https://api-sandbox.pmp.io/'
   end
 
+  def pmp_url(*path)
+    URI.join(pmp_endpoint, *path.collect(&:to_s).join('/')).to_s
+  end
+
   def pmp_doc_find_first(conditions)
     pmp.query["urn:collectiondoc:query:docs"].where(conditions.merge(limit: 1)).items.first
   end
 
-  def add_tag_to_doc(tag, doc)
-    doc.tags = doc.tags || []
+  def pmp_doc_profile(doc)
+    profile_link = Array(doc.profile).first
+    profile_link.href.split('/').last.downcase if profile_link
+  end
+
+  def add_tag_to_doc(doc, tag)
+    doc.tags ||= []
     return if doc.tags.include?(tag)
     doc.tags << tag
+  end
+
+  def add_link_to_doc(doc, rel, link_attrs)
+    doc.links[rel] ||= []
+    return if Array(doc.links[rel]).detect{|l| l[:href] == link_attrs[:href]}
+    doc.links[rel] << PMP::Link.new(link_attrs)
   end
 
   def strip_tags(text)
