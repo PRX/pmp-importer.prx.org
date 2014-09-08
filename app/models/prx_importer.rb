@@ -1,4 +1,4 @@
-# fix: alternate is to the api url, shoud be the page
+# fix: analytics image url added to content encoded
 # fix: author link
 # fix: topics
 
@@ -52,26 +52,14 @@ class PRXImporter < ApplicationImporter
   end
 
   def find_or_create_account_doc(account)
-    adoc = nil
-
-    # first go looking for it
-
-    adoc = retrieve_doc('Account', account.self.href)
-
-    # if this is a station account, look not just with the tag
-    adoc = find_station_organization(account) unless adoc
-
-    # fine, I'll add an account doc since it doesn't exist
-    adoc = create_account_doc(account) unless adoc
-
-    adoc
+    retrieve_doc('Account', account.self.href) ||
+    find_station_organization(account) ||
+    create_account_doc(account)
   end
 
   def find_station_organization(account)
     return nil unless account.type == 'StationAccount'
 
-    station = nil
-  
     # retrieve the station account from the prx api
     # get the call letters to search
     call_letters = account.shortName.match(/[W|K]\w{3}(-[F|A]M)*/).to_s
@@ -108,7 +96,7 @@ class PRXImporter < ApplicationImporter
 
     # links
     # fix: this should be page not api
-    add_link_to_doc(doc, 'alternate', { href: prx_url(account.self.href) })
+    add_link_to_doc(doc, 'alternate', { href: prx_web_link("#{account.type.tableize}/#{account.id}") })
 
     # image
     if account.image
@@ -125,6 +113,9 @@ class PRXImporter < ApplicationImporter
     adoc
   end
 
+  def prx_web_link(path)
+    "#{prx_web_endpoint}/#{path}"
+  end
 
   def set_series
     retrieve_doc('Series', series.self.href) || create_series_doc(series)
@@ -137,7 +128,7 @@ class PRXImporter < ApplicationImporter
 
     # links
     # fix: this should be page not api url
-    sdoc.links['alternate'] = PMP::Link.new(href: prx_url(series.self.href))
+    add_link_to_doc(sdoc, 'alternate', { href: prx_web_link("series/#{series.id}") })
 
     # image
     if series.image
@@ -217,18 +208,23 @@ class PRXImporter < ApplicationImporter
   def set_attributes
     doc.hreflang       = "en"
     doc.title          = story.title
-    doc.desciption     = strip_tags(story.description)
-    doc.contentencoded = story.description
-    doc.published      = story.published # Time ?
-    doc.byline         = "" # I don't know, based on the account?
+    doc.teaser         = story.shortDescription
+
+    description = story.description.blank? ? story.shortDescription : story.description
+    doc.description    = strip_tags(description)
+    doc.contentencoded = description
+
+    doc.byline         = story.account.name
+
+    doc.published      = story.published
+    doc.valid          = {from: story.published, to: (story.published + 1000.years)}
   end
 
 
   def set_links
-    # this is wrong, need the page not the api url
-    # doc.links['alternate'] = PMP::Link.new(href: prx_url(story.links[:self].href)) 
-
-    # doc.links['author']    = PMP::Link.new(href: 'http://...')
+    add_link_to_doc(doc, 'alternate', { href: prx_web_link("pieces/#{story.id}") })
+    # add_link_to_doc(doc, 'author', { href: prx_web_link("pieces/#{story.id}") })
+    # add_link_to_doc(doc, 'copyright', { href: prx_web_link("pieces/#{story.id}") })
   end
 
   def set_tags
@@ -287,11 +283,15 @@ class PRXImporter < ApplicationImporter
   end
 
   def prx
-    HyperResource.new(root: prx_endpoint)
+    HyperResource.new(root: prx_api_endpoint)
   end
 
-  def prx_endpoint
-    options[:prx_endpoint] || 'https://hal.prx.org/api/v1'
+  def prx_api_endpoint
+    options[:prx_api_endpoint] || 'https://hal.prx.org/api/v1'
+  end
+
+  def prx_web_endpoint
+    options[:prx_web_endpoint] || 'https://www.prx.org'
   end
 
   def prx_tag(url)
@@ -307,7 +307,7 @@ class PRXImporter < ApplicationImporter
 
     return url if url.start_with?('http')
 
-    URI.join(prx_endpoint, url).to_s
+    URI.join(prx_api_endpoint, url).to_s
   end
 
   def find_or_create_guid(type, prx_obj)
