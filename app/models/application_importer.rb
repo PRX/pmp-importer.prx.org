@@ -2,12 +2,12 @@ class ApplicationImporter
 
   attr_accessor :options
 
-  def source_name
-    raise NotImplementedError.new("Subclass must implement source_name")
-  end
-
   def initialize(options={})
     self.options = HashWithIndifferentAccess.new(options)
+  end
+
+  def source_name
+    raise NotImplementedError.new("Subclass must implement source_name")
   end
 
   def import(options)
@@ -38,9 +38,14 @@ class ApplicationImporter
     pmp.query["urn:collectiondoc:query:docs"].where(conditions.merge(limit: 1)).items.first
   end
 
+  # these below could all be class methods I think
+
   def pmp_doc_profile(doc)
-    profile_link = Array(doc.profile).first
-    profile_link.href.split('/').last.downcase if profile_link
+    # puts "doc.links['profile']: #{doc.links['profile'].inspect}"
+    if profile_link = doc.links['profile']
+      profile_link = profile_link.is_a?(Array) ? profile_link.first : profile_link
+      profile_link.href.split('/').last.downcase
+    end
   end
 
   def add_tag_to_doc(doc, tag)
