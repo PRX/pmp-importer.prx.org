@@ -27,7 +27,7 @@ class ApplicationImporter
   end
 
   def pmp_endpoint
-    options[:pmp_endpoint] || ENV['PMP_ENDPOINT'] || 'https://api-sandbox.pmp.io/'
+    options[:pmp_endpoint] || ENV['PMP_ENDPOINT'] || 'https://api.pmp.io/'
   end
 
   def pmp_url(*path)

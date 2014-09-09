@@ -23,7 +23,7 @@ describe ApplicationImporter do
   end
 
   it 'has optional or env based pmp id, secret and endpoint' do
-    {pmp_client_id: nil, pmp_client_secret: nil, pmp_endpoint: 'https://api-sandbox.pmp.io/'}.each  do |k, v|
+    {pmp_client_id: nil, pmp_client_secret: nil, pmp_endpoint: 'https://api.pmp.io/'}.each  do |k, v|
       env_key = k.to_s.upcase
       ENV[env_key] = nil
       importer.send(k).must_equal v
@@ -47,17 +47,17 @@ describe ApplicationImporter do
 
   it 'finds the first pmp doc that matches conditions' do
 
-    stub_request(:get, "https://api-sandbox.pmp.io/").
+    stub_request(:get, "https://api.pmp.io/").
       to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
 
-    stub_request(:get, "https://api-sandbox.pmp.io/docs?limit=1").
+    stub_request(:get, "https://api.pmp.io/docs?limit=1").
       to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"1"}}]}', :headers => {})
 
     result = importer.pmp_doc_find_first({}).a.must_equal "1"
 
 
 
-    stub_request(:get, "https://api-sandbox.pmp.io/docs?guid=onlythelonely&limit=1").
+    stub_request(:get, "https://api.pmp.io/docs?guid=onlythelonely&limit=1").
       to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"2"}}]}', :headers => {})
 
     result = importer.pmp_doc_find_first({guid: 'onlythelonely'}).a.must_equal "2"

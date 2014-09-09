@@ -1,6 +1,6 @@
 {
     "version": "1.0",
-    "href": "https://api-sandbox.pmp.io/",
+    "href": "https://api.pmp.io/",
     "attributes": {
         "valid": {
             "from": "2013-07-04T04:00:44+00:00",
@@ -15,7 +15,7 @@
     "links": {
         "bookmark": [
             {
-                "href": "https://api-sandbox.pmp.io/docs/trove",
+                "href": "https://api.pmp.io/docs/trove",
                 "rels": [
                     "urn:pmp:trove"
                 ]
@@ -23,13 +23,13 @@
         ],
         "creator": [
             {
-                "href": "https://api-sandbox.pmp.io/docs/af676335-21df-4486-ab43-e88c1b48f026"
+                "href": "https://api.pmp.io/docs/af676335-21df-4486-ab43-e88c1b48f026"
             }
         ],
         "item": [],
         "navigation": [
             {
-                "href": "https://api-sandbox.pmp.io/docs?guid=04224975-e93c-4b17-9df9-96db37d318f3",
+                "href": "https://api.pmp.io/docs?guid=04224975-e93c-4b17-9df9-96db37d318f3",
                 "rels": [
                     "self"
                 ]
@@ -37,7 +37,7 @@
         ],
         "query": [
             {
-                "href-template": "https://api-sandbox.pmp.io/docs{/guid}{?limit,offset}",
+                "href-template": "https://api.pmp.io/docs{/guid}{?limit,offset}",
                 "title": "Access documents",
                 "rels": [
                     "urn:collectiondoc:hreftpl:docs"
@@ -54,7 +54,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/docs{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,language,profile,collection,has,distributor,distributorgroup,author,text}",
+                "href-template": "https://api.pmp.io/docs{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,language,profile,collection,has,distributor,distributorgroup,author,text}",
                 "title": "Query for documents",
                 "rels": [
                     "urn:collectiondoc:query:docs"
@@ -84,7 +84,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/profiles{/guid}",
+                "href-template": "https://api.pmp.io/profiles{/guid}",
                 "title": "Access profiles",
                 "rels": [
                     "urn:collectiondoc:hreftpl:profiles"
@@ -99,7 +99,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/profiles{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
+                "href-template": "https://api.pmp.io/profiles{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
                 "title": "Query for profiles",
                 "rels": [
                     "urn:collectiondoc:query:profiles"
@@ -123,7 +123,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/schemas{/guid}",
+                "href-template": "https://api.pmp.io/schemas{/guid}",
                 "title": "Access schemas",
                 "rels": [
                     "urn:collectiondoc:hreftpl:schemas"
@@ -138,7 +138,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/schemas{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
+                "href-template": "https://api.pmp.io/schemas{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
                 "title": "Query for schemas",
                 "rels": [
                     "urn:collectiondoc:query:schemas"
@@ -162,7 +162,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/users{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
+                "href-template": "https://api.pmp.io/users{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
                 "title": "Query for users",
                 "rels": [
                     "urn:collectiondoc:query:users"
@@ -186,7 +186,7 @@
                 }
             },
             {
-                "href-template": "https://api-sandbox.pmp.io/groups{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,has,text}",
+                "href-template": "https://api.pmp.io/groups{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,has,text}",
                 "title": "Query for groups",
                 "rels": [
                     "urn:collectiondoc:query:groups"
@@ -211,7 +211,7 @@
                 }
             },
             {
-                "href": "https://api-sandbox.pmp.io/guids",
+                "href": "https://api.pmp.io/guids",
                 "title": "Generate guids",
                 "rels": [
                     "urn:collectiondoc:query:guids"
@@ -335,7 +335,7 @@
                 }
             },
             {
-                "href": "https://api-sandbox.pmp.io/auth/access_token",
+                "href": "https://api.pmp.io/auth/access_token",
                 "title": "Issue OAuth2 Token",
                 "rels": [
                     "urn:collectiondoc:form:issuetoken"
