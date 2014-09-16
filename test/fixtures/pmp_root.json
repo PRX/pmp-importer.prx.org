@@ -229,7 +229,7 @@
         ],
         "edit": [
             {
-                "href-template": "https://publish-sandbox.pmp.io/docs{/guid}",
+                "href-template": "https://publish.pmp.io/docs{/guid}",
                 "title": "Document Save",
                 "rels": [
                     "urn:collectiondoc:form:documentsave"
@@ -249,7 +249,7 @@
                 }
             },
             {
-                "href-template": "https://publish-sandbox.pmp.io/profiles{/guid}",
+                "href-template": "https://publish.pmp.io/profiles{/guid}",
                 "title": "Profile Save",
                 "rels": [
                     "urn:collectiondoc:form:profilesave"
@@ -269,7 +269,7 @@
                 }
             },
             {
-                "href-template": "https://publish-sandbox.pmp.io/schemas{/guid}",
+                "href-template": "https://publish.pmp.io/schemas{/guid}",
                 "title": "Schema Save",
                 "rels": [
                     "urn:collectiondoc:form:schemasave"
@@ -289,7 +289,7 @@
                 }
             },
             {
-                "href": "https://publish-sandbox.pmp.io/files",
+                "href": "https://publish.pmp.io/files",
                 "title": "Upload a rich media file",
                 "rels": [
                     "urn:collectiondoc:form:mediaupload"
@@ -309,7 +309,7 @@
         ],
         "auth": [
             {
-                "href": "https://publish-sandbox.pmp.io/auth/credentials",
+                "href": "https://publish.pmp.io/auth/credentials",
                 "title": "Create OAuth2 Credentials",
                 "rels": [
                     "urn:collectiondoc:form:createcredentials"
@@ -322,7 +322,7 @@
                 }
             },
             {
-                "href-template": "https://publish-sandbox.pmp.io/auth/credentials/{client_id}",
+                "href-template": "https://publish.pmp.io/auth/credentials/{client_id}",
                 "title": "Remove OAuth2 Credentials",
                 "rels": [
                     "urn:collectiondoc:form:removecredentials"
@@ -351,7 +351,7 @@
                 }
             },
             {
-                "href": "https://publish-sandbox.pmp.io/auth/access_token",
+                "href": "https://publish.pmp.io/auth/access_token",
                 "title": "Revoke OAuth2 Token",
                 "rels": [
                     "urn:collectiondoc:form:revoketoken"
