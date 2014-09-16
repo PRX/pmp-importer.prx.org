@@ -23,6 +23,7 @@ describe ApplicationImporter do
   end
 
   it 'has optional or env based pmp id, secret and endpoint' do
+    env_start = ENV.to_h
     {pmp_client_id: nil, pmp_client_secret: nil, pmp_endpoint: 'https://api.pmp.io/'}.each  do |k, v|
       env_key = k.to_s.upcase
       ENV[env_key] = nil
@@ -36,6 +37,7 @@ describe ApplicationImporter do
 
       ENV[env_key] = nil # reset
     end
+    ENV.replace(env_start)
   end
 
   it 'constructs pmp url from endpoint and args' do
@@ -47,20 +49,36 @@ describe ApplicationImporter do
 
   it 'finds the first pmp doc that matches conditions' do
 
-    stub_request(:get, "https://api.pmp.io/").
-      to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
+    if use_webmock?
+      stub_request(:get, "https://api.pmp.io/").
+        to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
 
-    stub_request(:get, "https://api.pmp.io/docs?limit=1").
-      to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"1"}}]}', :headers => {})
+      # pmp stubs
+      pmp_token = {
+        access_token: "thisisnotanaccesstokenno",
+        token_type: "Bearer",
+        token_issue_date: DateTime.now,
+        token_expires_in: 24*60*60
+      }.to_json
 
-    result = importer.pmp_doc_find_first({}).a.must_equal "1"
+      # login
+      stub_request(:post, "https://api.pmp.io/auth/access_token").
+        with(:body => {"grant_type"=>"client_credentials"},
+             :headers => {'Accept'=>'application/json', 'Authorization'=>'Basic Og==', 'Content-Type'=>'application/x-www-form-urlencoded', 'Host'=>'api.pmp.io:443'}).
+        to_return(:status => 200, :body => pmp_token, :headers => {'Content-Type' => 'application/json; charset=utf-8'})
+
+      stub_request(:get, "https://api.pmp.io/docs?limit=1").
+        to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"1"}}]}', :headers => {})
+
+      result = importer.pmp_doc_find_first({}).a.must_equal "1"
 
 
+      stub_request(:get, "https://api.pmp.io/docs?guid=onlythelonely&limit=1").
+        to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"2"}}]}', :headers => {})
 
-    stub_request(:get, "https://api.pmp.io/docs?guid=onlythelonely&limit=1").
-      to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"2"}}]}', :headers => {})
+      result = importer.pmp_doc_find_first({guid: 'onlythelonely'}).a.must_equal "2"
+    end
 
-    result = importer.pmp_doc_find_first({guid: 'onlythelonely'}).a.must_equal "2"
   end
 
   describe "doc based methods" do
