@@ -38,6 +38,25 @@ class ApplicationImporter
     pmp.query["urn:collectiondoc:query:docs"].where(conditions.merge(limit: 1)).items.first
   end
 
+  def retrieve_doc(type, url)
+    doc = nil
+
+    guid = PMPGuidMapping.find_guid(source_name, type, url)
+    doc = pmp_doc_find_first(guid: guid) if guid
+
+    # no guid yet? look to see if a doc has the right tag
+    if !doc
+      doc = pmp_doc_find_first(tag: tag_for_url(source_name, url))
+      PMPGuidMapping.create(source_name: source_name, source_type: type, source_id: url, guid: doc.guid) if doc
+    end
+
+    doc
+  end
+
+  def tag_for_url(source, url)
+    "_#{source}_#{url}_"
+  end
+
   # these below could all be class methods I think
 
   def pmp_doc_profile(doc)
