@@ -163,7 +163,7 @@ class PRXImporter < ApplicationImporter
     idoc.guid = find_or_create_guid('Image', image)
 
     idoc.title  = image.attributes[:caption] || image.attributes[:filename]
-    idoc.byline = image.attributes[:credit]
+    idoc.byline = image.attributes[:credit] || ""
 
     href = image.enclosure.href
     type = image.body['_links']['enclosure']['type']
