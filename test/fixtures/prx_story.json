@@ -15,31 +15,11 @@
                     "postalCode": "10018",
                     "state": "New York",
                     "street1": "481 Broadway, Third Floor"
-                },
-                "prx:image": {
-                    "_links": {
-                        "enclosure": {
-                            "href": "/pub/d8835c49efa9bc2578f47607fe4aa768/0/web/account_image/5092/medium/mothradiohr-web_medium.jpg",
-                            "type": "image/jpeg"
-                        },
-                        "self": {
-                            "href": "/api/v1/account_images/5092",
-                            "profile": "http://meta.prx.org/model/image/account"
-                        }
-                    },
-                    "filename": "mothradiohr-web_medium.jpg",
-                    "id": 5092,
-                    "size": 152775
                 }
             },
             "_links": {
                 "prx:address": {
                     "href": "/api/v1/addresses/136184"
-                },
-                "prx:image": {
-                    "href": "/api/v1/account_images/5092",
-                    "profile": "http://meta.prx.org/model/image/account/min",
-                    "title": "mothradiohr-web_medium.jpg"
                 },
                 "prx:opener": {
                     "href": "/api/v1/users/35533",
@@ -63,56 +43,56 @@
             {
                 "_links": {
                     "enclosure": {
-                        "href": "/pub/9c905776937e8754cafad27fa0fe6c37/0/web/audio_file/716108/broadcast/Moth1006BounceRev14.mp3",
+                        "href": "/pub/472875466d225aca0480000fea4b5fc2/0/web/audio_file/451642/broadcast/Moth1301GarrisonFinal.mp3",
                         "type": "audio/mpeg"
                     },
                     "self": {
-                        "href": "/api/v1/audio_files/716108",
+                        "href": "/api/v1/audio_files/451642",
                         "profile": "http://meta.prx.org/model/audio-file"
                     }
                 },
-                "duration": 3180,
-                "filename": "Moth1006BounceRev14.mp2",
-                "id": 716108,
-                "label": "Moth 1006 Single file",
-                "size": 101645385
+                "duration": 3179,
+                "filename": "Moth1301GarrisonFinal.mp2",
+                "id": 451642,
+                "label": "Moth 1301 Single File",
+                "size": 101617830
             }
         ],
         "prx:image": {
             "_links": {
                 "enclosure": {
-                    "href": "/pub/c551e29897209a6b3af355e6e2698bfa/0/web/story_image/232470/medium/Daisy_Rosario.jpg",
+                    "href": "/pub/f8b82b49a679ab9a621791bc9b752ff2/0/web/story_image/203874/medium/Moth_ElnaBaker_1301.jpg",
                     "type": "image/jpeg"
                 },
                 "self": {
-                    "href": "/api/v1/story_images/232470",
+                    "href": "/api/v1/story_images/203874",
                     "profile": "http://meta.prx.org/model/image/story"
                 }
             },
-            "caption": "Daisy Rosario",
-            "credit": "Daisy Rosario",
-            "filename": "Daisy_Rosario.jpg",
-            "id": 232470,
-            "size": 152242
+            "caption": "Elna Baker",
+            "credit": "Elna Baker",
+            "filename": "Moth_ElnaBaker_1301.jpg",
+            "id": 203874,
+            "size": 33080
         },
         "prx:series": {
             "_embedded": {
                 "prx:image": {
                     "_links": {
                         "enclosure": {
-                            "href": "/pub/309f04252d0479d3d063a7fed5c318b4/0/web/series_image/10408/medium/mothradiohr-web.jpg",
+                            "href": "/pub/e56ce22b1bce78de79993ebcccf76611/0/web/series_image/8696/medium/WEEKLY_LOGO.jpg",
                             "type": "image/jpeg"
                         },
                         "self": {
-                            "href": "/api/v1/series_images/10408",
+                            "href": "/api/v1/series_images/8696",
                             "profile": "http://meta.prx.org/model/image/series"
                         }
                     },
                     "caption": "",
                     "credit": "",
-                    "filename": "mothradiohr-web.jpg",
-                    "id": 10408,
-                    "size": 152775
+                    "filename": "WEEKLY_LOGO.jpg",
+                    "id": 8696,
+                    "size": 59904
                 }
             },
             "_links": {
@@ -122,7 +102,7 @@
                     "title": "The Moth"
                 },
                 "prx:image": {
-                    "href": "/api/v1/series_images/10408"
+                    "href": "/api/v1/series_images/8696"
                 },
                 "prx:stories": {
                     "href": "/api/v1/series/32832/stories"
@@ -133,9 +113,9 @@
                 }
             },
             "id": 32832,
-            "shortDescription": "The Moth Radio Hour is a weekly series featuring true stories told live on stage without scripts, notes, props, or accompaniment. Each Moth Radio Hour mixes humorous, heartbreaking, and poignant tales that captivate, surprise, and delight audiences with their honesty, bravery and humor.",
-            "storyCount": 72,
-            "title": "The Moth Radio Hour"
+            "shortDescription": "The Moth Radio Hour features true stories told live on stage without scripts, notes, props, or accompaniment. Each Moth Radio Hour mixes humorous, heartbreaking, and poignant tales that captivate, surprise, and delight audiences with their honesty, bravery and humor.",
+            "storyCount": 1,
+            "title": "Moth Weekly Episodes for 2013"
         }
     },
     "_links": {
@@ -153,45 +133,46 @@
         },
         "prx:audio": [
             {
-                "href": "/api/v1/audio_files/716108",
-                "title": "Moth 1006 Single file"
+                "href": "/api/v1/audio_files/451642",
+                "title": "Moth 1301 Single File"
             }
         ],
         "prx:audio-versions": [
             {
-                "href": "/api/v1/audio_versions/218731",
+                "href": "/api/v1/audio_versions/198841",
                 "title": "Piece Audio"
             },
             {
-                "href": "/api/v1/audio_versions/218733",
-                "title": "Single File"
+                "href": "/api/v1/audio_versions/198851",
+                "title": "Single File "
             }
         ],
         "prx:image": {
-            "href": "/api/v1/story_images/232470",
+            "href": "/api/v1/story_images/203874",
             "profile": "http://meta.prx.org/model/image/story"
         },
         "prx:musical-works": {
-            "href": "/api/v1/stories/97474/musical_works"
+            "href": "/api/v1/stories/87683/musical_works"
         },
         "prx:series": {
             "href": "/api/v1/series/32832",
-            "title": "The Moth Radio Hour"
+            "title": "Moth Weekly Episodes for 2013"
         },
         "self": {
-            "href": "/api/v1/stories/97474",
+            "href": "/api/v1/stories/87683",
             "profile": "http://meta.prx.org/model/story"
         }
     },
     "broadcastHistory": "",
     "contentAdvisory": "",
-    "description": "<div>Josh Axelrad - A blackjack player faces his demons.<br />&nbsp;</div>\n<div>Daisy Rosario - A young woman meets her brother for the first time at their father's funeral.&nbsp;<br />&nbsp;</div>\n<div>Colin Quinn - Is hired to do comedy at Robert Deniro's birthday party...and bombs.<br />&nbsp;</div>\n<div>Hosted by comic, author and Moth regular, Mike Birbiglia.&nbsp;</div>",
-    "duration": 3180,
-    "id": 97474,
+    "description": "<div>Tina McElroy Ansa is a little girl when her father&rsquo;s business goes under and her family must leave their beloved, expansive home.<br /><br />Alan Rabinowitz treks through the Himilayas to study the Taron, a dying race of people, and makes discoveries about himself.<br />&nbsp;</div>\n<div>Elna Baker must tell her Mormon parents that she has made an irreversible change in her life.</div>\n<div>&nbsp;<br />Hosted by Jay Allison/Garrison Keillor&nbsp;</div>",
+    "duration": 3179,
+    "id": 87683,
     "points": 270,
-    "publishedAt": "2014-08-11T16:26:31.000Z",
-    "relatedWebsite": "http://www.themoth.org",
-    "shortDescription": "A professional blackjack player faces down his gambling demons; a young woman meets her brother for the first time at their father's funeral;  and Colin Quinn (Weekend Update, SNL) is hired to do comedy for Robert DeNiro's birthday party...and bombs.\n\nHosted by comic and author Mike Birbiglia (\"Sleepwalk with Me\"). The Moth Radio Hour is produced by The Moth and Jay Allison of Atlantic Public Media.",
+    "producedOn": "2012-11-01",
+    "publishedAt": "2012-12-20T18:57:45.000Z",
+    "relatedWebsite": "http://www.prx.org/themoth",
+    "shortDescription": "A special live edition of The Moth at Town Hall in NYC with Garrison Keillor, with additional hosting by Jay Allison. World renowned conservationist and field biologist Alan Rabinowitz (\"Man and Beast\", MRH episode 902) makes a life-changing friendship while studying the Taron tribe of the Himilayas; a woman describes how her father\u2019s risky entrepreneurial endeavors kept her close-knit Southern family in flux; and a woman raised as a Mormon is terrified that her parents will disown her when she confesses that she has left the faith.\u00a0\n\n\n\u00a0\n",
     "timingAndCues": "",
-    "title": "Gambling and Long Lost Dads"
+    "title": "The Moth Radio Hour"
 }

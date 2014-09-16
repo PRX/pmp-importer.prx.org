@@ -1,0 +1,24 @@
+{
+    "_links": {
+        "curies": [
+            {
+                "href": "http://meta.prx.org/relation/{rel}",
+                "name": "prx",
+                "templated": true
+            }
+        ],
+        "enclosure": {
+            "href": "/pub/e56ce22b1bce78de79993ebcccf76611/0/web/series_image/8696/medium/WEEKLY_LOGO.jpg",
+            "type": "image/jpeg"
+        },
+        "self": {
+            "href": "/api/v1/series_images/8696",
+            "profile": "http://meta.prx.org/model/image/series"
+        }
+    },
+    "caption": "",
+    "credit": "",
+    "filename": "WEEKLY_LOGO.jpg",
+    "id": 8696,
+    "size": 59904
+}
