@@ -18,4 +18,5 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym 'PMP'
   inflect.acronym 'PRX'
+  inflect.acronym 'RSS'
 end
