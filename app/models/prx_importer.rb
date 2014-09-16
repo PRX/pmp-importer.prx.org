@@ -41,14 +41,14 @@ class PRXImporter < ApplicationImporter
 
     # what rel to use?
     # set the rels based on the account type
-    rel =  if pmp_doc_profile(account_doc) == 'property'
+    rel = if pmp_doc_profile(account_doc) == 'property'
       "urn:collectiondoc:collection:property" 
     else
       "urn:collectiondoc:collection:contributor"
     end
 
     # set the urn based on the type of account
-    add_link_to_doc(doc, 'collection', { href: account_doc.href, title: account_doc.name, rels:[rel] })
+    add_link_to_doc(doc, 'collection', { href: account_doc.href, title: account_doc.title, rels:[rel] })
   end
 
   def find_or_create_account_doc(account)
@@ -92,20 +92,19 @@ class PRXImporter < ApplicationImporter
     end
 
     adoc.guid  = find_or_create_guid('Account', account)
-    adoc.title = account.name
+    adoc.title = account.attributes[:name]
 
     # links
-    # fix: this should be page not api
-    add_link_to_doc(doc, 'alternate', { href: prx_web_link("#{account.type.tableize}/#{account.id}") })
+    add_link_to_doc(adoc, 'alternate', { href: prx_web_link("#{account.type.tableize}/#{account.id}") })
 
     # image
-    if account.image
+    if account.links[:image]
       image_doc = find_or_create_image_doc(account.image)
-      add_link_to_doc(doc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
+      add_link_to_doc(adoc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
     end
 
     # tags
-    set_standard_tags(doc, account)
+    set_standard_tags(adoc, account)
 
     # guid
     adoc.save
@@ -113,25 +112,24 @@ class PRXImporter < ApplicationImporter
     adoc
   end
 
-  def prx_web_link(path)
-    "#{prx_web_endpoint}/#{path}"
-  end
-
   def set_series
-    retrieve_doc('Series', series.self.href) || create_series_doc(series)
+    return unless story.links[:series]
+    series_doc = retrieve_doc('Series', story.series.self.href) || create_series_doc(story.series)
+
+    add_link_to_doc(doc, 'collection', { href: series_doc.href, title: series_doc.title, rels:["urn:collectiondoc:collection:series"] })
   end
 
   def create_series_doc(series)
     sdoc = pmp.doc_of_type('series')
     sdoc.guid  = find_or_create_guid('Series', series)
-    sdoc.title = series.name
+    sdoc.title = series.title
 
     # links
     # fix: this should be page not api url
     add_link_to_doc(sdoc, 'alternate', { href: prx_web_link("series/#{series.id}") })
 
     # image
-    if series.image
+    if series.links[:image]
       image_doc = find_or_create_image_doc(series.image)
       add_link_to_doc(sdoc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
     end
@@ -139,7 +137,7 @@ class PRXImporter < ApplicationImporter
     # tags
     set_standard_tags(sdoc, series)
 
-    # guid
+    # save it
     sdoc.save
 
     sdoc
@@ -147,7 +145,7 @@ class PRXImporter < ApplicationImporter
 
 
   def set_images
-    return unless story.image
+    return unless story.links[:image]
 
     image_doc = find_or_create_image_doc(story.image)
     add_link_to_doc(doc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
@@ -167,16 +165,20 @@ class PRXImporter < ApplicationImporter
     idoc.title  = image.attributes[:caption] || image.attributes[:filename]
     idoc.byline = image.attributes[:credit]
 
-    add_link_to_doc(idoc, 'enclosure', { href: prx_url(image.enclosure.href), type: image.enclosure.type, meta: {crop: 'medium'} })
+    href = image.enclosure.href
+    type = image.body['_links']['enclosure']['type']
+    add_link_to_doc(idoc, 'enclosure', { href: prx_url(href), type: type, meta: {crop: 'medium'} })
 
     set_standard_tags(idoc, image)
+
+    idoc.save
 
     idoc
   end
 
 
   def set_audio
-    return unless story.audio && story.audio.size > 0
+    return unless story.links[:audio] && story.links[:audio].size > 0
 
     Array(story.audio).each do |audio|
       audio_doc = find_or_create_audio_doc(audio, story.id)
@@ -195,31 +197,34 @@ class PRXImporter < ApplicationImporter
     adoc.guid  = find_or_create_guid('Audio', audio)
     adoc.title = audio.attributes[:label] || audio.attributes[:filename]
 
-    enclosure_url = count_audio_url(audio.enclosure.href, audio.id, prx_piece_id, adoc.guid)
+    href = audio.enclosure.href
+    type = audio.body['_links']['enclosure']['type']
 
-    add_link_to_doc(adoc, 'enclosure', { href: enclosure_url, type: audio.enclosure.type, meta: {duration: audio.duration, size: audio.size} })
+    enclosure_url = count_audio_url(href, audio.id, prx_piece_id, adoc.guid)
+
+    add_link_to_doc(adoc, 'enclosure', { href: enclosure_url, type: type, meta: {duration: audio.duration, size: audio.size} })
 
     set_standard_tags(adoc, audio)
+
+    adoc.save
 
     adoc
   end
 
-
   def set_attributes
     doc.hreflang       = "en"
-    doc.title          = story.title
+    doc.title          = story.attributes[:title]
     doc.teaser         = story.shortDescription
 
     description = story.description.blank? ? story.shortDescription : story.description
     doc.description    = strip_tags(description)
     doc.contentencoded = description
 
-    doc.byline         = story.account.name
+    doc.byline         = story.account.attributes[:name]
 
-    doc.published      = story.published
-    doc.valid          = {from: story.published, to: (story.published + 1000.years)}
+    doc.published      = DateTime.parse(story.publishedAt)
+    doc.valid          = {from: doc.published, to: (doc.published + 1000.years)}
   end
-
 
   def set_links
     add_link_to_doc(doc, 'alternate', { href: prx_web_link("pieces/#{story.id}") })
@@ -233,6 +238,7 @@ class PRXImporter < ApplicationImporter
 
   def set_standard_tags(tag_doc, prx_obj)
     add_tag_to_doc(tag_doc, 'prx_test') unless Rails.env.production?
+    add_tag_to_doc(tag_doc, 'PRX')
     add_tag_to_doc(tag_doc, prx_tag(prx_obj.self.href))
   end
 
@@ -250,23 +256,6 @@ class PRXImporter < ApplicationImporter
     end
 
     sdoc
-  end
-
-  def retrieve_doc(type, url)
-    doc = nil
-
-    url = prx_url(url)
-
-    guid = PMPGuidMapping.find_guid(source_name, type, url)
-    doc = pmp_doc_find_first(guid: guid) if guid
-
-    # no guid yet? look to see if the prx id is tagging a doc
-    if !doc
-      doc = pmp_doc_find_first(tag: prx_tag(url))
-      PMPGuidMapping.create(source_name: source_name, source_type: type, source_id: url, guid: doc.guid) if doc
-    end
-
-    doc
   end
 
   # https://count.prx.org/redirect?location=http://www.prx.org&action=request&action_value=%7Bsrc%3A+pmp%7D&referrer=https://api.pmp.io
@@ -287,19 +276,11 @@ class PRXImporter < ApplicationImporter
   end
 
   def prx_api_endpoint
-    options[:prx_api_endpoint] || 'https://hal.prx.org/api/v1'
+    options[:prx_api_endpoint] || 'https://hal.prx.org/api/v1/'
   end
 
   def prx_web_endpoint
-    options[:prx_web_endpoint] || 'https://www.prx.org'
-  end
-
-  def prx_tag(url)
-    vals = url.to_s.split('/')
-    id   = vals.pop.to_i
-    type = vals.pop.to_s
-
-    "_prx_#{type}__#{id}_"
+    options[:prx_web_endpoint] || 'https://www.prx.org/'
   end
 
   def prx_url(*path)
@@ -308,6 +289,21 @@ class PRXImporter < ApplicationImporter
     return url if url.start_with?('http')
 
     URI.join(prx_api_endpoint, url).to_s
+  end
+
+  def prx_web_link(path)
+    "#{prx_web_endpoint}#{path}"
+  end
+
+  def tag_for_url(source, url)
+    prx_tag(url)
+  end
+
+  def prx_tag(url)
+    vals = url.to_s.split('/')
+    id   = vals.pop.to_i
+    type = vals.pop.to_s
+    "_#{source_name}_#{type}__#{id}_"
   end
 
   def find_or_create_guid(type, prx_obj)
