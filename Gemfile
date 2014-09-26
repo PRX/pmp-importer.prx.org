@@ -30,6 +30,9 @@ gem 'pmp'
 
 gem 'hyperresource'
 
+# for rss feeds
+gem 'feedjira'
+
 group :test do
   gem 'minitest-spec-rails'
   gem 'factory_girl_rails'
