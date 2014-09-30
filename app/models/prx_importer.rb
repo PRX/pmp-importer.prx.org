@@ -176,11 +176,8 @@ class PRXImporter < ApplicationImporter
     idoc
   end
 
-
   def set_audio
-    return unless story.links[:audio] && story.links[:audio].size > 0
-
-    Array(story.audio).each do |audio|
+    Array(story.links[:audio]).each do |audio|
       audio_doc = find_or_create_audio_doc(audio, story.id)
       add_link_to_doc(doc, 'item', { href: audio_doc.href, title: audio_doc.title, rels: ['urn:collectiondoc:audio'] })
     end
@@ -234,12 +231,14 @@ class PRXImporter < ApplicationImporter
 
   def set_tags
     set_standard_tags(doc, story)
+    Array(story.attributes[:tags]).each{|t| add_tag_to_doc(doc, t) }
   end
 
   def set_standard_tags(tag_doc, prx_obj)
-    add_tag_to_doc(tag_doc, 'prx_test') unless Rails.env.production?
     add_tag_to_doc(tag_doc, 'PRX')
-    add_tag_to_doc(tag_doc, prx_tag(prx_obj.self.href))
+
+    add_itag_to_doc(tag_doc, 'prx_test') unless Rails.env.production?
+    add_itag_to_doc(tag_doc, prx_tag(prx_obj.self.href))
   end
 
 
@@ -303,7 +302,7 @@ class PRXImporter < ApplicationImporter
     vals = url.to_s.split('/')
     id   = vals.pop.to_i
     type = vals.pop.to_s
-    "_#{source_name}_#{type}__#{id}_"
+    "#{source_name}:#{type}-#{id}"
   end
 
   def find_or_create_guid(type, prx_obj)

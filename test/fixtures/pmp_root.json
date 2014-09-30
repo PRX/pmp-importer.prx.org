@@ -1,18 +1,90 @@
 {
-    "version": "1.0",
-    "href": "https://api.pmp.io/",
     "attributes": {
+        "created": "2014-09-08T20:56:59+00:00",
+        "guid": "04224975-e93c-4b17-9df9-96db37d318f3",
+        "modified": "2014-09-08T20:56:59+00:00",
+        "published": "2013-07-04T04:00:44+00:00",
+        "title": "PMP Home Document",
         "valid": {
             "from": "2013-07-04T04:00:44+00:00",
             "to": "3013-07-04T04:00:44+00:00"
-        },
-        "created": "2014-07-24T23:02:27+00:00",
-        "modified": "2014-07-24T23:02:27+00:00",
-        "guid": "04224975-e93c-4b17-9df9-96db37d318f3",
-        "title": "PMP Home Document",
-        "published": "2013-07-04T04:00:44+00:00"
+        }
     },
+    "href": "https://api.pmp.io/",
     "links": {
+        "auth": [
+            {
+                "hints": {
+                    "allow": [
+                        "GET"
+                    ],
+                    "docs": "http://docs.pmp.io/wiki/Authenticating-with-the-API#testing-access"
+                },
+                "href": "https://api.pmp.io/auth/credentials",
+                "rels": [
+                    "urn:collectiondoc:form:listcredentials"
+                ],
+                "title": "List OAuth2 Credentials"
+            },
+            {
+                "hints": {
+                    "accept-post": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "allow": [
+                        "POST"
+                    ],
+                    "docs": "http://docs.pmp.io/wiki/Authenticating-with-the-API#generating-credentials"
+                },
+                "href": "https://publish.pmp.io/auth/credentials",
+                "rels": [
+                    "urn:collectiondoc:form:createcredentials"
+                ],
+                "title": "Create OAuth2 Credentials"
+            },
+            {
+                "hints": {
+                    "allow": [
+                        "DELETE"
+                    ],
+                    "docs": "http://docs.pmp.io/wiki/Authenticating-with-the-API#removing-a-credential"
+                },
+                "href-template": "https://publish.pmp.io/auth/credentials/{client_id}",
+                "rels": [
+                    "urn:collectiondoc:form:removecredentials"
+                ],
+                "title": "Remove OAuth2 Credentials"
+            },
+            {
+                "hints": {
+                    "accept-post": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "allow": [
+                        "POST"
+                    ],
+                    "docs": "http://docs.pmp.io/wiki/Authentication-Model#token-management"
+                },
+                "href": "https://api.pmp.io/auth/access_token",
+                "rels": [
+                    "urn:collectiondoc:form:issuetoken"
+                ],
+                "title": "Issue OAuth2 Token"
+            },
+            {
+                "hints": {
+                    "allow": [
+                        "DELETE"
+                    ],
+                    "docs": "http://docs.pmp.io/wiki/Authentication-Model#revoke-a-token"
+                },
+                "href": "https://publish.pmp.io/auth/access_token",
+                "rels": [
+                    "urn:collectiondoc:form:revoketoken"
+                ],
+                "title": "Revoke OAuth2 Token"
+            }
+        ],
         "bookmark": [
             {
                 "href": "https://api.pmp.io/docs/trove",
@@ -26,6 +98,60 @@
                 "href": "https://api.pmp.io/docs/af676335-21df-4486-ab43-e88c1b48f026"
             }
         ],
+        "edit": [
+            {
+                "hints": {
+                    "allow": [
+                        "PUT"
+                    ],
+                    "docs": "http://docs.pmp.io/wiki/Collection.doc-JSON-Media-Type",
+                    "formats": [
+                        "application/vnd.collection.doc+json"
+                    ]
+                },
+                "href-template": "https://publish.pmp.io/docs/{guid}",
+                "href-vars": {
+                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
+                },
+                "rels": [
+                    "urn:collectiondoc:form:documentsave"
+                ],
+                "title": "Document Save"
+            },
+            {
+                "hints": {
+                    "allow": [
+                        "DELETE"
+                    ]
+                },
+                "href-template": "https://publish.pmp.io/docs/{guid}",
+                "href-vars": {
+                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
+                },
+                "rels": [
+                    "urn:collectiondoc:form:documentdelete"
+                ],
+                "title": "Document Delete"
+            },
+            {
+                "hints": {
+                    "accept-post": [
+                        "multipart/form-data"
+                    ],
+                    "allow": [
+                        "POST"
+                    ]
+                },
+                "href": "https://publish.pmp.io/files",
+                "href-vars": {
+                    "submission": "http://docs.pmp.io/wiki/Media-File-Upload"
+                },
+                "rels": [
+                    "urn:collectiondoc:form:mediaupload"
+                ],
+                "title": "Upload a rich media file"
+            }
+        ],
         "item": [],
         "navigation": [
             {
@@ -37,332 +163,201 @@
         ],
         "query": [
             {
-                "href-template": "https://api.pmp.io/docs{/guid}{?limit,offset}",
-                "title": "Access documents",
+                "hints": {
+                    "allow": [
+                        "GET"
+                    ]
+                },
+                "href-template": "https://api.pmp.io/docs/{guid}{?limit,offset}",
+                "href-vars": {
+                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents",
+                    "limit": "http://docs.pmp.io/wiki/Querying-the-API#limit",
+                    "offset": "http://docs.pmp.io/wiki/Querying-the-API#offset"
+                },
                 "rels": [
                     "urn:collectiondoc:hreftpl:docs"
                 ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents",
-                    "limit": "http://docs.pmp.io/wiki/Content-Retrieval#limit",
-                    "offset": "http://docs.pmp.io/wiki/Content-Retrieval#offset"
-                },
+                "title": "Access documents"
+            },
+            {
                 "hints": {
                     "allow": [
                         "GET"
                     ]
-                }
-            },
-            {
-                "href-template": "https://api.pmp.io/docs{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,language,profile,collection,has,distributor,distributorgroup,author,text}",
-                "title": "Query for documents",
-                "rels": [
-                    "urn:collectiondoc:query:docs"
-                ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Content-Retrieval#guid",
-                    "limit": "http://docs.pmp.io/wiki/Content-Retrieval#limit",
-                    "offset": "http://docs.pmp.io/wiki/Content-Retrieval#offset",
-                    "searchsort": "http://docs.pmp.io/wiki/Content-Retrieval#searchsort",
-                    "startdate": "http://docs.pmp.io/wiki/Content-Retrieval#startdate",
-                    "enddate": "http://docs.pmp.io/wiki/Content-Retrieval#enddate",
-                    "writeable": "http://docs.pmp.io/wiki/Content-Retrieval#writeable",
-                    "tag": "http://docs.pmp.io/wiki/Content-Retrieval#tag",
-                    "language": "http://docs.pmp.io/wiki/Content-Retrieval#language",
-                    "profile": "http://docs.pmp.io/wiki/Content-Retrieval#profile",
-                    "collection": "http://docs.pmp.io/wiki/Content-Retrieval#collection",
-                    "has": "http://docs.pmp.io/wiki/Content-Retrieval#has",
-                    "distributor": "http://docs.pmp.io/wiki/Content-Retrieval#distributor",
-                    "distributorgroup": "http://docs.pmp.io/wiki/Content-Retrieval#distributorgroup",
-                    "author": "http://docs.pmp.io/wiki/Content-Retrieval#author",
-                    "text": "http://docs.pmp.io/wiki/Content-Retrieval#text"
                 },
-                "hints": {
-                    "allow": [
-                        "GET"
-                    ]
-                }
-            },
-            {
-                "href-template": "https://api.pmp.io/profiles{/guid}",
-                "title": "Access profiles",
+                "href-template": "https://api.pmp.io/profiles/{guid}",
+                "href-vars": {
+                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
+                },
                 "rels": [
                     "urn:collectiondoc:hreftpl:profiles"
                 ],
+                "title": "Access profiles"
+            },
+            {
+                "hints": {
+                    "allow": [
+                        "GET"
+                    ]
+                },
+                "href-template": "https://api.pmp.io/schemas/{guid}",
                 "href-vars": {
                     "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
                 },
-                "hints": {
-                    "allow": [
-                        "GET"
-                    ]
-                }
-            },
-            {
-                "href-template": "https://api.pmp.io/profiles{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
-                "title": "Query for profiles",
-                "rels": [
-                    "urn:collectiondoc:query:profiles"
-                ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Content-Retrieval#guid",
-                    "limit": "http://docs.pmp.io/wiki/Content-Retrieval#limit",
-                    "offset": "http://docs.pmp.io/wiki/Content-Retrieval#offset",
-                    "searchsort": "http://docs.pmp.io/wiki/Content-Retrieval#searchsort",
-                    "startdate": "http://docs.pmp.io/wiki/Content-Retrieval#startdate",
-                    "enddate": "http://docs.pmp.io/wiki/Content-Retrieval#enddate",
-                    "writeable": "http://docs.pmp.io/wiki/Content-Retrieval#writeable",
-                    "tag": "http://docs.pmp.io/wiki/Content-Retrieval#tag",
-                    "collection": "http://docs.pmp.io/wiki/Content-Retrieval#collection",
-                    "text": "http://docs.pmp.io/wiki/Content-Retrieval#text"
-                },
-                "hints": {
-                    "allow": [
-                        "GET"
-                    ]
-                }
-            },
-            {
-                "href-template": "https://api.pmp.io/schemas{/guid}",
-                "title": "Access schemas",
                 "rels": [
                     "urn:collectiondoc:hreftpl:schemas"
                 ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
-                },
+                "title": "Access schemas"
+            },
+            {
                 "hints": {
                     "allow": [
                         "GET"
                     ]
-                }
+                },
+                "href-template": "https://api.pmp.io/users/{guid}",
+                "href-vars": {
+                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
+                },
+                "rels": [
+                    "urn:collectiondoc:hreftpl:users"
+                ],
+                "title": "Access users"
             },
             {
-                "href-template": "https://api.pmp.io/schemas{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
-                "title": "Query for schemas",
+                "hints": {
+                    "allow": [
+                        "GET"
+                    ]
+                },
+                "href-template": "https://api.pmp.io/docs{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,itag,language,profile,collection,has,creator,distributor,distributorgroup,author,text}",
+                "href-vars": {
+                    "author": "http://docs.pmp.io/wiki/Querying-the-API#author",
+                    "collection": "http://docs.pmp.io/wiki/Querying-the-API#collection",
+                    "creator": "http://docs.pmp.io/wiki/Querying-the-API#creator",
+                    "distributor": "http://docs.pmp.io/wiki/Querying-the-API#distributor",
+                    "distributorgroup": "http://docs.pmp.io/wiki/Querying-the-API#distributorgroup",
+                    "enddate": "http://docs.pmp.io/wiki/Querying-the-API#enddate",
+                    "guid": "http://docs.pmp.io/wiki/Querying-the-API#guid",
+                    "has": "http://docs.pmp.io/wiki/Querying-the-API#has",
+                    "itag": "http://docs.pmp.io/wiki/Querying-the-API#itag",
+                    "language": "http://docs.pmp.io/wiki/Querying-the-API#language",
+                    "limit": "http://docs.pmp.io/wiki/Querying-the-API#limit",
+                    "offset": "http://docs.pmp.io/wiki/Querying-the-API#offset",
+                    "profile": "http://docs.pmp.io/wiki/Querying-the-API#profile",
+                    "searchsort": "http://docs.pmp.io/wiki/Querying-the-API#searchsort",
+                    "startdate": "http://docs.pmp.io/wiki/Querying-the-API#startdate",
+                    "tag": "http://docs.pmp.io/wiki/Querying-the-API#tag",
+                    "text": "http://docs.pmp.io/wiki/Querying-the-API#text",
+                    "writeable": "http://docs.pmp.io/wiki/Querying-the-API#writeable"
+                },
+                "rels": [
+                    "urn:collectiondoc:query:docs"
+                ],
+                "title": "Query for documents"
+            },
+            {
+                "hints": {
+                    "allow": [
+                        "GET"
+                    ]
+                },
+                "href-template": "https://api.pmp.io/profiles{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,itag,collection,text}",
+                "href-vars": {
+                    "collection": "http://docs.pmp.io/wiki/Querying-the-API#collection",
+                    "enddate": "http://docs.pmp.io/wiki/Querying-the-API#enddate",
+                    "guid": "http://docs.pmp.io/wiki/Querying-the-API#guid",
+                    "itag": "http://docs.pmp.io/wiki/Querying-the-API#itag",
+                    "limit": "http://docs.pmp.io/wiki/Querying-the-API#limit",
+                    "offset": "http://docs.pmp.io/wiki/Querying-the-API#offset",
+                    "searchsort": "http://docs.pmp.io/wiki/Querying-the-API#searchsort",
+                    "startdate": "http://docs.pmp.io/wiki/Querying-the-API#startdate",
+                    "tag": "http://docs.pmp.io/wiki/Querying-the-API#tag",
+                    "text": "http://docs.pmp.io/wiki/Querying-the-API#text",
+                    "writeable": "http://docs.pmp.io/wiki/Querying-the-API#writeable"
+                },
+                "rels": [
+                    "urn:collectiondoc:query:profiles"
+                ],
+                "title": "Query for profiles"
+            },
+            {
+                "hints": {
+                    "allow": [
+                        "GET"
+                    ]
+                },
+                "href-template": "https://api.pmp.io/schemas{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,itag,collection,text}",
+                "href-vars": {
+                    "collection": "http://docs.pmp.io/wiki/Querying-the-API#collection",
+                    "enddate": "http://docs.pmp.io/wiki/Querying-the-API#enddate",
+                    "guid": "http://docs.pmp.io/wiki/Querying-the-API#guid",
+                    "itag": "http://docs.pmp.io/wiki/Querying-the-API#itag",
+                    "limit": "http://docs.pmp.io/wiki/Querying-the-API#limit",
+                    "offset": "http://docs.pmp.io/wiki/Querying-the-API#offset",
+                    "searchsort": "http://docs.pmp.io/wiki/Querying-the-API#searchsort",
+                    "startdate": "http://docs.pmp.io/wiki/Querying-the-API#startdate",
+                    "tag": "http://docs.pmp.io/wiki/Querying-the-API#tag",
+                    "text": "http://docs.pmp.io/wiki/Querying-the-API#text",
+                    "writeable": "http://docs.pmp.io/wiki/Querying-the-API#writeable"
+                },
                 "rels": [
                     "urn:collectiondoc:query:schemas"
                 ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Content-Retrieval#guid",
-                    "limit": "http://docs.pmp.io/wiki/Content-Retrieval#limit",
-                    "offset": "http://docs.pmp.io/wiki/Content-Retrieval#offset",
-                    "searchsort": "http://docs.pmp.io/wiki/Content-Retrieval#searchsort",
-                    "startdate": "http://docs.pmp.io/wiki/Content-Retrieval#startdate",
-                    "enddate": "http://docs.pmp.io/wiki/Content-Retrieval#enddate",
-                    "writeable": "http://docs.pmp.io/wiki/Content-Retrieval#writeable",
-                    "tag": "http://docs.pmp.io/wiki/Content-Retrieval#tag",
-                    "collection": "http://docs.pmp.io/wiki/Content-Retrieval#collection",
-                    "text": "http://docs.pmp.io/wiki/Content-Retrieval#text"
-                },
+                "title": "Query for schemas"
+            },
+            {
                 "hints": {
                     "allow": [
                         "GET"
                     ]
-                }
-            },
-            {
-                "href-template": "https://api.pmp.io/users{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,text}",
-                "title": "Query for users",
+                },
+                "href-template": "https://api.pmp.io/users{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,itag,collection,text}",
+                "href-vars": {
+                    "collection": "http://docs.pmp.io/wiki/Querying-the-API#collection",
+                    "enddate": "http://docs.pmp.io/wiki/Querying-the-API#enddate",
+                    "guid": "http://docs.pmp.io/wiki/Querying-the-API#guid",
+                    "itag": "http://docs.pmp.io/wiki/Querying-the-API#itag",
+                    "limit": "http://docs.pmp.io/wiki/Querying-the-API#limit",
+                    "offset": "http://docs.pmp.io/wiki/Querying-the-API#offset",
+                    "searchsort": "http://docs.pmp.io/wiki/Querying-the-API#searchsort",
+                    "startdate": "http://docs.pmp.io/wiki/Querying-the-API#startdate",
+                    "tag": "http://docs.pmp.io/wiki/Querying-the-API#tag",
+                    "text": "http://docs.pmp.io/wiki/Querying-the-API#text",
+                    "writeable": "http://docs.pmp.io/wiki/Querying-the-API#writeable"
+                },
                 "rels": [
                     "urn:collectiondoc:query:users"
                 ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Content-Retrieval#guid",
-                    "limit": "http://docs.pmp.io/wiki/Content-Retrieval#limit",
-                    "offset": "http://docs.pmp.io/wiki/Content-Retrieval#offset",
-                    "searchsort": "http://docs.pmp.io/wiki/Content-Retrieval#searchsort",
-                    "startdate": "http://docs.pmp.io/wiki/Content-Retrieval#startdate",
-                    "enddate": "http://docs.pmp.io/wiki/Content-Retrieval#enddate",
-                    "writeable": "http://docs.pmp.io/wiki/Content-Retrieval#writeable",
-                    "tag": "http://docs.pmp.io/wiki/Content-Retrieval#tag",
-                    "collection": "http://docs.pmp.io/wiki/Content-Retrieval#collection",
-                    "text": "http://docs.pmp.io/wiki/Content-Retrieval#text"
-                },
+                "title": "Query for users"
+            },
+            {
                 "hints": {
                     "allow": [
                         "GET"
                     ]
-                }
-            },
-            {
-                "href-template": "https://api.pmp.io/groups{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,collection,has,text}",
-                "title": "Query for groups",
+                },
+                "href-template": "https://api.pmp.io/groups{?guid,limit,offset,searchsort,startdate,enddate,writeable,tag,itag,collection,has,text}",
+                "href-vars": {
+                    "collection": "http://docs.pmp.io/wiki/Querying-the-API#collection",
+                    "enddate": "http://docs.pmp.io/wiki/Querying-the-API#enddate",
+                    "guid": "http://docs.pmp.io/wiki/Querying-the-API#guid",
+                    "has": "http://docs.pmp.io/wiki/Querying-the-API#has",
+                    "itag": "http://docs.pmp.io/wiki/Querying-the-API#itag",
+                    "limit": "http://docs.pmp.io/wiki/Querying-the-API#limit",
+                    "offset": "http://docs.pmp.io/wiki/Querying-the-API#offset",
+                    "searchsort": "http://docs.pmp.io/wiki/Querying-the-API#searchsort",
+                    "startdate": "http://docs.pmp.io/wiki/Querying-the-API#startdate",
+                    "tag": "http://docs.pmp.io/wiki/Querying-the-API#tag",
+                    "text": "http://docs.pmp.io/wiki/Querying-the-API#text",
+                    "writeable": "http://docs.pmp.io/wiki/Querying-the-API#writeable"
+                },
                 "rels": [
                     "urn:collectiondoc:query:groups"
                 ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Content-Retrieval#guid",
-                    "limit": "http://docs.pmp.io/wiki/Content-Retrieval#limit",
-                    "offset": "http://docs.pmp.io/wiki/Content-Retrieval#offset",
-                    "searchsort": "http://docs.pmp.io/wiki/Content-Retrieval#searchsort",
-                    "startdate": "http://docs.pmp.io/wiki/Content-Retrieval#startdate",
-                    "enddate": "http://docs.pmp.io/wiki/Content-Retrieval#enddate",
-                    "writeable": "http://docs.pmp.io/wiki/Content-Retrieval#writeable",
-                    "tag": "http://docs.pmp.io/wiki/Content-Retrieval#tag",
-                    "collection": "http://docs.pmp.io/wiki/Content-Retrieval#collection",
-                    "has": "http://docs.pmp.io/wiki/Content-Retrieval#has",
-                    "text": "http://docs.pmp.io/wiki/Content-Retrieval#text"
-                },
-                "hints": {
-                    "allow": [
-                        "GET"
-                    ]
-                }
-            },
-            {
-                "href": "https://api.pmp.io/guids",
-                "title": "Generate guids",
-                "rels": [
-                    "urn:collectiondoc:query:guids"
-                ],
-                "hints": {
-                    "allow": [
-                        "POST"
-                    ],
-                    "accept-post": [
-                        "application/x-www-form-urlencoded"
-                    ]
-                },
-                "type": "application/json"
-            }
-        ],
-        "edit": [
-            {
-                "href-template": "https://publish.pmp.io/docs{/guid}",
-                "title": "Document Save",
-                "rels": [
-                    "urn:collectiondoc:form:documentsave"
-                ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
-                },
-                "hints": {
-                    "formats": [
-                        "application/vnd.collection.doc+json"
-                    ],
-                    "allow": [
-                        "PUT",
-                        "DELETE"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Collection.doc-JSON-Media-Type"
-                }
-            },
-            {
-                "href-template": "https://publish.pmp.io/profiles{/guid}",
-                "title": "Profile Save",
-                "rels": [
-                    "urn:collectiondoc:form:profilesave"
-                ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
-                },
-                "hints": {
-                    "formats": [
-                        "application/vnd.collection.doc+json"
-                    ],
-                    "allow": [
-                        "PUT",
-                        "DELETE"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Profile-profile"
-                }
-            },
-            {
-                "href-template": "https://publish.pmp.io/schemas{/guid}",
-                "title": "Schema Save",
-                "rels": [
-                    "urn:collectiondoc:form:schemasave"
-                ],
-                "href-vars": {
-                    "guid": "http://docs.pmp.io/wiki/Globaly-Unique-Identifiers-for-PMP-Documents"
-                },
-                "hints": {
-                    "formats": [
-                        "application/vnd.collection.doc+json"
-                    ],
-                    "allow": [
-                        "PUT",
-                        "DELETE"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Schema-profile"
-                }
-            },
-            {
-                "href": "https://publish.pmp.io/files",
-                "title": "Upload a rich media file",
-                "rels": [
-                    "urn:collectiondoc:form:mediaupload"
-                ],
-                "href-vars": {
-                    "submission": "http://docs.pmp.io/wiki/Media-File-Upload"
-                },
-                "hints": {
-                    "allow": [
-                        "POST"
-                    ],
-                    "accept-post": [
-                        "multipart/form-data"
-                    ]
-                }
-            }
-        ],
-        "auth": [
-            {
-                "href": "https://publish.pmp.io/auth/credentials",
-                "title": "Create OAuth2 Credentials",
-                "rels": [
-                    "urn:collectiondoc:form:createcredentials"
-                ],
-                "hints": {
-                    "allow": [
-                        "POST"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Authenticating-with-the-API#generating-credentials"
-                }
-            },
-            {
-                "href-template": "https://publish.pmp.io/auth/credentials/{client_id}",
-                "title": "Remove OAuth2 Credentials",
-                "rels": [
-                    "urn:collectiondoc:form:removecredentials"
-                ],
-                "hints": {
-                    "allow": [
-                        "DELETE"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Authenticating-with-the-API#removing-a-credential"
-                }
-            },
-            {
-                "href": "https://api.pmp.io/auth/access_token",
-                "title": "Issue OAuth2 Token",
-                "rels": [
-                    "urn:collectiondoc:form:issuetoken"
-                ],
-                "hints": {
-                    "allow": [
-                        "POST"
-                    ],
-                    "accept-post": [
-                        "application/x-www-form-urlencoded"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Authentication-Model#token-management"
-                }
-            },
-            {
-                "href": "https://publish.pmp.io/auth/access_token",
-                "title": "Revoke OAuth2 Token",
-                "rels": [
-                    "urn:collectiondoc:form:revoketoken"
-                ],
-                "hints": {
-                    "allow": [
-                        "DELETE"
-                    ],
-                    "docs": "http://docs.pmp.io/wiki/Authentication-Model#revoke-a-token"
-                }
+                "title": "Query for groups"
             }
         ]
-    }
+    },
+    "version": "1.0"
 }
