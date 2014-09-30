@@ -16,7 +16,7 @@ describe PMPGuidMapping do
 
   it 'finds existing guid' do
     guid = SecureRandom.uuid
-    PMPGuidMapping.create!(source_name: 'test', source_type:'test', source_id: 2, guid: guid)
+    PMPGuidMapping.create!(source_name: 'test', source_type:'test', source_identifier: '2', guid: guid)
     PMPGuidMapping.find_guid('test', 'test', 2).must_equal guid
   end
 

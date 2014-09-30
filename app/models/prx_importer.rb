@@ -68,7 +68,7 @@ class PRXImporter < ApplicationImporter
     station = pmp_doc_find_first(profile: 'organization', text: call_letters.to_s) if !call_letters.blank?
 
     # add a mapping to the station guid for the account url (so we can use that next time)
-    PMPGuidMapping.create(source_name: source_name, source_type: 'Account', source_id: prx_url(account.self.href), guid: station.guid) if station
+    PMPGuidMapping.create(source_name: source_name, source_type: 'Account', source_identifier: prx_url(account.self.href), guid: station.guid) if station
 
     station
   end
