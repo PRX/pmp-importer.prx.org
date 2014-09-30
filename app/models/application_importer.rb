@@ -47,7 +47,7 @@ class ApplicationImporter
     # no guid yet? look to see if a doc has the right tag
     if !doc
       doc = pmp_doc_find_first(itag: tag_for_url(source_name, url))
-      PMPGuidMapping.create(source_name: source_name, source_type: type, source_identifier: url, guid: doc.guid) if doc
+      PMPGuidMapping.create(source_name: source_name, source_type: type, source_id: url, guid: doc.guid) if doc
     end
 
     doc

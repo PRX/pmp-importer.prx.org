@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 20140812191726) do
   create_table "pmp_guid_mappings", force: true do |t|
     t.string   "source_name"
     t.string   "source_type"
-    t.integer  "source_identifier"
-    t.string   "guid",              null: false
+    t.string   "source_id"
+    t.string   "guid",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "pmp_guid_mappings", ["guid"], name: "index_pmp_guid_mappings_on_guid", unique: true, using: :btree
-  add_index "pmp_guid_mappings", ["source_name", "source_type", "source_identifier"], name: "by_source", unique: true, using: :btree
+  add_index "pmp_guid_mappings", ["source_name", "source_type", "source_id"], name: "by_source", unique: true, using: :btree
 
 end
