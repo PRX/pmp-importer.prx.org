@@ -46,7 +46,7 @@ class ApplicationImporter
 
     # no guid yet? look to see if a doc has the right tag
     if !doc
-      doc = pmp_doc_find_first(tag: tag_for_url(source_name, url))
+      doc = pmp_doc_find_first(itag: tag_for_url(source_name, url))
       PMPGuidMapping.create(source_name: source_name, source_type: type, source_id: url, guid: doc.guid) if doc
     end
 
@@ -54,7 +54,7 @@ class ApplicationImporter
   end
 
   def tag_for_url(source, url)
-    "_#{source}_#{url}_"
+    "#{source}:#{url}"
   end
 
   # these below could all be class methods I think
@@ -71,6 +71,12 @@ class ApplicationImporter
     doc.tags ||= []
     return if doc.tags.include?(tag)
     doc.tags << tag
+  end
+
+  def add_itag_to_doc(doc, tag)
+    doc.itags ||= []
+    return if doc.itags.include?(tag)
+    doc.itags << tag
   end
 
   def add_link_to_doc(doc, rel, link_attrs)
