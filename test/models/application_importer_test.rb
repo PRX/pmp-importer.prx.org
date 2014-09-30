@@ -50,6 +50,10 @@ describe ApplicationImporter do
   it 'finds the first pmp doc that matches conditions' do
 
     if use_webmock?
+
+      ENV['PMP_CLIENT_ID'] = ""
+      ENV['PMP_CLIENT_SECRET'] = ""
+
       stub_request(:get, "https://api.pmp.io/").
         to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
 
