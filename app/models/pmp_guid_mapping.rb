@@ -6,8 +6,6 @@ class PMPGuidMapping < ActiveRecord::Base
   end
 
   def self.find_or_create_guid(name, type, id)
-    puts "find_or_create_guid: #{name}, #{type}, #{id}"
-
     conditions = { source_name: name.to_s, source_type: type.to_s, source_id: id.to_s }
     guid_mapping = PMPGuidMapping.where(conditions).first
 
