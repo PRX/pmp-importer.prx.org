@@ -77,7 +77,7 @@ describe ApplicationImporter do
       result = importer.pmp_doc_find_first({}).a.must_equal "1"
 
 
-      stub_request(:get, "https://api.pmp.io/docs?guid=onlythelonely&limit=1").
+      stub_request(:get, "https://api.pmp.io/docs?guid=onlythelonely").
         to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"2"}}]}', :headers => {})
 
       result = importer.pmp_doc_find_first({guid: 'onlythelonely'}).a.must_equal "2"

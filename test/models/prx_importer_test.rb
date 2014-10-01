@@ -88,7 +88,7 @@ describe PRXImporter do
         # Story start...
 
         # find story by tag
-        stub_request(:get, "https://api.pmp.io/docs?itag=prx:stories-87683&limit=1").
+        stub_request(:get, "https://api.pmp.io/docs?itag=prx:stories-87683").
           to_return(:status => 200, :body => "", :headers => {})
 
         # Account
@@ -98,7 +98,7 @@ describe PRXImporter do
           to_return(:status => 200, :body => json_file(:prx_account), :headers => {})
 
         # find account by tag
-        stub_request(:get, "https://api.pmp.io/docs?itag=prx:accounts-45139&limit=1").
+        stub_request(:get, "https://api.pmp.io/docs?itag=prx:accounts-45139").
           to_return(:status => 200, :body => "", :headers => {})
 
         # create account
@@ -113,7 +113,7 @@ describe PRXImporter do
           to_return(:status => 200, :body => json_file(:prx_series), :headers => {})
 
         # find series by tag
-        stub_request(:get, "https://api.pmp.io/docs?itag=prx:series-32832&limit=1").
+        stub_request(:get, "https://api.pmp.io/docs?itag=prx:series-32832").
           to_return(:status => 200, :body => "", :headers => {})
 
         # prx series image
@@ -121,7 +121,7 @@ describe PRXImporter do
           to_return(:status => 200, :body => json_file(:prx_series_image), :headers => {})
 
         # find series image by tag
-        stub_request(:get, "https://api.pmp.io/docs?itag=prx:series_images-8696&limit=1").
+        stub_request(:get, "https://api.pmp.io/docs?itag=prx:series_images-8696").
           to_return(:status => 200, :body => "", :headers => {})
 
         # create image for series
@@ -141,7 +141,7 @@ describe PRXImporter do
           to_return(:status => 200, :body => json_file(:prx_story_image), :headers => {})
 
         # find story image by tag
-        stub_request(:get, "https://api.pmp.io/docs?itag=prx:story_images-203874&limit=1").
+        stub_request(:get, "https://api.pmp.io/docs?itag=prx:story_images-203874").
           to_return(:status => 200, :body => "", :headers => {})
 
         # create image for story
@@ -156,7 +156,7 @@ describe PRXImporter do
           to_return(:status => 200, :body => json_file(:prx_audio_file), :headers => {})
 
         # find audio by tag
-        stub_request(:get, "https://api.pmp.io/docs?itag=prx:audio_files-451642&limit=1").
+        stub_request(:get, "https://api.pmp.io/docs?itag=prx:audio_files-451642").
           to_return(:status => 200, :body => "", :headers => {})
 
         # create audio
