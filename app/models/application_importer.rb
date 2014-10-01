@@ -34,20 +34,37 @@ class ApplicationImporter
     URI.join(pmp_endpoint, *path.collect(&:to_s).join('/')).to_s
   end
 
+  def pmp_doc_by_guid(guid)
+    response = pmp.query["urn:collectiondoc:hreftpl:docs"].where(guid: guid).get
+
+    response = nil if (response.response.raw['status'] == '404')
+    response = nil if response.response.raw['body'].blank?
+
+    response
+  end
+
   def pmp_doc_find_first(conditions)
-    pmp.query["urn:collectiondoc:query:docs"].where(conditions.merge(limit: 1)).items.first
+    response = pmp.query["urn:collectiondoc:query:docs"].where(conditions).get
+    response.items.first
   end
 
   def retrieve_doc(type, url)
     doc = nil
 
     guid = PMPGuidMapping.find_guid(source_name, type, url)
-    doc = pmp_doc_find_first(guid: guid) if guid
+
+    if guid
+      doc = pmp_doc_by_guid(guid)
+    end
 
     # no guid yet? look to see if a doc has the right tag
     if !doc
-      doc = pmp_doc_find_first(itag: tag_for_url(source_name, url))
-      PMPGuidMapping.create(source_name: source_name, source_type: type, source_id: url, guid: doc.guid) if doc
+      itag = tag_for_url(source_name, url)
+      doc = pmp_doc_find_first(itag: itag)
+
+      if doc && !guid
+        PMPGuidMapping.create(source_name: source_name, source_type: type, source_id: url, guid: doc.guid)
+      end
     end
 
     doc
