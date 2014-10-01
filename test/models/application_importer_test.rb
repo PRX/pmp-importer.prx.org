@@ -71,7 +71,7 @@ describe ApplicationImporter do
              :headers => {'Accept'=>'application/json', 'Authorization'=>'Basic Og==', 'Content-Type'=>'application/x-www-form-urlencoded', 'Host'=>'api.pmp.io:443'}).
         to_return(:status => 200, :body => pmp_token, :headers => {'Content-Type' => 'application/json; charset=utf-8'})
 
-      stub_request(:get, "https://api.pmp.io/docs?limit=1").
+      stub_request(:get, "https://api.pmp.io/docs").
         to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"1"}}]}', :headers => {})
 
       result = importer.pmp_doc_find_first({}).a.must_equal "1"
