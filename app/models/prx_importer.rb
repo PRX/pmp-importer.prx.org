@@ -7,7 +7,7 @@ require 'pmp'
 
 class PRXImporter < ApplicationImporter
 
-  attr_accessor :doc, :story
+  attr_accessor :doc, :story, :series
 
   def source_name
     'prx'
@@ -17,7 +17,30 @@ class PRXImporter < ApplicationImporter
     super
 
     # expect a prx story id as an option
-    prx_story_id = options[:prx_story_id]
+    if options[:prx_story_id]
+      import_story(options[:prx_story_id])
+    elsif options[:prx_series_id]
+      import_series(options[:prx_series_id])
+    end
+  end
+
+  def import_series(prx_series_id)
+    self.series = retrieve_series(prx_series_id)
+
+    stories = series.stories.get
+    while (stories) do
+      stories.each do |s|
+        import(prx_story_id: s.id)
+      end
+      stories = stories.links[:next] ? stories.next.get : nil
+    end
+  end
+
+  def retrieve_series(prx_series_id)
+    prx.get.series.first.where(id: prx_series_id).get
+  end
+
+  def import_story(prx_story_id)
 
     self.story = retrieve_story(prx_story_id)
     self.doc   = find_or_init_story_doc(story)
@@ -241,9 +264,8 @@ class PRXImporter < ApplicationImporter
     add_itag_to_doc(tag_doc, prx_tag(prx_obj.self.href))
   end
 
-
   def retrieve_story(prx_story_id)
-    prx.get.story.first.where(id: prx_story_id)
+    prx.get.story.first.where(id: prx_story_id).get
   end
 
   def find_or_init_story_doc(story)
@@ -280,6 +302,10 @@ class PRXImporter < ApplicationImporter
 
   def prx_web_endpoint
     options[:prx_web_endpoint] || 'https://www.prx.org/'
+  end
+
+  def retrieve_doc(type, url)
+    super(type, prx_url(url))
   end
 
   def prx_url(*path)
