@@ -58,7 +58,7 @@ GEM
       safe_yaml (~> 1.0.0)
     docile (1.1.5)
     erubis (2.7.0)
-    excon (0.39.5)
+    excon (0.39.6)
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -110,7 +110,7 @@ GEM
       multi_xml (~> 0.5)
       rack (~> 1.2)
     pg (0.17.1)
-    pmp (0.4.1)
+    pmp (0.5.0)
       activesupport
       excon
       faraday
@@ -207,7 +207,7 @@ DEPENDENCIES
   minitest-reporters
   minitest-spec-rails
   pg
-  pmp
+  pmp (~> 0.5.0)
   rails (= 4.1.5)
   rails_12factor
   sass-rails (~> 4.0.3)
