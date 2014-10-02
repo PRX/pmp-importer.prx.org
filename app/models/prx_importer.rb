@@ -30,7 +30,7 @@ class PRXImporter < ApplicationImporter
     stories = series.stories.get
     while (stories) do
       stories.each do |s|
-        import(prx_story_id: s.id)
+        PRXImporter.new.import_story(s.id)
       end
       stories = stories.links[:next] ? stories.next.get : nil
     end
@@ -41,6 +41,7 @@ class PRXImporter < ApplicationImporter
   end
 
   def import_story(prx_story_id)
+    logger.debug("import_story: #{prx_story_id}")
 
     self.story = retrieve_story(prx_story_id)
     self.doc   = find_or_init_story_doc(story)
@@ -55,11 +56,13 @@ class PRXImporter < ApplicationImporter
     set_tags
 
     doc.save
+    logger.debug("import_story: saved!")
 
     return doc
   end
 
   def set_account
+    logger.debug("set_account")
     account_doc = find_or_create_account_doc(story.account)
 
     # what rel to use?
@@ -98,6 +101,7 @@ class PRXImporter < ApplicationImporter
 
 
   def create_account_doc(account)
+    logger.debug("create_account_doc: #{account.id}")
     # what profile for an account doc?
 
     case account.type
@@ -136,7 +140,10 @@ class PRXImporter < ApplicationImporter
   end
 
   def set_series
+    logger.debug("set_series")
+
     return unless story.links[:series]
+
     series_doc = retrieve_doc('Series', story.series.self.href) || create_series_doc(story.series)
 
     add_link_to_doc(doc, 'collection', { href: series_doc.href, title: series_doc.title, rels:["urn:collectiondoc:collection:series"] })
@@ -168,6 +175,8 @@ class PRXImporter < ApplicationImporter
 
 
   def set_images
+    logger.debug("set_images")
+
     return unless story.links[:image]
 
     image_doc = find_or_create_image_doc(story.image)
@@ -200,6 +209,8 @@ class PRXImporter < ApplicationImporter
   end
 
   def set_audio
+    logger.debug("set_audio")
+
     Array(story.links[:audio]).each do |audio|
       audio_doc = find_or_create_audio_doc(audio, story.id)
       add_link_to_doc(doc, 'item', { href: audio_doc.href, title: audio_doc.title, rels: ['urn:collectiondoc:audio'] })
@@ -232,6 +243,8 @@ class PRXImporter < ApplicationImporter
   end
 
   def set_attributes
+    logger.debug("set_attributes")
+
     doc.hreflang       = "en"
     doc.title          = story.attributes[:title]
     doc.teaser         = story.shortDescription
@@ -247,12 +260,16 @@ class PRXImporter < ApplicationImporter
   end
 
   def set_links
+    logger.debug("set_links")
+
     add_link_to_doc(doc, 'alternate', { href: prx_web_link("pieces/#{story.id}") })
     # add_link_to_doc(doc, 'author', { href: prx_web_link("pieces/#{story.id}") })
     # add_link_to_doc(doc, 'copyright', { href: prx_web_link("pieces/#{story.id}") })
   end
 
   def set_tags
+    logger.debug("set_tags")
+
     set_standard_tags(doc, story)
     Array(story.attributes[:tags]).each{|t| add_tag_to_doc(doc, t) }
   end

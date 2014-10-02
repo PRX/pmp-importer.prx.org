@@ -2,6 +2,10 @@ class ApplicationImporter
 
   attr_accessor :options
 
+  def logger
+    @logger = Rails.logger
+  end
+
   def initialize(options={})
     self.options = HashWithIndifferentAccess.new(options)
   end
