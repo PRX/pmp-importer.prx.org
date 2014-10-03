@@ -14,6 +14,10 @@ class ApplicationImporter
     raise NotImplementedError.new("Subclass must implement source_name")
   end
 
+  def distributor_tag
+    ENV['DISTRIBUTOR_TAG'] || 'PRX'
+  end
+
   def import(options)
     self.options.merge!(options)
   end
@@ -74,11 +78,16 @@ class ApplicationImporter
     doc
   end
 
+  def set_standard_tags(tag_doc, url)
+    add_tag_to_doc(tag_doc, distributor_tag)
+
+    add_itag_to_doc(tag_doc, "#{distributor_tag.downcase}_test") unless Rails.env.production?
+    add_itag_to_doc(tag_doc, tag_for_url(source_name, url))
+  end
+
   def tag_for_url(source, url)
     "#{source}:#{url}"
   end
-
-  # these below could all be class methods I think
 
   def pmp_doc_profile(doc)
     # puts "doc.links['profile']: #{doc.links['profile'].inspect}"
@@ -89,12 +98,14 @@ class ApplicationImporter
   end
 
   def add_tag_to_doc(doc, tag)
+    tag = tag.strip
     doc.tags ||= []
     return if doc.tags.include?(tag)
     doc.tags << tag
   end
 
   def add_itag_to_doc(doc, tag)
+    tag = tag.strip
     doc.itags ||= []
     return if doc.itags.include?(tag)
     doc.itags << tag

@@ -56,7 +56,7 @@ class PRXImporter < ApplicationImporter
     set_tags
 
     doc.save
-    logger.debug("import_story: saved!")
+    logger.debug("import_story: #{prx_story_id} saved as: #{doc.guid}")
 
     return doc
   end
@@ -131,7 +131,7 @@ class PRXImporter < ApplicationImporter
     end
 
     # tags
-    set_standard_tags(adoc, account)
+    set_standard_tags(adoc, account.self.href)
 
     # guid
     adoc.save
@@ -153,6 +153,7 @@ class PRXImporter < ApplicationImporter
     sdoc = pmp.doc_of_type('series')
     sdoc.guid  = find_or_create_guid('Series', series)
     sdoc.title = series.title
+    sdoc.description = series.description
 
     # links
     # fix: this should be page not api url
@@ -165,7 +166,7 @@ class PRXImporter < ApplicationImporter
     end
 
     # tags
-    set_standard_tags(sdoc, series)
+    set_standard_tags(sdoc, series.self.href)
 
     # save it
     sdoc.save
@@ -192,8 +193,7 @@ class PRXImporter < ApplicationImporter
     idoc = nil
 
     idoc = pmp.doc_of_type('image')
-    idoc.guid = find_or_create_guid('Image', image)
-
+    idoc.guid   = find_or_create_guid('Image', image)
     idoc.title  = image.attributes[:caption] || image.attributes[:filename]
     idoc.byline = image.attributes[:credit] || ""
 
@@ -201,7 +201,7 @@ class PRXImporter < ApplicationImporter
     type = image.body['_links']['enclosure']['type']
     add_link_to_doc(idoc, 'enclosure', { href: prx_url(href), type: type, meta: {crop: 'medium'} })
 
-    set_standard_tags(idoc, image)
+    set_standard_tags(idoc, image.self.href)
 
     idoc.save
 
@@ -235,7 +235,7 @@ class PRXImporter < ApplicationImporter
 
     add_link_to_doc(adoc, 'enclosure', { href: enclosure_url, type: type, meta: {duration: audio.duration, size: audio.size} })
 
-    set_standard_tags(adoc, audio)
+    set_standard_tags(adoc, audio.self.href)
 
     adoc.save
 
@@ -270,15 +270,8 @@ class PRXImporter < ApplicationImporter
   def set_tags
     logger.debug("set_tags")
 
-    set_standard_tags(doc, story)
+    set_standard_tags(doc, story.self.href)
     Array(story.attributes[:tags]).each{|t| add_tag_to_doc(doc, t) }
-  end
-
-  def set_standard_tags(tag_doc, prx_obj)
-    add_tag_to_doc(tag_doc, 'PRX')
-
-    add_itag_to_doc(tag_doc, 'prx_test') unless Rails.env.production?
-    add_itag_to_doc(tag_doc, prx_tag(prx_obj.self.href))
   end
 
   def retrieve_story(prx_story_id)

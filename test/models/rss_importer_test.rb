@@ -52,9 +52,8 @@ describe RSSImporter do
         stub_request(:get, "https://api.pmp.io/").
           to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
 
-        stub_request(:get, "https://api.pmp.io/docs?limit=1&tag=_rss_http://99percentinvisible.prx.org_").
+        stub_request(:get, "https://api.pmp.io/docs?itag=rss:http://99percentinvisible.prx.org").
           to_return(:status => 200, :body => "", :headers => {})
-
 
       end
     }
