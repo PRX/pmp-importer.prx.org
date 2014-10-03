@@ -56,6 +56,7 @@ GEM
       thor
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
+    curb (0.8.6)
     docile (1.1.5)
     erubis (2.7.0)
     excon (0.39.6)
@@ -69,6 +70,10 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
+    feedjira (1.4.0)
+      curb (~> 0.8)
+      loofah (~> 2.0)
+      sax-machine (~> 1.0)
     fuzzyurl (0.2.2)
     hashie (3.3.1)
     hike (1.2.3)
@@ -86,11 +91,18 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+<<<<<<< HEAD
     minitest (5.4.2)
+=======
+    mini_portile (0.6.0)
+    minitest (5.4.1)
+>>>>>>> rss_import
     minitest-reporters (1.0.5)
       ansi
       builder
@@ -103,6 +115,8 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     netrc (0.7.7)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -157,6 +171,7 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    sax-machine (1.0.0)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -201,6 +216,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   coveralls
   factory_girl_rails
+  feedjira
   hyperresource
   jbuilder (~> 2.0)
   jquery-rails

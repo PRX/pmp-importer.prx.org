@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.themoth.org/~d/styles/itemcontent.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+	<channel>
+		<title>The Moth Podcast</title>
+		<link>http://themoth.prx.org</link>
+		<description>Since its launch in 1997, The Moth has presented thousands of true stories, told live and without notes, to standing-room-only crowds worldwide. Moth storytellers stand alone, under a spotlight, with only a microphone and a roomful of strangers. The storyteller and the audience embark on a high-wire act of shared experience which is both terrifying and exhilarating. Since 2008, The Moth podcast has featured many of our favorite stories told live on Moth stages around the country. For information on all of our programs and live events, visit themoth.org.</description>
+		<lastBuildDate>Tue, 16 Sep 2014 18:25:21 +0000</lastBuildDate>
+		<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<!-- podcast_generator="Blubrry PowerPress/5.0.9" mode="advanced" -->
+		<itunes:summary>Since its launch in 1997, The Moth has presented thousands of true stories, told live and without notes, to standing-room-only crowds worldwide. Moth storytellers stand alone, under a spotlight, with only a microphone and a roomful of strangers. The storyteller and the audience embark on a high-wire act of shared experience which is both terrifying and exhilarating. Since 2008, The Moth podcast has featured many of our favorite stories told live on Moth stages around the country. For information on all of our programs and live events, visit themoth.org.</itunes:summary>
+		<itunes:author>The Moth</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:image href="http://cdn.themoth.prx.org/wp-content/uploads/powerpress/moth_podcast_1400x1400.jpg"/>
+		<itunes:owner>
+			<itunes:name>The Moth</itunes:name>
+			<itunes:email>webmaster@themoth.org</itunes:email>
+		</itunes:owner>
+		<managingEditor>webmaster@themoth.org (The Moth)</managingEditor>
+		<copyright>2006-2014</copyright>
+		<itunes:subtitle>Since its launch in 1997, The Moth has presented thousands of true stories, told live and without notes, to standing-room-only crowds worldwide. Moth storytellers stand alone, under a spotlight, with only a microphone and a roomful of strangers. The story</itunes:subtitle>
+		<itunes:keywords>the moth, the moht, storytelling, stories, story, mainstage, story slam, New York, Los Angeles, improv, comedy</itunes:keywords>
+		<image>
+			<title>The Moth Podcast</title>
+			<url>http://cdn.themoth.prx.org/wp-content/uploads/powerpress/moth_podcast_prx_480x480.jpeg</url>
+			<link>http://themoth.prx.org</link>
+		</image>
+		<itunes:category text="Arts">
+			<itunes:category text="Performing Arts"/>
+		</itunes:category>
+		<itunes:category text="Comedy"/>
+		<atom10:link href="http://feeds.themoth.org/themothpodcast" rel="self" type="application/rss+xml" xmlns:atom10="http://www.w3.org/2005/Atom"/>
+		<feedburner:info uri="themothpodcast"/>
+		<atom10:link href="http://pubsubhubbub.appspot.com/" rel="hub" xmlns:atom10="http://www.w3.org/2005/Atom"/>
+		<media:copyright>2006-2014</media:copyright>
+		<media:thumbnail url="http://cdn.themoth.prx.org/wp-content/uploads/powerpress/moth_podcast_1400x1400.jpg"/>
+		<media:keywords>the moth, the moht, storytelling, stories, story, mainstage, story slam, New York, Los Angeles, improv, comedy</media:keywords>
+		<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Arts/Performing Arts</media:category>
+		<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Comedy</media:category>
+		<item>
+			<title>Ethan Hawke: Ode to Stepfather</title>
+			<link>http://feeds.themoth.org/~r/themothpodcast/~3/1gZI4X9gVas/</link>
+			<comments>http://themoth.prx.org/ethan-hawke-ode-to-stepfather/#comments</comments>
+			<pubDate>Tue, 16 Sep 2014 18:25:21 +0000</pubDate>
+			<dc:creator><![CDATA[Whitney Jones]]></dc:creator>
+			<category><![CDATA[Podcasts]]></category>
+			<category><![CDATA[WNYC]]></category>
+			<guid isPermaLink="false">http://themoth.prx.org/?p=2396</guid>
+			<description><![CDATA[A young boy grows up with the influence of a tough stepfather figure.]]></description>
+			<content:encoded><![CDATA[
+				<p>
+					A young boy grows up with the influence of a tough stepfather figure.</p>
+				<img height="1" src="http://feeds.feedburner.com/~r/themothpodcast/~4/1gZI4X9gVas" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://themoth.prx.org/ethan-hawke-ode-to-stepfather/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<itunes:subtitle>A young boy grows up with the influence of a tough stepfather figure.</itunes:subtitle>
+			<itunes:summary>A young boy grows up with the influence of a tough stepfather figure.</itunes:summary>
+			<itunes:author>The Moth</itunes:author>
+			<itunes:explicit>yes</itunes:explicit>
+			<itunes:duration>15:49</itunes:duration>
+			<media:content fileSize="9225896" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/DB2gR9VHC8k/moth_podcast_348_ethan_hawke.mp3"/>
+			<itunes:keywords>Podcasts, WNYC</itunes:keywords>
+			<feedburner:origLink>http://themoth.prx.org/ethan-hawke-ode-to-stepfather/</feedburner:origLink>
+			<enclosure length="9225896" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/DB2gR9VHC8k/moth_podcast_348_ethan_hawke.mp3"/>
+			<feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/cdn.themoth.prx.org/wp-content/uploads/moth_podcast_348_ethan_hawke.mp3</feedburner:origEnclosureLink>
+		</item>
+		<item>
+			<title>The Moth Radio Hour: Mismatch, Marriage, and a Marathon</title>
+			<link>http://feeds.themoth.org/~r/themothpodcast/~3/471t4XE2wuo/</link>
+			<comments>http://themoth.prx.org/the-moth-radio-hour-mismatch-marriage-and-a-marathon/#comments</comments>
+			<pubDate>Tue, 09 Sep 2014 18:27:35 +0000</pubDate>
+			<dc:creator><![CDATA[Whitney Jones]]></dc:creator>
+			<category><![CDATA[Podcasts]]></category>
+			<category><![CDATA[WNYC]]></category>
+			<guid isPermaLink="false">http://themoth.prx.org/?p=2392</guid>
+			<description><![CDATA[A woman follows love to a campsite, a man gets married and divorced and then remarried, and a public radio host runs the Boston Marathon as a guide for a visually impaired man.]]></description>
+			<content:encoded><![CDATA[
+				<div style="color: #000000;">
+					A woman follows love to a campsite, a man gets married and divorced and then remarried, and a public radio host runs the Boston Marathon as a guide for a visually impaired man.</div>
+				<img height="1" src="http://feeds.feedburner.com/~r/themothpodcast/~4/471t4XE2wuo" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://themoth.prx.org/the-moth-radio-hour-mismatch-marriage-and-a-marathon/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<itunes:subtitle>A woman follows love to a campsite, a man gets married and divorced and then remarried, and a public radio host runs the Boston Marathon as a guide for a visually impaired man.</itunes:subtitle>
+			<itunes:summary>A woman follows love to a campsite, a man gets married and divorced and then remarried, and a public radio host runs the Boston Marathon as a guide for a visually impaired man.</itunes:summary>
+			<itunes:author>The Moth</itunes:author>
+			<itunes:explicit>yes</itunes:explicit>
+			<itunes:duration>55:17</itunes:duration>
+			<media:content fileSize="28081106" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/Crqk_dQnPI4/moth_podcast_347_mrh_1419.mp3"/>
+			<itunes:keywords>Podcasts, WNYC</itunes:keywords>
+			<feedburner:origLink>http://themoth.prx.org/the-moth-radio-hour-mismatch-marriage-and-a-marathon/</feedburner:origLink>
+			<enclosure length="28081106" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/Crqk_dQnPI4/moth_podcast_347_mrh_1419.mp3"/>
+			<feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/cdn.themoth.prx.org/wp-content/uploads/moth_podcast_347_mrh_1419.mp3</feedburner:origEnclosureLink>
+		</item>
+		<item>
+			<title>Annie Duke: The Big Things You Don’t Do</title>
+			<link>http://feeds.themoth.org/~r/themothpodcast/~3/mXrJ-jXMntQ/</link>
+			<comments>http://themoth.prx.org/annie-duke-the-big-things-you-dont-do/#comments</comments>
+			<pubDate>Tue, 02 Sep 2014 15:58:56 +0000</pubDate>
+			<dc:creator><![CDATA[Whitney Jones]]></dc:creator>
+			<category><![CDATA[Podcasts]]></category>
+			<category><![CDATA[WNYC]]></category>
+			<guid isPermaLink="false">http://themoth.prx.org/?p=2388</guid>
+			<description><![CDATA[A woman plays the most high-stakes poker game of her life, live on camera.]]></description>
+			<content:encoded><![CDATA[
+				<p>
+					A woman plays the most high-stakes poker game of her life, live on camera.</p>
+				<img height="1" src="http://feeds.feedburner.com/~r/themothpodcast/~4/mXrJ-jXMntQ" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://themoth.prx.org/annie-duke-the-big-things-you-dont-do/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<itunes:subtitle>A woman plays the most high-stakes poker game of her life, live on camera.</itunes:subtitle>
+			<itunes:summary>A woman plays the most high-stakes poker game of her life, live on camera.</itunes:summary>
+			<itunes:author>The Moth</itunes:author>
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:duration>19:18</itunes:duration>
+			<media:content fileSize="20155492" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/KWbgQwmNCOM/moth_podcast_346_Annie_Duke.mp3"/>
+			<itunes:keywords>Podcasts, WNYC</itunes:keywords>
+			<feedburner:origLink>http://themoth.prx.org/annie-duke-the-big-things-you-dont-do/</feedburner:origLink>
+			<enclosure length="20155492" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/KWbgQwmNCOM/moth_podcast_346_Annie_Duke.mp3"/>
+			<feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/cdn.themoth.prx.org/wp-content/uploads/moth_podcast_346_Annie_Duke.mp3</feedburner:origEnclosureLink>
+		</item>
+		<item>
+			<title>Michael Massimino: A View of the Earth</title>
+			<link>http://feeds.themoth.org/~r/themothpodcast/~3/WAdkOvixfgM/</link>
+			<comments>http://themoth.prx.org/michael-massimino-a-view-of-the-earth/#comments</comments>
+			<pubDate>Tue, 26 Aug 2014 20:07:16 +0000</pubDate>
+			<dc:creator><![CDATA[Whitney Jones]]></dc:creator>
+			<category><![CDATA[Podcasts]]></category>
+			<category><![CDATA[WNYC]]></category>
+			<guid isPermaLink="false">http://themoth.prx.org/?p=2384</guid>
+			<description><![CDATA[An astronaut details his high stakes mission to repair the Hubble Space Telescope.]]></description>
+			<content:encoded><![CDATA[
+				<p>
+					An astronaut details his high stakes mission to repair the Hubble Space Telescope.</p>
+				<img height="1" src="http://feeds.feedburner.com/~r/themothpodcast/~4/WAdkOvixfgM" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://themoth.prx.org/michael-massimino-a-view-of-the-earth/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<itunes:subtitle>An astronaut details his high stakes mission to repair the Hubble Space Telescope.</itunes:subtitle>
+			<itunes:summary>An astronaut details his high stakes mission to repair the Hubble Space Telescope.</itunes:summary>
+			<itunes:author>The Moth</itunes:author>
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:duration>19:18</itunes:duration>
+			<media:content fileSize="10933841" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/6gRHWGvZ_tw/moth_podcast_345_michael_massimino.mp3"/>
+			<itunes:keywords>Podcasts, WNYC</itunes:keywords>
+			<feedburner:origLink>http://themoth.prx.org/michael-massimino-a-view-of-the-earth/</feedburner:origLink>
+			<enclosure length="10933841" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/6gRHWGvZ_tw/moth_podcast_345_michael_massimino.mp3"/>
+			<feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/cdn.themoth.prx.org/wp-content/uploads/moth_podcast_345_michael_massimino.mp3</feedburner:origEnclosureLink>
+		</item>
+		<item>
+			<title>George Dawes Green: The Haunted Freezer</title>
+			<link>http://feeds.themoth.org/~r/themothpodcast/~3/PneJ-t8tucU/</link>
+			<comments>http://themoth.prx.org/george-dawes-green-the-haunted-freezer/#comments</comments>
+			<pubDate>Tue, 19 Aug 2014 20:50:00 +0000</pubDate>
+			<dc:creator><![CDATA[Whitney Jones]]></dc:creator>
+			<category><![CDATA[Podcasts]]></category>
+			<category><![CDATA[WNYC]]></category>
+			<guid isPermaLink="false">http://themoth.prx.org/?p=2379</guid>
+			<description><![CDATA[Moth founder George Dawes Green recalls playing poker with his dearest friends.]]></description>
+			<content:encoded><![CDATA[
+				<p>
+					<span style="color: #000000;">
+						Moth founder George Dawes Green recalls playing poker with his dearest friends.</span>
+				</p>
+				<img height="1" src="http://feeds.feedburner.com/~r/themothpodcast/~4/PneJ-t8tucU" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://themoth.prx.org/george-dawes-green-the-haunted-freezer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<itunes:subtitle>Moth founder George Dawes Green recalls playing poker with his dearest friends.</itunes:subtitle>
+			<itunes:summary>Moth founder George Dawes Green recalls playing poker with his dearest friends.</itunes:summary>
+			<itunes:author>The Moth</itunes:author>
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:duration>16:25</itunes:duration>
+			<media:content fileSize="9549696" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/vt-8Mhb27r4/moth-podcast-344-george-dawes-green.mp3"/>
+			<itunes:keywords>Podcasts, WNYC</itunes:keywords>
+			<feedburner:origLink>http://themoth.prx.org/george-dawes-green-the-haunted-freezer/</feedburner:origLink>
+			<enclosure length="9549696" type="audio/mpeg" url="http://feeds.themoth.org/~r/themothpodcast/~5/vt-8Mhb27r4/moth-podcast-344-george-dawes-green.mp3"/>
+			<feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/cdn.themoth.prx.org/wp-content/uploads/moth-podcast-344-george-dawes-green.mp3</feedburner:origEnclosureLink>
+		</item>
+		<media:credit role="author">The Moth</media:credit>
+		<media:rating>nonadult</media:rating>
+		<media:description type="plain">Since its launch in 1997, The Moth has presented thousands of true stories, told live and without notes, to standing-room-only crowds worldwide. Moth storytellers stand alone, under a spotlight, with only a microphone and a roomful of strangers. The story</media:description>
+	</channel>
+</rss>

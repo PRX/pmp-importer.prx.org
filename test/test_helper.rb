@@ -23,5 +23,9 @@ class MiniTest::Spec
 end
 
 def json_file(name)
-  File.read( File.dirname(__FILE__) + "/fixtures/#{name}.json")
+  test_file("/fixtures/#{name}.json")
+end
+
+def test_file(path)
+  File.read( File.dirname(__FILE__) + path)
 end
