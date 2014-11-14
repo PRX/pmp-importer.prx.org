@@ -33,6 +33,13 @@ gem 'hyperresource'
 # for rss feeds
 gem 'feedjira'
 
+gem 'excon'
+gem 'faraday'
+# gem 'faraday-http-cache'
+# gem 'redis-activesupport'
+
+gem 'sidekiq'
+
 group :test do
   gem 'minitest-spec-rails'
   gem 'factory_girl_rails'
@@ -47,4 +54,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-ruby "2.1.1"
+ruby "2.1.4"

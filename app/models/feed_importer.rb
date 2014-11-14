@@ -1,34 +1,38 @@
 require 'hyperresource'
 require 'pmp'
 
-class RSSImporter < ApplicationImporter
+class FeedImporter < ApplicationImporter
   attr_accessor :doc, :item, :feed, :feed_doc
 
   def source_name
-    'rss'
+    'feed'
   end
 
   def import(options={})
     super
 
-    # get the feed url
-    rss_url = options[:rss_url]
-    self.feed = retrieve_feed(rss_url)
-
-    # find or create a pmp series for the feed
-    self.feed_doc = find_or_create_feed_doc(feed)
-
-    feed.entries.each do |item|
-      self.item = self.doc = nil
-      import_item(item)
+    # expect a prx story id as an option
+    if options[:feed_entry_id]
+      import_entry(options[:feed_entry_id])
+    elsif options[:feed_id]
+      import_feed(options[:feed_id])
     end
-
   end
 
-  def import_item(item)
-    logger.debug("import_item: #{item.entry_id}")
+  def import_feed(feed_id)
+    self.feed = Feed.find(feed_id)
 
-    self.item = item
+    feed.entry_ids.each do |feed_entry_id|
+      FeedImporter.new.import_entry(feed_entry_id)
+    end
+  end
+
+  def import_entry(feed_entry_id)
+    logger.debug("import_entry: #{feed_entry_id}")
+
+    self.item = FeedEntry.find(feed_entry_id)
+    self.feed = item.feed
+    self.feed_doc = find_or_create_feed_doc(feed)
     self.doc  = find_or_init_item_doc(item)
 
     set_series
@@ -40,7 +44,7 @@ class RSSImporter < ApplicationImporter
     set_tags
 
     doc.save
-    logger.debug("import_item: #{item.entry_id} saved as: #{doc.guid}")
+    logger.debug("import_entry: #{item.entry_id} saved as: #{doc.guid}")
 
     return doc
   end
@@ -50,9 +54,9 @@ class RSSImporter < ApplicationImporter
 
     set_standard_tags(doc, item.entry_id)
 
-    (item.itunes_keywords || '').split(',').each{|kw| add_tag_to_doc(doc, kw)}
+    (item.keywords || '').split(',').each{|kw| add_tag_to_doc(doc, kw)}
 
-    if item.itunes_explicit && item.itunes_explicit != 'no'
+    if item.explicit
       add_tag_to_doc(doc, 'explicit')
     end
   end
@@ -71,14 +75,13 @@ class RSSImporter < ApplicationImporter
     doc.hreflang       = "en"
     doc.title          = item.title
 
-    doc.teaser         = item.itunes_subtitle
-    doc.description    = item.itunes_summary || item.summary || strip_tags(content)
+    doc.teaser         = item.subtitle
+    doc.description    = item.summary || strip_tags(content)
     doc.contentencoded = item.content
-    doc.byline         = item.itunes_author || feed_doc.byline
+    doc.byline         = item.author || feed_doc.byline
 
     doc.published      = item.published || item.last_modified
     doc.valid          = {from: doc.published, to: (doc.published + 1000.years)}
-
   end
 
   def set_series
@@ -94,7 +97,7 @@ class RSSImporter < ApplicationImporter
 
     return if item.itunes_image.blank?
 
-    image_doc = find_or_create_image_doc(item.itunes_image)
+    image_doc = find_or_create_image_doc(item.image_url)
     add_link_to_doc(doc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
   end
 
@@ -120,7 +123,7 @@ class RSSImporter < ApplicationImporter
     href     = item.enclosure_url
     type     = item.enclosure_type
     size     = item.enclosure_length
-    duration = seconds_for_duration(item.itunes_duration)
+    duration = item.duration
     add_link_to_doc(adoc, 'enclosure', { href: href, type: type, meta: {size: size, duration: duration } })
 
     set_standard_tags(adoc, item.enclosure_url)
@@ -130,16 +133,12 @@ class RSSImporter < ApplicationImporter
     adoc
   end
 
-  def seconds_for_duration(duration)
-    duration.split(':').reverse.inject([0,0]){|info, i| sum = (i.to_i * 60**info[0]) + info[1]; [(info[0]+1), sum] }[1]
-  end
-
   def find_or_init_item_doc(item)
-    sdoc = retrieve_doc('RSSItem', item.entry_id)
+    sdoc = retrieve_doc('FeedEntry', item.id)
 
     if !sdoc
       sdoc = pmp.doc_of_type('story')
-      sdoc.guid = find_or_create_guid('RSSItem', item.entry_id)
+      sdoc.guid = find_or_create_guid('FeedEntry', item.id)
     end
 
     sdoc
@@ -147,14 +146,14 @@ class RSSImporter < ApplicationImporter
 
   def find_or_create_feed_doc(feed)
     # puts "feed: #{feed.inspect}"
-    retrieve_doc('RSSFeed', feed.url) || create_feed_doc(feed)
+    retrieve_doc('Feed', feed.id) || create_feed_doc(feed)
   end
 
   def create_feed_doc(feed)
     sdoc = pmp.doc_of_type('series')
-    sdoc.guid        = find_or_create_guid('RSSFeed', feed.url)
+    sdoc.guid        = find_or_create_guid('Feed', feed.id)
     sdoc.title       = feed.title
-    
+
     sdoc.teaser      = feed.itunes_subtitle || feed.description
     sdoc.description = feed.itunes_summary || feed.description
     sdoc.byline      = extract_byline(feed)
@@ -215,7 +214,7 @@ class RSSImporter < ApplicationImporter
   end
 
   def extract_byline(feed)
-    owners = feed.itunes_owners.collect{|o| puts o.name }.join(', ') if (feed.itunes_owners && feed.itunes_owners.size > 0)
+    owners = feed.itunes_owners.collect{|o| o.name.strip }.join(', ') if (feed.itunes_owners && feed.itunes_owners.size > 0)
     owners || feed.itunes_author || feed.managingEditor
   end
 
@@ -224,11 +223,11 @@ class RSSImporter < ApplicationImporter
 
     # pull the feed
     feed = Feedjira::Feed.fetch_and_parse(rss_url, {
-      on_success: ->(url, feed){ puts "url: #{url}, feed: #{feed.inspect}" } ,
-      on_failure: ->(c, err){ puts "c: #{c.response_code}, err: #{err.inspect}"; can_process = false }
+      on_success: ->(url, feed){ logger.debug("loaded url: #{url}") } ,
+      on_failure: ->(c, err){ logger.error("c: #{c.response_code}, err: #{err.inspect}"); can_process = false }
     })
 
-    puts "can_process: #{can_process}, feed: #{feed.class.inspect}: #{feed.inspect}"
+    # puts "can_process: #{can_process}, feed: #{feed.class.inspect}: #{feed.inspect}"
     can_process ? feed : nil
   end
 

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Love + Radio</title>
+    <link>http://loveandradio.org</link>
+    <pubDate>Mon, 29 Sep 2014 15:49:52 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Sep 2014 15:49:52 +0000</lastBuildDate>
+    <ttl>60</ttl>
+    <language>en</language>
+    <copyright>Copyright Love and Radio, LLC</copyright>
+    <webMaster>feeds@soundcloud.com (SoundCloud Feeds)</webMaster>
+    <description>Nick van der Kolk's Love and Radio features in-depth, otherworldly-produced interviews with an eclectic range of subjects, from the seedy to the sublime. Get inside the mind of a rogue taxidermist. Find out what it's like to experience a stroke firsthand. Or spend time with an artist who gives away her life savings every night. You've never heard anything like it before. Powered by PRX's Radiotopia.</description>
+    <itunes:subtitle>Listen with your headphones on. Powered by Radiotopia.</itunes:subtitle>
+    <itunes:author>Love and Radio</itunes:author>
+    <itunes:explicit>yes</itunes:explicit>
+    <itunes:image href="http://loveandradio.org/images/Loveandradio14002.jpg"/>
+    <image>
+      <url>http://i1.sndcdn.com/avatars-000041262272-ykduz7-original.jpg?86347b7</url>
+      <title>Love + Radio</title>
+      <link>http://loveandradio.org</link>
+    </image>
+    <atom10:link href="http://feeds.feedburner.com/loveplusradio" rel="self" type="application/rss+xml" xmlns:atom10="http://www.w3.org/2005/Atom"/>
+    <feedburner:info uri="loveplusradio"/>
+    <atom10:link href="http://pubsubhubbub.appspot.com/" rel="hub" xmlns:atom10="http://www.w3.org/2005/Atom"/>
+    <media:copyright>Copyright Love and Radio, LLC</media:copyright>
+    <media:thumbnail url="http://loveandradio.org/images/Loveandradio14002.jpg"/>
+    <media:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</media:keywords>
+    <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Society &amp; Culture</media:category>
+    <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Arts</media:category>
+    <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Music</media:category>
+    <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Comedy</media:category>
+    <itunes:owner>
+      <itunes:email>contact@loveandradio.org</itunes:email>
+      <itunes:name>Love and Radio</itunes:name>
+    </itunes:owner>
+    <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+    <itunes:summary>Nick van der Kolk's Love and Radio features intimate and otherworldly-produced interviews with an eclectic range of subjects, from the seedy to the sublime. Powered by Radiotopia.</itunes:summary>
+    <itunes:category text="Society &amp; Culture"/>
+    <itunes:category text="Arts"/>
+    <itunes:category text="Music"/>
+    <itunes:category text="Comedy"/>
+    <feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2Floveplusradio" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/169273014</guid>
+      <title>Of Birds and Boundaries</title>
+      <pubDate>Thu, 25 Sep 2014 05:33:55 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/Hkhuq8RG-10/of-birds-and-boundaries</link>
+      <itunes:duration>00:31:45</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>An eruv is a ritual enclosure that allows religious Jews to negate rules against carrying certain objects (like housekeys or strollers) during the Sabbath. This conversation is not about that.</itunes:summary>
+      <itunes:subtitle>An eruv is a ritual enclosure that allows religio…</itunes:subtitle>
+      <description>An eruv is a ritual enclosure that allows religious Jews to negate rules against carrying certain objects (like housekeys or strollers) during the Sabbath. This conversation is not about that.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/Hkhuq8RG-10&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000092235032-5a9yhm-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="45936500" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/N25xS0rRhbE/169273014-loveandradio-of-birds-and-boundaries.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/of-birds-and-boundaries</feedburner:origLink>
+      <enclosure length="45936500" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/N25xS0rRhbE/169273014-loveandradio-of-birds-and-boundaries.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/169273014-loveandradio-of-birds-and-boundaries.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/164077345</guid>
+      <title>Choir Boy</title>
+      <pubDate>Thu, 21 Aug 2014 05:11:05 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/us1IicZ_ofc/choir-boy</link>
+      <itunes:duration>00:37:18</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Tom Justice is passionate about cycling, and was on the shortlist for the US Olympic Team. Also, he's a bank robber.</itunes:summary>
+      <itunes:subtitle>Tom Justice is passionate about cycling, and was …</itunes:subtitle>
+      <description>Tom Justice is passionate about cycling, and was on the shortlist for the US Olympic Team. Also, he's a bank robber.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/us1IicZ_ofc&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000088682567-5fdwm6-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="53713198" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/p-nIoyBh3sw/164077345-loveandradio-choir-boy.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/choir-boy</feedburner:origLink>
+      <enclosure length="53713198" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/p-nIoyBh3sw/164077345-loveandradio-choir-boy.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/164077345-loveandradio-choir-boy.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/160842944</guid>
+      <title>Sesquipedalian</title>
+      <pubDate>Tue, 29 Jul 2014 19:39:14 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/PO0yY3M8xCA/sesquipedalian</link>
+      <itunes:duration>00:51:18</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Charles Farrell was born to a sophisticated middle class family in Boston, but at age 12, he left home and came of age on the street, joining “low-life culture”, the underbelly of boxing, and avant garde piano.</itunes:summary>
+      <itunes:subtitle>Charles Farrell was born to a sophisticated middl…</itunes:subtitle>
+      <description>Charles Farrell was born to a sophisticated middle class family in Boston, but at age 12, he left home and came of age on the street, joining “low-life culture”, the underbelly of boxing, and avant garde piano.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/PO0yY3M8xCA&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000086579864-6wqj8i-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="74606554" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/tXl_5zrK240/160842944-loveandradio-sesquipedalian.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/sesquipedalian</feedburner:origLink>
+      <enclosure length="74606554" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/tXl_5zrK240/160842944-loveandradio-sesquipedalian.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/160842944-loveandradio-sesquipedalian.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/154078323</guid>
+      <title>I, Sitting Beside Me</title>
+      <pubDate>Thu, 12 Jun 2014 18:57:38 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/_163Ysltf8s/i-sitting-beside-myself</link>
+      <itunes:duration>00:37:31</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>In 1987, during the last years of the Cold War, a West German teenager with only about 50 hours of flying experience rented a Cessna and departed on a two week trip. His goal was to fly over the Iron Curtain and land in Moscow.</itunes:summary>
+      <itunes:subtitle>In 1987, during the last years of the Cold War, a…</itunes:subtitle>
+      <description>In 1987, during the last years of the Cold War, a West German teenager with only about 50 hours of flying experience rented a Cessna and departed on a two week trip. His goal was to fly over the Iron Curtain and land in Moscow.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/_163Ysltf8s&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000082201668-yzdlit-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="54030836" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/6OsHSI6yndA/154078323-loveandradio-i-sitting-beside-myself.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/i-sitting-beside-myself</feedburner:origLink>
+      <enclosure length="54030836" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/6OsHSI6yndA/154078323-loveandradio-i-sitting-beside-myself.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/154078323-loveandradio-i-sitting-beside-myself.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/149322864</guid>
+      <title>Hostile Planet</title>
+      <pubDate>Tue, 13 May 2014 14:01:26 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/GHyoxICijDI/hostile-planet</link>
+      <itunes:duration>00:27:15</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>We think of certain events as profoundly life-altering. Getting married or emigrating to a new country, say. But you can always get divorced, and you can almost always move back. Taylor is weighing a life decision from which there would be no turning back.</itunes:summary>
+      <itunes:subtitle>We think of certain events as profoundly life-alt…</itunes:subtitle>
+      <description>We think of certain events as profoundly life-altering. Getting married or emigrating to a new country, say. But you can always get divorced, and you can almost always move back. Taylor is weighing a life decision from which there would be no turning back.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/GHyoxICijDI&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000079311618-wb1cjb-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="39238216" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/QpwVqOHy5co/149322864-loveandradio-hostile-planet.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/hostile-planet</feedburner:origLink>
+      <enclosure length="39238216" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/QpwVqOHy5co/149322864-loveandradio-hostile-planet.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/149322864-loveandradio-hostile-planet.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/143740810</guid>
+      <title>Another Planet</title>
+      <pubDate>Tue, 08 Apr 2014 18:58:55 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/lQ4S__NA7uE/another-planet</link>
+      <itunes:duration>00:34:22</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>The true story of Clyde Casey, a street performer who used surrealism and abstract art to fight crime in Los Angeles' Skid Row in the 1980s, and the creator of a place called Another Planet. Also featuring the voices of Tim Robbins (yes, THAT Tim Robbins), Lonnie Johnson, Flame Simon, and Richard Haxton.</itunes:summary>
+      <itunes:subtitle>The true story of Clyde Casey, a street performer…</itunes:subtitle>
+      <description>The true story of Clyde Casey, a street performer who used surrealism and abstract art to fight crime in Los Angeles' Skid Row in the 1980s, and the creator of a place called Another Planet. Also featuring the voices of Tim Robbins (yes, THAT Tim Robbins), Lonnie Johnson, Flame Simon, and Richard Haxton.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/lQ4S__NA7uE&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000075983125-g78frp-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="49497662" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/Zq7N9Vhf_yE/143740810-loveandradio-another-planet.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/another-planet</feedburner:origLink>
+      <enclosure length="49497662" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/Zq7N9Vhf_yE/143740810-loveandradio-another-planet.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/143740810-loveandradio-another-planet.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/137089846</guid>
+      <title>The Silver Dollar</title>
+      <pubDate>Thu, 27 Feb 2014 21:01:27 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/O3KP9qI8RCs/the-silver-dollar</link>
+      <itunes:duration>00:39:59</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Music is Daryl Davis' profession, but extreme racism is his obsession.</itunes:summary>
+      <itunes:subtitle>Music is Daryl Davis' profession, but extreme rac…</itunes:subtitle>
+      <description>Music is Daryl Davis' profession, but extreme racism is his obsession.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/O3KP9qI8RCs&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000072108491-ni23fg-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="57592092" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/P_f97_v43gw/137089846-loveandradio-the-silver-dollar.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-silver-dollar</feedburner:origLink>
+      <enclosure length="57592092" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/P_f97_v43gw/137089846-loveandradio-the-silver-dollar.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/137089846-loveandradio-the-silver-dollar.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/130716292</guid>
+      <title>The Superchat</title>
+      <pubDate>Tue, 21 Jan 2014 23:31:43 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/o2OOm48HHWM/the-superchat</link>
+      <itunes:duration>00:32:34</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A couple months ago, a friend handed Julia a scrap of paper with a phone number on it. One night, bored and maybe a little tipsy, she called it up. This is who she met.</itunes:summary>
+      <itunes:subtitle>A couple months ago, a friend handed Julia a scra…</itunes:subtitle>
+      <description>A couple months ago, a friend handed Julia a scrap of paper with a phone number on it. One night, bored and maybe a little tipsy, she called it up. This is who she met.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/o2OOm48HHWM&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000068637071-qe7d4n-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="31270451" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/_CfRoNRtjiw/130716292-loveandradio-the-superchat.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-superchat</feedburner:origLink>
+      <enclosure length="31270451" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/_CfRoNRtjiw/130716292-loveandradio-the-superchat.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/130716292-loveandradio-the-superchat.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/124185440</guid>
+      <title>The Pandrogyne</title>
+      <pubDate>Tue, 10 Dec 2013 18:23:03 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/mLW2yr-XRvA/the-pandrogyne</link>
+      <itunes:duration>00:29:03</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Genesis Breyer P-Orridge is the founding fa/mo/ther of Industrial music, a performance artist, and a very, very, very devoted husband.</itunes:summary>
+      <itunes:subtitle>Genesis Breyer P-Orridge is the founding fa/mo/th…</itunes:subtitle>
+      <description>Genesis Breyer P-Orridge is the founding fa/mo/ther of Industrial music, a performance artist, and a very, very, very devoted husband.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/mLW2yr-XRvA&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000064990964-auo5lj-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="41842112" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/T6IA4-DLkDg/124185440-loveandradio-the-pandrogyne.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-pandrogyne</feedburner:origLink>
+      <enclosure length="41842112" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/T6IA4-DLkDg/124185440-loveandradio-the-pandrogyne.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/124185440-loveandradio-the-pandrogyne.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/80233342</guid>
+      <title>Jack and Ellen</title>
+      <pubDate>Thu, 21 Feb 2013 18:04:37 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/t-QABXQ7mKA/jack-and-ellen</link>
+      <itunes:duration>00:31:15</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Hey kids, this interview isn't for you. You should skip this one.
+
+Ellen was struggling for money, working as a Subway &quot;sandwich artist&quot; (yes, that's a real thing). So she decided to find a new job, and settled on one that allowed her to make over $30,000 for just a couple hours of work each week. One with emotional and moral consequences she didn't fully anticipate.
+
+Produced by Mooj Zadie, Brendan Baker, and Nick van der Kolk, with help from Mark Ristich, Sharon Mashihi, Rachel James, Matthew Kielty, and Lingling Yang.</itunes:summary>
+      <itunes:subtitle>Hey kids, this interview isn't for you. You shoul…</itunes:subtitle>
+      <description>&lt;em&gt;Hey kids, this interview isn't for you. You should skip this one.&lt;/em&gt;
+
+Ellen was struggling for money, working as a Subway &quot;sandwich artist&quot; (yes, &lt;a href=&quot;http://www.subway.com/subwayroot/careers/default.aspx#&quot;&gt;that's a real thing&lt;/a&gt;). So she decided to find a new job, and settled on one that allowed her to make over $30,000 for just a couple hours of work each week. One with emotional and moral consequences she didn't fully anticipate.
+
+Produced by Mooj Zadie, Brendan Baker, and Nick van der Kolk, with help from Mark Ristich, Sharon Mashihi, Rachel James, Matthew Kielty, and Lingling Yang.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/t-QABXQ7mKA&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000042313296-k32yph-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="45008270" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/aio-xUof3Os/80233342-loveandradio-jack-and-ellen.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/jack-and-ellen</feedburner:origLink>
+      <enclosure length="45008270" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/aio-xUof3Os/80233342-loveandradio-jack-and-ellen.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/80233342-loveandradio-jack-and-ellen.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/72167248</guid>
+      <title>Greenberg's War</title>
+      <pubDate>Sat, 22 Dec 2012 05:10:47 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/7oBeAQoRhcg/greenbergs-war</link>
+      <itunes:duration>00:22:59</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Lewis Greenberg is an artist unlike any other, a winner of the coveted Geezer of the Year award, and a man on a mission--much to the chagrin of his Ballwin, Missouri neighbors.</itunes:summary>
+      <itunes:subtitle>Lewis Greenberg is an artist unlike any other, a …</itunes:subtitle>
+      <description>Lewis Greenberg is an artist unlike any other, a winner of the coveted &lt;a href=&quot;http://blogs.riverfronttimes.com/dailyrft/2010/10/lewis_greenberg_ballwin_lawn_artist_in_county_jail.php&quot;&gt;Geezer of the Year award&lt;/a&gt;, and a man on a mission--much to the chagrin of his Ballwin, Missouri neighbors.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/7oBeAQoRhcg&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000036740674-v1r9nh-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="22075767" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/SzQEoi8-pKY/72167248-loveandradio-greenbergs-war.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/greenbergs-war</feedburner:origLink>
+      <enclosure length="22075767" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/SzQEoi8-pKY/72167248-loveandradio-greenbergs-war.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/72167248-loveandradio-greenbergs-war.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/53407139</guid>
+      <title>Seventy Weeks</title>
+      <pubDate>Thu, 19 Jul 2012 17:26:22 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/XoerWGAniFk/seventy-weeks</link>
+      <itunes:duration>00:35:59</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Andre Taylor identified strongly with Daniel from the Bible, who interpreted the visions and dreams of kings. And like Daniel, he spent 3 years in a Babylonian captivity of sorts. But Daniel never had quite the unorthodox career path of Andre.</itunes:summary>
+      <itunes:subtitle>Andre Taylor identified strongly with Daniel from…</itunes:subtitle>
+      <description>Andre Taylor identified strongly with Daniel from the Bible, who interpreted the visions and dreams of kings. And like Daniel, he spent 3 years in a Babylonian captivity of sorts. But Daniel never had quite the unorthodox career path of Andre.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/XoerWGAniFk&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000026959198-t6qbd4-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="34544458" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/2BIRAfAA5-w/53407139-loveandradio-seventy-weeks.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/seventy-weeks</feedburner:origLink>
+      <enclosure length="34544458" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/2BIRAfAA5-w/53407139-loveandradio-seventy-weeks.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/53407139-loveandradio-seventy-weeks.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/47311396</guid>
+      <title>Fix</title>
+      <pubDate>Wed, 23 May 2012 13:58:30 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/fHmHySRhOiA/fix</link>
+      <itunes:duration>00:54:42</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A crusader for truth, or, as Karl Rove called him: &quot;a nut with internet access&quot;? Jason Leopold wanted to be a part of something, and that quest brought him through a labyrinthine world of decadent glam metal, dangerous mafioso, love, and investigative journalism challenging the heights of government and corporate power.</itunes:summary>
+      <itunes:subtitle>A crusader for truth, or, as Karl Rove called him…</itunes:subtitle>
+      <description>A crusader for truth, or, as Karl Rove called him: &quot;a nut with internet access&quot;? Jason Leopold wanted to be a part of something, and that quest brought him through a labyrinthine world of decadent glam metal, dangerous mafioso, love, and investigative journalism challenging the heights of government and corporate power.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/fHmHySRhOiA&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000023814846-x4nvvl-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="78767233" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/5VVnN6eY4sw/47311396-loveandradio-fix.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/fix</feedburner:origLink>
+      <enclosure length="78767233" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/5VVnN6eY4sw/47311396-loveandradio-fix.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/47311396-loveandradio-fix.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34029390</guid>
+      <title>Bedouin Love (Revisited)</title>
+      <pubDate>Sat, 21 Jan 2012 00:01:37 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/ATJ6ZriKy1k/season-3-is-coming</link>
+      <itunes:duration>00:09:27</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Bedouin Love (Revisited) by Love + Radio</itunes:summary>
+      <itunes:subtitle>Bedouin Love (Revisited) by Love + Radio</itunes:subtitle>
+      <description>Bedouin Love (Revisited) by Love + Radio&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/ATJ6ZriKy1k&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017084595-wcple7-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="9097569" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/WT2EC7QZ9VU/34029390-loveandradio-season-3-is-coming.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/season-3-is-coming</feedburner:origLink>
+      <enclosure length="9097569" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/WT2EC7QZ9VU/34029390-loveandradio-season-3-is-coming.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34029390-loveandradio-season-3-is-coming.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34029214</guid>
+      <title>The Man in the Road</title>
+      <pubDate>Fri, 20 Jan 2012 23:59:07 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/39Fp_zyE1c0/the-man-in-the-road</link>
+      <itunes:duration>00:27:07</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>On a late night along an empty Utah highway, Melvin Dummar says he came across a bloodied man lying by the road. It’s cliched to say this, but it’s really true: the story of that discovery would profoundly alter the course of his life forever.</itunes:summary>
+      <itunes:subtitle>On a late night along an empty Utah highway, Melv…</itunes:subtitle>
+      <description>On a late night along an empty Utah highway, Melvin Dummar says he came across a bloodied man lying by the road. It’s cliched to say this, but it’s really true: the story of that discovery would profoundly alter the course of his life forever.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/39Fp_zyE1c0&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017084457-lqk87z-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="26056261" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/Yw0QjBmf2b8/34029214-loveandradio-the-man-in-the-road.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-man-in-the-road</feedburner:origLink>
+      <enclosure length="26056261" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/Yw0QjBmf2b8/34029214-loveandradio-the-man-in-the-road.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34029214-loveandradio-the-man-in-the-road.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34028947</guid>
+      <title>The Wisdom of Jay Thunderbolt</title>
+      <pubDate>Fri, 20 Jan 2012 23:55:39 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/326iY56iT4o/the-wisdom-of-jay</link>
+      <itunes:duration>00:28:12</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Jay Thunderbolt's business card is a little mysterious. It reads, &quot;Thunderbolt - Party Naked&quot; and gives a phone number.</itunes:summary>
+      <itunes:subtitle>Jay Thunderbolt's business card is a little myste…</itunes:subtitle>
+      <description>Jay Thunderbolt's business card is a little mysterious. It reads, &quot;Thunderbolt - Party Naked&quot; and gives a phone number.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/326iY56iT4o&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017084321-zq772f-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="27070416" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/awsFREC2QJ4/34028947-loveandradio-the-wisdom-of-jay.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-wisdom-of-jay</feedburner:origLink>
+      <enclosure length="27070416" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/awsFREC2QJ4/34028947-loveandradio-the-wisdom-of-jay.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34028947-loveandradio-the-wisdom-of-jay.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34028682</guid>
+      <title>The Businesswoman</title>
+      <pubDate>Fri, 20 Jan 2012 23:52:30 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/vEHdk14unvc/the-businesswoman</link>
+      <itunes:duration>00:26:15</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>&quot;I don't know you and you don't know me,&quot; I said. &quot;I could tell you any secret and it wouldn't matter.&quot;
+
+&quot;It's funny you should mention that,&quot; she said, &quot;because I've got a secret I've only told my closest friend.&quot;</itunes:summary>
+      <itunes:subtitle>&quot;I don't know you and you don't know me,&quot; I said.…</itunes:subtitle>
+      <description>&quot;I don't know you and you don't know me,&quot; I said. &quot;I could tell you any secret and it wouldn't matter.&quot;
+
+&quot;It's funny you should mention that,&quot; she said, &quot;because I've got a secret I've only told my closest friend.&quot;&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/vEHdk14unvc&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017084211-vlwraj-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="25225710" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/5nX-5cXhAww/34028682-loveandradio-the-businesswoman.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-businesswoman</feedburner:origLink>
+      <enclosure length="25225710" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/5nX-5cXhAww/34028682-loveandradio-the-businesswoman.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34028682-loveandradio-the-businesswoman.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34028481</guid>
+      <title>Milk-eyed Bender</title>
+      <pubDate>Fri, 20 Jan 2012 23:49:58 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/ORXl2x545SA/milk-eyed-bender</link>
+      <itunes:duration>00:14:44</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A call from a well-know musician gets very weird, very quickly.</itunes:summary>
+      <itunes:subtitle>A call from a well-know musician gets very weird,…</itunes:subtitle>
+      <description>A call from a well-know musician gets very weird, very quickly.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/ORXl2x545SA&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017084128-96lvxd-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="7074199" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/SmBmU-3ZKRo/34028481-loveandradio-milk-eyed-bender.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/milk-eyed-bender</feedburner:origLink>
+      <enclosure length="7074199" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/SmBmU-3ZKRo/34028481-loveandradio-milk-eyed-bender.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34028481-loveandradio-milk-eyed-bender.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34028312</guid>
+      <title>The List</title>
+      <pubDate>Fri, 20 Jan 2012 23:47:47 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/4yfDjhWpXKc/the-list</link>
+      <itunes:duration>00:35:54</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Adam Warner has a very ambitious list of accomplishments he's trying to achieve. It's not his list though.</itunes:summary>
+      <itunes:subtitle>Adam Warner has a very ambitious list of accompli…</itunes:subtitle>
+      <description>Adam Warner has a very ambitious list of accomplishments he's trying to achieve. It's not his list though.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/4yfDjhWpXKc&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017084004-dqccu7-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="34492891" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/XM7VKMg1wNk/34028312-loveandradio-the-list.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/the-list</feedburner:origLink>
+      <enclosure length="34492891" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/XM7VKMg1wNk/34028312-loveandradio-the-list.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34028312-loveandradio-the-list.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34027982</guid>
+      <title>Dirty Balloons</title>
+      <pubDate>Fri, 20 Jan 2012 23:43:10 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/u01VVMFSj70/dirty-balloons</link>
+      <itunes:duration>00:33:02</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Amy was dead broke when she found a Craigslist ad looking for a balloon porn fetish model.</itunes:summary>
+      <itunes:subtitle>Amy was dead broke when she found a Craigslist ad…</itunes:subtitle>
+      <description>Amy was dead broke when she found a Craigslist ad looking for a balloon porn fetish model.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/u01VVMFSj70&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017083826-8ed5te-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="31741755" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/in7sALRMNjQ/34027982-loveandradio-dirty-balloons.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/dirty-balloons</feedburner:origLink>
+      <enclosure length="31741755" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/in7sALRMNjQ/34027982-loveandradio-dirty-balloons.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34027982-loveandradio-dirty-balloons.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34027497</guid>
+      <title>Split Brain</title>
+      <pubDate>Fri, 20 Jan 2012 23:37:40 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/0vpRUYmtXhg/split-brain</link>
+      <itunes:duration>00:28:05</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Dr. Jill Bolte Taylor is a brain scientist who remembers every moment of her life-altering stroke.</itunes:summary>
+      <itunes:subtitle>Dr. Jill Bolte Taylor is a brain scientist who re…</itunes:subtitle>
+      <description>Dr. Jill Bolte Taylor is a brain scientist who remembers every moment of her life-altering stroke.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/0vpRUYmtXhg&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017083638-b5m7td-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="26985808" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/amYka1USBKo/34027497-loveandradio-split-brain.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/split-brain</feedburner:origLink>
+      <enclosure length="26985808" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/amYka1USBKo/34027497-loveandradio-split-brain.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34027497-loveandradio-split-brain.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34027201</guid>
+      <title>Aftermath</title>
+      <pubDate>Fri, 20 Jan 2012 23:33:51 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/lrkGoeEbvTI/aftermath</link>
+      <itunes:duration>00:17:24</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>The Aftermath, Inc., headed by Tim Reifsteck, headquarters is nestled in a strip of ordinary office buildings in the Chicago suburbs, but there’s nothing bland about the service the company provides.</itunes:summary>
+      <itunes:subtitle>The Aftermath, Inc., headed by Tim Reifsteck, hea…</itunes:subtitle>
+      <description>The Aftermath, Inc., headed by Tim Reifsteck, headquarters is nestled in a strip of ordinary office buildings in the Chicago suburbs, but there’s nothing bland about the service the company provides.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/lrkGoeEbvTI&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017083490-2tx86n-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="16721587" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/WiPNS4FRZRg/34027201-loveandradio-aftermath.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/aftermath</feedburner:origLink>
+      <enclosure length="16721587" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/WiPNS4FRZRg/34027201-loveandradio-aftermath.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34027201-loveandradio-aftermath.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34026898</guid>
+      <title>Strip, Pt 2</title>
+      <pubDate>Fri, 20 Jan 2012 23:30:31 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/mEtZvLmr22U/strip-pt-2</link>
+      <itunes:duration>00:17:02</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Sara Juli--who was previously featured on our &quot;Take It, It's For You&quot; episode--recounts her epic bachelorette party.</itunes:summary>
+      <itunes:subtitle>Sara Juli--who was previously featured on our &quot;Ta…</itunes:subtitle>
+      <description>Sara Juli--who was previously featured on our &quot;Take It, It's For You&quot; episode--recounts her epic bachelorette party.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/mEtZvLmr22U&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017083355-le4v6n-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="16373438" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/pu06eztsQrM/34026898-loveandradio-strip-pt-2.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/strip-pt-2</feedburner:origLink>
+      <enclosure length="16373438" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/pu06eztsQrM/34026898-loveandradio-strip-pt-2.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34026898-loveandradio-strip-pt-2.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34026691</guid>
+      <title>We've Got Your Back, Ashley Dupré</title>
+      <pubDate>Fri, 20 Jan 2012 23:27:35 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/5Pt0wNaN9iQ/weve-got-your-back-ashley-dupr</link>
+      <itunes:duration>00:20:35</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A meditation on the brave new world of 21st century news.</itunes:summary>
+      <itunes:subtitle>A meditation on the brave new world of 21st centu…</itunes:subtitle>
+      <description>A meditation on the brave new world of 21st century news.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/5Pt0wNaN9iQ&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017083166-4rla3h-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="19781081" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/qiXszCt9_lc/34026691-loveandradio-weve-got-your-back-ashley-dupr.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/weve-got-your-back-ashley-dupr</feedburner:origLink>
+      <enclosure length="19781081" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/qiXszCt9_lc/34026691-loveandradio-weve-got-your-back-ashley-dupr.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34026691-loveandradio-weve-got-your-back-ashley-dupr.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34026256</guid>
+      <title>Take It, It's for You</title>
+      <pubDate>Fri, 20 Jan 2012 23:22:26 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/BuBDYBISqLQ/take-it-it-s-for-you</link>
+      <itunes:duration>00:18:15</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>When Sara Juli decided her relationship with money was fucked up, she figured the only way to deal with it was to give it to you.</itunes:summary>
+      <itunes:subtitle>When Sara Juli decided her relationship with mone…</itunes:subtitle>
+      <description>When Sara Juli decided her relationship with money was fucked up, she figured the only way to deal with it was to give it to you.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/BuBDYBISqLQ&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017083000-5fh82x-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="17547492" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/aglKtq3oDqE/34026256-loveandradio-take-it-it-s-for-you.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/take-it-it-s-for-you</feedburner:origLink>
+      <enclosure length="17547492" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/aglKtq3oDqE/34026256-loveandradio-take-it-it-s-for-you.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34026256-loveandradio-take-it-it-s-for-you.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34025698</guid>
+      <title>Animal Parts</title>
+      <pubDate>Fri, 20 Jan 2012 23:16:03 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/m_Hx8_b_Rwg/animal-parts</link>
+      <itunes:duration>00:14:14</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Nate Hill and Takeshi Yamada are two rogue taxidermists, artists whose raw material is gathered from dead animals. Also featuring a story by Dan Deacon.</itunes:summary>
+      <itunes:subtitle>Nate Hill and Takeshi Yamada are two rogue taxide…</itunes:subtitle>
+      <description>Nate Hill and Takeshi Yamada are two rogue taxidermists, artists whose raw material is gathered from dead animals. Also featuring a story by Dan Deacon.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/m_Hx8_b_Rwg&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017082698-ls3eni-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="17084786" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/SGtHTUsvSPI/34025698-loveandradio-animal-parts.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/animal-parts</feedburner:origLink>
+      <enclosure length="17084786" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/SGtHTUsvSPI/34025698-loveandradio-animal-parts.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34025698-loveandradio-animal-parts.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34025440</guid>
+      <title>Strip, Pt 1</title>
+      <pubDate>Fri, 20 Jan 2012 23:12:46 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/88E3mwMvy4g/strip-pt-1</link>
+      <itunes:duration>00:11:55</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Sean Cole is a public radio reporter who did a story for Marketplace about a group in Memphis assisting women who left the sex industry. This is what got cut from that story.</itunes:summary>
+      <itunes:subtitle>Sean Cole is a public radio reporter who did a st…</itunes:subtitle>
+      <description>Sean Cole is a public radio reporter who did a story for Marketplace about a group in Memphis assisting women who left the sex industry. This is what got cut from that story.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/88E3mwMvy4g&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017082481-qzv298-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="11466589" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/2PP7KERJMWo/34025440-loveandradio-strip-pt-1.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/strip-pt-1</feedburner:origLink>
+      <enclosure length="11466589" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/2PP7KERJMWo/34025440-loveandradio-strip-pt-1.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34025440-loveandradio-strip-pt-1.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34024864</guid>
+      <title>Violent</title>
+      <pubDate>Fri, 20 Jan 2012 23:06:25 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/VbaX8HK4l9c/violent</link>
+      <itunes:duration>00:23:19</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Stories of violence. Excerpts from Penelope Spheeris’ seminal 1981 punk documentary “The Decline of Western Civilization.” Mixed martial artist “Travis” explains when it’s time to call mom. Adam takes a punch to the face, and Nick Salvatore describes fighting as a creative practice.</itunes:summary>
+      <itunes:subtitle>Stories of violence. Excerpts from Penelope Sphee…</itunes:subtitle>
+      <description>Stories of violence. Excerpts from Penelope Spheeris’ seminal 1981 punk documentary “The Decline of Western Civilization.” Mixed martial artist “Travis” explains when it’s time to call mom. Adam takes a punch to the face, and Nick Salvatore describes fighting as a creative practice.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/VbaX8HK4l9c&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017082165-fzn5gu-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="27986724" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/ObapTO4_I_I/34024864-loveandradio-violent.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/violent</feedburner:origLink>
+      <enclosure length="27986724" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/ObapTO4_I_I/34024864-loveandradio-violent.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34024864-loveandradio-violent.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34024254</guid>
+      <title>Lady Sovereign vs. Jelly Donut</title>
+      <pubDate>Fri, 20 Jan 2012 22:59:38 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/dx5Cu95siY8/lady-sovereign-vs-jelly-donut</link>
+      <itunes:duration>00:15:06</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Zach Slow had a dream to go on a date with UK rapper Lady Sovereign, something that became the catalyst for the unlikely events leading to the greatest rap beef in the history of pastrycore.</itunes:summary>
+      <itunes:subtitle>Zach Slow had a dream to go on a date with UK rap…</itunes:subtitle>
+      <description>Zach Slow had a dream to go on a date with UK rapper Lady Sovereign, something that became the catalyst for the unlikely events leading to the greatest rap beef in the history of pastrycore.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/dx5Cu95siY8&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017081940-y1zgj8-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="18133357" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/0MKcYWV-vMg/34024254-loveandradio-lady-sovereign-vs-jelly-donut.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/lady-sovereign-vs-jelly-donut</feedburner:origLink>
+      <enclosure length="18133357" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/0MKcYWV-vMg/34024254-loveandradio-lady-sovereign-vs-jelly-donut.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34024254-loveandradio-lady-sovereign-vs-jelly-donut.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34023835</guid>
+      <title>Bloody Fingers</title>
+      <pubDate>Fri, 20 Jan 2012 22:54:48 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/TsriV4wYceU/bloody-fingers</link>
+      <itunes:duration>00:23:22</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A horrible accident and a complicated friendship.</itunes:summary>
+      <itunes:subtitle>A horrible accident and a complicated friendship.</itunes:subtitle>
+      <description>A horrible accident and a complicated friendship.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/TsriV4wYceU&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017081740-uc3a7b-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="28036886" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/o-ZB4jeRKJQ/34023835-loveandradio-bloody-fingers.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/bloody-fingers</feedburner:origLink>
+      <enclosure length="28036886" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/o-ZB4jeRKJQ/34023835-loveandradio-bloody-fingers.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34023835-loveandradio-bloody-fingers.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34023498</guid>
+      <title>How I Found Out My Relationship Had No Future, Pt 2</title>
+      <pubDate>Fri, 20 Jan 2012 22:50:54 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/jZSUEHLvSiw/how-i-found-out-my-1</link>
+      <itunes:duration>00:08:39</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Adrianne downs most of a bottle of Riesling and calls her college boyfriend Adam Conover.</itunes:summary>
+      <itunes:subtitle>Adrianne downs most of a bottle of Riesling and c…</itunes:subtitle>
+      <description>Adrianne downs most of a bottle of Riesling and calls her college boyfriend Adam Conover.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/jZSUEHLvSiw&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017081591-qkc3hr-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="4183238" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/hjsXYgHVh8M/34023498-loveandradio-how-i-found-out-my-1.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/how-i-found-out-my-1</feedburner:origLink>
+      <enclosure length="4183238" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/hjsXYgHVh8M/34023498-loveandradio-how-i-found-out-my-1.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34023498-loveandradio-how-i-found-out-my-1.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34023167</guid>
+      <title>How I Found Out My Relationship Had No Future, Pt 1</title>
+      <pubDate>Fri, 20 Jan 2012 22:47:09 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/Q_dSzJYXVBg/how-i-found-out-my</link>
+      <itunes:duration>00:13:10</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Adrianne sips on some whiskey and calls her ex-boyfriend from high school to get some shit figured out. Let’s call him “Jason.” Also featuring Brendan Sullivan.</itunes:summary>
+      <itunes:subtitle>Adrianne sips on some whiskey and calls her ex-bo…</itunes:subtitle>
+      <description>Adrianne sips on some whiskey and calls her ex-boyfriend from high school to get some shit figured out. Let’s call him “Jason.” Also featuring Brendan Sullivan.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/Q_dSzJYXVBg&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017081437-n5npsq-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="6366767" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/feX48kufX1o/34023167-loveandradio-how-i-found-out-my.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/how-i-found-out-my</feedburner:origLink>
+      <enclosure length="6366767" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/feX48kufX1o/34023167-loveandradio-how-i-found-out-my.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34023167-loveandradio-how-i-found-out-my.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34022778</guid>
+      <title>In the Company of Men</title>
+      <pubDate>Fri, 20 Jan 2012 22:42:44 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/KR0PLO5Td2w/in-the-company-of-men</link>
+      <itunes:duration>00:09:12</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Nick interviews his friend Matt while they're peeing.</itunes:summary>
+      <itunes:subtitle>Nick interviews his friend Matt while they're pee…</itunes:subtitle>
+      <description>Nick interviews his friend Matt while they're peeing.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/KR0PLO5Td2w&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017081213-tde1ae-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="4447945" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/C1z5NAaewb8/34022778-loveandradio-in-the-company-of-men.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/in-the-company-of-men</feedburner:origLink>
+      <enclosure length="4447945" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/C1z5NAaewb8/34022778-loveandradio-in-the-company-of-men.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34022778-loveandradio-in-the-company-of-men.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34022389</guid>
+      <title>Insane vs. Unsane</title>
+      <pubDate>Fri, 20 Jan 2012 22:38:01 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/dVo9rwLtUiY/insane-vs-unsane</link>
+      <itunes:duration>00:50:51</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Meditations on insanity and unsanity. Featuring Clay Pigeon of The Dusty Show.</itunes:summary>
+      <itunes:subtitle>Meditations on insanity and unsanity. Featuring C…</itunes:subtitle>
+      <description>Meditations on insanity and unsanity. Featuring Clay Pigeon of The Dusty Show.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/dVo9rwLtUiY&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017081026-dlynue-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="48859474" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/XquBwVRd1sw/34022389-loveandradio-insane-vs-unsane.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/insane-vs-unsane</feedburner:origLink>
+      <enclosure length="48859474" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/XquBwVRd1sw/34022389-loveandradio-insane-vs-unsane.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34022389-loveandradio-insane-vs-unsane.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34022084</guid>
+      <title>Tell Me the Future</title>
+      <pubDate>Fri, 20 Jan 2012 22:33:56 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/k082u3Aw4wU/tell-me-the-future</link>
+      <itunes:duration>00:32:58</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Discussions of prediction and soothsaying.</itunes:summary>
+      <itunes:subtitle>Discussions of prediction and soothsaying.</itunes:subtitle>
+      <description>Discussions of prediction and soothsaying.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/k082u3Aw4wU&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017080765-powwgp-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="15910520" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/LMQBtCX3HM0/34022084-loveandradio-tell-me-the-future.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/tell-me-the-future</feedburner:origLink>
+      <enclosure length="15910520" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/LMQBtCX3HM0/34022084-loveandradio-tell-me-the-future.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34022084-loveandradio-tell-me-the-future.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34021597</guid>
+      <title>Secrets</title>
+      <pubDate>Fri, 20 Jan 2012 22:28:26 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/_lrNDdI6n54/secrets</link>
+      <itunes:duration>00:20:43</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Stories about Secrets.  Babar, adoption, Post-Secret, and so many more secrets waiting to be discovered.</itunes:summary>
+      <itunes:subtitle>Stories about Secrets.  Babar, adoption, Post-Sec…</itunes:subtitle>
+      <description>Stories about Secrets.  Babar, adoption, Post-Secret, and so many more secrets waiting to be discovered.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/_lrNDdI6n54&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017080549-bvq9vu-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="24866136" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/1dXjHzsp0E8/34021597-loveandradio-secrets.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/secrets</feedburner:origLink>
+      <enclosure length="24866136" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/1dXjHzsp0E8/34021597-loveandradio-secrets.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34021597-loveandradio-secrets.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34020727</guid>
+      <title>Elimination</title>
+      <pubDate>Fri, 20 Jan 2012 22:18:52 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/ZzQM_DklKNI/elimination</link>
+      <itunes:duration>00:29:24</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A cribbage bet ends with someone pissing their pants.  A conversation about drinking your own urine.  The worst 21st birthday ever. And so much more.</itunes:summary>
+      <itunes:subtitle>A cribbage bet ends with someone pissing their pa…</itunes:subtitle>
+      <description>A cribbage bet ends with someone pissing their pants.  A conversation about drinking your own urine.  The worst 21st birthday ever. And so much more.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/ZzQM_DklKNI&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017079970-rq3rmu-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="28266988" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/8OXF959UkjY/34020727-loveandradio-elimination.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/elimination</feedburner:origLink>
+      <enclosure length="28266988" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/8OXF959UkjY/34020727-loveandradio-elimination.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34020727-loveandradio-elimination.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34019856</guid>
+      <title>Show Me Yours</title>
+      <pubDate>Fri, 20 Jan 2012 22:09:47 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/Tqa7jN71fXk/show-me-yours</link>
+      <itunes:duration>00:48:41</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>First experiences with sex. Adrianne tells the harrowing experience of “the first time I saw one.” Lance Anderson of The Verge of the Fringe can't seem to get his first kiss. Paul McEvoy keeps pushing his hand down further. Harlyn Aizley creates penises. Many of them.</itunes:summary>
+      <itunes:subtitle>First experiences with sex. Adrianne tells the ha…</itunes:subtitle>
+      <description>First experiences with sex. Adrianne tells the harrowing experience of “the first time I saw one.” Lance Anderson of The Verge of the Fringe can't seem to get his first kiss. Paul McEvoy keeps pushing his hand down further. Harlyn Aizley creates penises. Many of them.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/Tqa7jN71fXk&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017079796-gkhaxz-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="46740309" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/NsJ1osmiHHo/34019856-loveandradio-show-me-yours.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/show-me-yours</feedburner:origLink>
+      <enclosure length="46740309" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/NsJ1osmiHHo/34019856-loveandradio-show-me-yours.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34019856-loveandradio-show-me-yours.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34019534</guid>
+      <title>Get Me Away From Here</title>
+      <pubDate>Fri, 20 Jan 2012 22:05:55 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/Vldxf8rsPAY/get-me-away-from-here</link>
+      <itunes:duration>00:57:01</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Stories about escape and rescue. Katie escapes to and away from one faction of the tradition known as the Hermetic Order of the Golden Dawn. Jenny Asarnow looks to Julie the Amtrak God to get away from it all. Adrianne has rescue fantasies. Ben Popik of Olde English moves in with his girlfriend. They're in love, it's going to be great. Josh Cole is buried in lots and lots and lots of snow. Kerry Seed of The Local Option dodges an untimely death via bear.</itunes:summary>
+      <itunes:subtitle>Stories about escape and rescue. Katie escapes to…</itunes:subtitle>
+      <description>Stories about escape and rescue. Katie escapes to and away from one faction of the tradition known as the Hermetic Order of the Golden Dawn. Jenny Asarnow looks to Julie the Amtrak God to get away from it all. Adrianne has rescue fantasies. Ben Popik of Olde English moves in with his girlfriend. They're in love, it's going to be great. Josh Cole is buried in lots and lots and lots of snow. Kerry Seed of The Local Option dodges an untimely death via bear.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/Vldxf8rsPAY&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017079317-r2uk10-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="54740758" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/WsuWG6w-48Q/34019534-loveandradio-get-me-away-from-here.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/get-me-away-from-here</feedburner:origLink>
+      <enclosure length="54740758" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/WsuWG6w-48Q/34019534-loveandradio-get-me-away-from-here.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34019534-loveandradio-get-me-away-from-here.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34018745</guid>
+      <title>Flip Yr Sh!t</title>
+      <pubDate>Fri, 20 Jan 2012 21:57:41 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/lgFAQCGhkpM/flip-yr-sh-t</link>
+      <itunes:duration>00:28:08</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Stories about anger. Adam Allington (edited by producer Kerry Seed) hates Tim Hortons. Julian James gets in deep shit with the vice principal. Adrianne learns how to swear in middle school. Shig the Unmentionable tells us to PUT THAT DOWN. Ben Popik of Olde English gets a coworker of his fired. Lev and his girlfriend try to rent a movie and enter a swirling emotional maelstrom of relationship doom. Lev’s story is from his excellent online comic Tales of Mere Existence. Check out the original version of Conversation at his website, (http://www.ingredientx.com/) along with the pretty drawrings that go along with it, and other stories that are sure to depress the shit out of you (in a good way).</itunes:summary>
+      <itunes:subtitle>Stories about anger. Adam Allington (edited by pr…</itunes:subtitle>
+      <description>Stories about anger. Adam Allington (edited by producer Kerry Seed) hates Tim Hortons. Julian James gets in deep shit with the vice principal. Adrianne learns how to swear in middle school. Shig the Unmentionable tells us to PUT THAT DOWN. Ben Popik of Olde English gets a coworker of his fired. Lev and his girlfriend try to rent a movie and enter a swirling emotional maelstrom of relationship doom. Lev’s story is from his excellent online comic Tales of Mere Existence. Check out the original version of Conversation at his website, (http://www.ingredientx.com/) along with the pretty drawrings that go along with it, and other stories that are sure to depress the shit out of you (in a good way).&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/lgFAQCGhkpM&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017078947-ydmnfk-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="27029657" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/yZGmQO0ik2k/34018745-loveandradio-flip-yr-sh-t.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/flip-yr-sh-t</feedburner:origLink>
+      <enclosure length="27029657" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/yZGmQO0ik2k/34018745-loveandradio-flip-yr-sh-t.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34018745-loveandradio-flip-yr-sh-t.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34017482</guid>
+      <title>Love in Bits</title>
+      <pubDate>Fri, 20 Jan 2012 21:43:19 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/v5nMFln0keU/love-in-bits</link>
+      <itunes:duration>00:51:48</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Stories from the World of Online Dating. Christian Rudder of OKCupid.com describes how he knows everything about what kind of lover you are. Aaron Henkin of WYPR’s The Signal reads a sample of the OKCupid Love Personality Types. Eric Herot flies down to Missouri to meet a Bajoran he met on a Star Trek simming board. Christina H meets up with some dude from craigslist. Bitch PHD describes the gender dynamics of an Adult Friend Finder chatroom. Christian Rudder explains how to tell if a boy likes you. Adam Conover of sketch comedy group Olde English discovers that girls really like to be told they’re secret agents. And finally, Christina’s leaves a businessman from Israel very frustrated.</itunes:summary>
+      <itunes:subtitle>Stories from the World of Online Dating. Christia…</itunes:subtitle>
+      <description>Stories from the World of Online Dating. Christian Rudder of OKCupid.com describes how he knows everything about what kind of lover you are. Aaron Henkin of WYPR’s The Signal reads a sample of the OKCupid Love Personality Types. Eric Herot flies down to Missouri to meet a Bajoran he met on a Star Trek simming board. Christina H meets up with some dude from craigslist. Bitch PHD describes the gender dynamics of an Adult Friend Finder chatroom. Christian Rudder explains how to tell if a boy likes you. Adam Conover of sketch comedy group Olde English discovers that girls really like to be told they’re secret agents. And finally, Christina’s leaves a businessman from Israel very frustrated.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/v5nMFln0keU&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017078353-ayg6en-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="62146533" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/3M9X-vTOFyM/34017482-loveandradio-love-in-bits.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/love-in-bits</feedburner:origLink>
+      <enclosure length="62146533" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/3M9X-vTOFyM/34017482-loveandradio-love-in-bits.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34017482-loveandradio-love-in-bits.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34016761</guid>
+      <title>Ghost Stories</title>
+      <pubDate>Fri, 20 Jan 2012 21:34:42 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/i-amjb-NHNc/ghost-stories</link>
+      <itunes:duration>00:30:51</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Exploring the Frankenstein Family Crypt in 1952. Paranormal observations by an eight-year-old. The haunting of an unkind kitty, a discussion of the ghost story structure, and a very scary pantry door. This episode features contributions from Michael Kraskin of Catalogue of Ships. Also a spooky story from Hans Anderson.</itunes:summary>
+      <itunes:subtitle>Exploring the Frankenstein Family Crypt in 1952. …</itunes:subtitle>
+      <description>Exploring the Frankenstein Family Crypt in 1952. Paranormal observations by an eight-year-old. The haunting of an unkind kitty, a discussion of the ghost story structure, and a very scary pantry door. This episode features contributions from Michael Kraskin of Catalogue of Ships. Also a spooky story from Hans Anderson.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/i-amjb-NHNc&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017078008-ttsw23-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="25933660" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/uy6U5HmYwwg/34016761-loveandradio-ghost-stories.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/ghost-stories</feedburner:origLink>
+      <enclosure length="25933660" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/uy6U5HmYwwg/34016761-loveandradio-ghost-stories.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34016761-loveandradio-ghost-stories.mp3</feedburner:origEnclosureLink>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/34016184</guid>
+      <title>With a Bullet</title>
+      <pubDate>Fri, 20 Jan 2012 21:27:55 +0000</pubDate>
+      <link>http://feedproxy.google.com/~r/loveplusradio/~3/moLfw1gKP8A/with-a-bullet</link>
+      <itunes:duration>00:34:35</itunes:duration>
+      <itunes:author>Love + Radio</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>Stories about guns and the people who come in contact with them.</itunes:summary>
+      <itunes:subtitle>Stories about guns and the people who come in con…</itunes:subtitle>
+      <description>Stories about guns and the people who come in contact with them.&lt;img src=&quot;http://feeds.feedburner.com/~r/loveplusradio/~4/moLfw1gKP8A&quot; height=&quot;1&quot; width=&quot;1&quot;/&gt;</description>
+      <itunes:image href="http://i1.sndcdn.com/artworks-000017077186-ick22k-original.jpg?86347b7"/>
+      <author>contact@loveandradio.org (Love and Radio)</author>
+      <media:content fileSize="29070645" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/YaDuPv8w1hw/34016184-loveandradio-with-a-bullet.mp3"/>
+      <itunes:keywords>loveandradio,storytelling,interviews,kolk,vanderkolk,radiotopia,prx</itunes:keywords>
+      <feedburner:origLink>https://soundcloud.com/loveandradio/with-a-bullet</feedburner:origLink>
+      <enclosure length="29070645" type="audio/mpeg" url="http://feedproxy.google.com/~r/loveplusradio/~5/YaDuPv8w1hw/34016184-loveandradio-with-a-bullet.mp3"/>
+      <feedburner:origEnclosureLink>http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/34016184-loveandradio-with-a-bullet.mp3</feedburner:origEnclosureLink>
+    </item>
+    <media:credit role="author">Love and Radio</media:credit>
+    <media:rating>adult</media:rating>
+    <media:description type="plain">Listen with your headphones on. Powered by Radiotopia.</media:description>
+  </channel>
+</rss>
