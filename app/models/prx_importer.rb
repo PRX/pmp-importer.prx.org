@@ -68,7 +68,7 @@ class PRXImporter < ApplicationImporter
     # what rel to use?
     # set the rels based on the account type
     rel = if pmp_doc_profile(account_doc) == 'property'
-      "urn:collectiondoc:collection:property" 
+      "urn:collectiondoc:collection:property"
     else
       "urn:collectiondoc:collection:contributor"
     end

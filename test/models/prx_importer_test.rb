@@ -31,13 +31,13 @@ describe PRXImporter do
     it 'prx web endpoint is default or option' do
       prx_importer.prx_web_endpoint.must_equal 'https://www.prx.org/'
       prx_importer.options[:prx_web_endpoint] = 'https://test.prx.org/'
-      prx_importer.prx_web_endpoint.must_equal 'https://test.prx.org/'      
+      prx_importer.prx_web_endpoint.must_equal 'https://test.prx.org/'
     end
 
     it 'prx api endpoint is default or option' do
       prx_importer.prx_api_endpoint.must_equal 'https://hal.prx.org/api/v1/'
       prx_importer.options[:prx_api_endpoint] = 'https://test.prx.org/'
-      prx_importer.prx_api_endpoint.must_equal 'https://test.prx.org/'      
+      prx_importer.prx_api_endpoint.must_equal 'https://test.prx.org/'
     end
 
     it 'returns a prx client' do
@@ -131,8 +131,9 @@ describe PRXImporter do
 
         # create property for series
         stub_request(:put, "https://publish.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b3").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"https://www.prx.org/series/32832\"}],\"item\":[{\"href\":\"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b4\",\"title\":\"\",\"rels\":[\"urn:collectiondoc:image\"]}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b3\",\"title\":\"Moth Weekly Episodes for 2013\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:series-32832\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"https://www.prx.org/series/32832\"}],\"item\":[{\"href\":\"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b4\",\"title\":\"\",\"rels\":[\"urn:collectiondoc:image\"]}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b3\",\"title\":\"Moth Weekly Episodes for 2013\",\"description\":\"Brought to you by PRX and Jay Allison of Atlantic Public Media. Learn more about The Moth, the series and live events at prx.org/themoth. Please confirm carriage of The Moth Radio Hour by contacting Deb Blakeley at blakeley.deb@gmail.com.\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:series-32832\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b3"}', :headers => {})
+
 
         # Image
 
@@ -195,7 +196,7 @@ describe PRXImporter do
         puts "delete prx_test: #{pi.pmp.inspect}\n\n"
         items = pi.pmp.query["urn:collectiondoc:query:docs"].where(itag: 'prx_test', limit: 100).items
         puts "\n\nitems: #{items.inspect}\n\nitems json: #{items.to_json}\n\n"
-        
+
         items.each{|i|
           puts "#{i.to_json}\n\n"
           i.delete rescue nil
