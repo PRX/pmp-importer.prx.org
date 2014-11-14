@@ -60,6 +60,7 @@ describe PRXImporter do
 
         ENV['PMP_CLIENT_ID'] = ""
         ENV['PMP_CLIENT_SECRET'] = ""
+        ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
 
         stub_request(:get, "https://hal.prx.org/api/v1/").
           to_return(:status => 200, :body => json_file(:prx_root), :headers => {})

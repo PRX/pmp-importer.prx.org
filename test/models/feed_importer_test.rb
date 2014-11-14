@@ -25,6 +25,7 @@ describe FeedImporter do
 
         ENV['PMP_CLIENT_ID'] = ""
         ENV['PMP_CLIENT_SECRET'] = ""
+        ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
 
         FeedImporter.class_eval do
           def retrieve_feed(url)

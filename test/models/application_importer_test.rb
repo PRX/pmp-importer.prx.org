@@ -9,7 +9,7 @@ describe ApplicationImporter do
     ApplicationImporter.new(options).options.must_equal options
   end
 
-  it 'has no source name' do 
+  it 'has no source name' do
     lambda { importer.source_name }.must_raise(NotImplementedError)
   end
 
@@ -53,6 +53,7 @@ describe ApplicationImporter do
 
       ENV['PMP_CLIENT_ID'] = ""
       ENV['PMP_CLIENT_SECRET'] = ""
+      ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
 
       stub_request(:get, "https://api.pmp.io/").
         to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
@@ -120,7 +121,7 @@ describe ApplicationImporter do
       link.href.must_equal 'http://example.org/foo'
     end
 
-    it 'will not add link with dupe rel and href' do    
+    it 'will not add link with dupe rel and href' do
       importer.add_link_to_doc(doc, 'foo', {href: 'http://example.org/foo'})
       importer.add_link_to_doc(doc, 'foo', {href: 'http://example.org/bar'})
       importer.add_link_to_doc(doc, 'foo', {href: 'http://example.org/foo'})
