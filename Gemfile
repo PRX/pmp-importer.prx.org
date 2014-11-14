@@ -54,4 +54,11 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development, :production, :staging do
+  gem 'sinatra' # for sidekiq
+  gem 'autoscaler', github: 'PRX/autoscaler'
+  gem 'foreman'
+  gem 'unicorn'
+end
+
 ruby "2.1.4"
