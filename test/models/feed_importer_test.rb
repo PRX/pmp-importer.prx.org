@@ -1,19 +1,19 @@
 require 'test_helper'
 
-describe RSSImporter do
+describe FeedImporter do
 
   describe 'basic methods' do
 
-    let(:rss_importer) { RSSImporter.new }
+    let(:rss_importer) { FeedImporter.new }
 
     it 'accepts options' do
       options = {}
-      rss_importer = RSSImporter.new(options)
+      rss_importer = FeedImporter.new(options)
       rss_importer.options.must_equal options
     end
 
     it 'sets default source' do
-      rss_importer.source_name.must_equal 'rss'
+      rss_importer.source_name.must_equal 'feed'
     end
 
   end
@@ -26,7 +26,7 @@ describe RSSImporter do
         ENV['PMP_CLIENT_ID'] = ""
         ENV['PMP_CLIENT_SECRET'] = ""
 
-        RSSImporter.class_eval do
+        FeedImporter.class_eval do
           def retrieve_feed(url)
             feed_file = test_file("/fixtures/99percentinvisible.xml")
             feed = Feedjira::Feed.parse(feed_file)
@@ -58,10 +58,12 @@ describe RSSImporter do
       end
     }
 
-    let(:rss_importer) { RSSImporter.new }
+    let(:rss_importer) { FeedImporter.new }
 
     it "imports a prx piece" do
-      items = rss_importer.import(rss_url: "http://feeds.99percentinvisible.org/99percentinvisible")
+      feed = Feed.create(feed_url: "http://feeds.99percentinvisible.org/99percentinvisible")
+      items = FeedImporter.new.import(feed_id: feed.id)
+
     end
 
   end

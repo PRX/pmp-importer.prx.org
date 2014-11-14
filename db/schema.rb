@@ -11,10 +11,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812191726) do
+ActiveRecord::Schema.define(version: 20141020183504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "feed_entries", force: true do |t|
+    t.integer  "feed_id"
+    t.string   "digest"
+    t.string   "entry_id"
+    t.string   "url"
+    t.string   "author"
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "content"
+    t.text     "summary"
+    t.datetime "published"
+    t.datetime "updated"
+    t.string   "image_url"
+    t.string   "enclosure_length"
+    t.string   "enclosure_type"
+    t.string   "enclosure_url"
+    t.integer  "duration"
+    t.boolean  "explicit"
+    t.text     "keywords"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "feed_entries", ["feed_id"], name: "index_feed_entries_on_feed_id", using: :btree
+
+  create_table "feed_responses", force: true do |t|
+    t.integer  "feed_id"
+    t.string   "url"
+    t.string   "etag"
+    t.datetime "last_modified"
+    t.text     "request"
+    t.text     "request_headers"
+    t.string   "status"
+    t.string   "method"
+    t.text     "response_headers"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feeds", force: true do |t|
+    t.string   "url"
+    t.text     "options"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "description"
+    t.text     "summary"
+    t.text     "owners"
+    t.string   "author"
+    t.text     "keywords"
+    t.text     "categories"
+    t.string   "image_url"
+    t.string   "feed_url"
+    t.boolean  "explicit"
+  end
 
   create_table "pmp_guid_mappings", force: true do |t|
     t.string   "source_name"
