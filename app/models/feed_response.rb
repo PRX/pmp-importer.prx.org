@@ -16,9 +16,9 @@ class FeedResponse < ActiveRecord::Base
 
   FARADAY_RESPONSE_ATTRIBUTES = [:url, :status, :body, :request, :request_headers, :response_headers]
 
-  serialize :request
-  serialize :request_headers
-  serialize :response_headers
+  serialize :request, JSON
+  serialize :request_headers, JSON
+  serialize :response_headers, JSON
 
   def self.for_response(response)
     self.new(response.to_hash.slice(*FARADAY_RESPONSE_ATTRIBUTES)).tap do |f|
