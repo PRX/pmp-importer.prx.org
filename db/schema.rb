@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020183504) do
+ActiveRecord::Schema.define(version: 20141125213554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,20 @@ ActiveRecord::Schema.define(version: 20141020183504) do
     t.string   "enclosure_type"
     t.string   "enclosure_url"
     t.integer  "duration"
-    t.boolean  "explicit"
+    t.string   "explicit"
     t.text     "keywords"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.text     "categories"
+    t.string   "comment_url"
+    t.boolean  "block"
+    t.boolean  "is_closed_captioned"
+    t.integer  "position"
+    t.string   "comment_rss_url"
+    t.string   "comment_count"
+    t.string   "feedburner_orig_link"
+    t.string   "feedburner_orig_enclosure_link"
   end
 
   add_index "feed_entries", ["feed_id"], name: "index_feed_entries_on_feed_id", using: :btree
@@ -71,7 +81,24 @@ ActiveRecord::Schema.define(version: 20141020183504) do
     t.text     "categories"
     t.string   "image_url"
     t.string   "feed_url"
-    t.boolean  "explicit"
+    t.string   "explicit"
+    t.string   "language"
+    t.string   "copyright"
+    t.string   "managing_editor"
+    t.string   "web_master"
+    t.string   "generator"
+    t.integer  "ttl"
+    t.datetime "published"
+    t.datetime "last_built"
+    t.boolean  "block"
+    t.boolean  "complete"
+    t.string   "new_feed_url"
+    t.string   "update_period"
+    t.integer  "update_frequency"
+    t.string   "feedburner_name"
+    t.string   "hub_url"
+    t.datetime "last_modified"
+    t.datetime "pub_date"
   end
 
   create_table "pmp_guid_mappings", force: true do |t|
@@ -85,5 +112,11 @@ ActiveRecord::Schema.define(version: 20141020183504) do
 
   add_index "pmp_guid_mappings", ["guid"], name: "index_pmp_guid_mappings_on_guid", unique: true, using: :btree
   add_index "pmp_guid_mappings", ["source_name", "source_type", "source_id"], name: "by_source", unique: true, using: :btree
+
+  create_table "prx_account_whitelists", force: true do |t|
+    t.integer  "prx_account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
