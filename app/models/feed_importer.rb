@@ -21,10 +21,10 @@ class FeedImporter < ApplicationImporter
 
   def import_feed(feed_id)
     self.feed = Feed.find(feed_id)
-
-    feed.entry_ids.each do |feed_entry_id|
-      FeedImporter.new.import_entry(feed_entry_id)
-    end
+    save_feed_doc(feed)
+    # feed.entry_ids.each do |feed_entry_id|
+    #   FeedImporter.new.import_entry(feed_entry_id)
+    # end
   end
 
   def import_entry(feed_entry_id)
@@ -32,7 +32,7 @@ class FeedImporter < ApplicationImporter
 
     self.item = FeedEntry.find(feed_entry_id)
     self.feed = item.feed
-    self.feed_doc = find_or_create_feed_doc(feed)
+    self.feed_doc = find_or_save_feed_doc(feed)
     self.doc  = find_or_init_item_doc(item)
 
     set_series
@@ -95,25 +95,25 @@ class FeedImporter < ApplicationImporter
   def set_image
     logger.debug("set_image")
 
-    return if item.itunes_image.blank?
+    return if item.image_url.blank?
 
-    image_doc = find_or_create_image_doc(item.image_url)
+    image_doc = find_or_save_image_doc(item.image_url)
     add_link_to_doc(doc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
   end
 
   def set_audio
     logger.debug("set_audio")
 
-    audio_doc = find_or_create_audio_doc(item)
+    audio_doc = find_or_save_audio_doc(item)
     add_link_to_doc(doc, 'item', { href: audio_doc.href, title: audio_doc.title, rels: ['urn:collectiondoc:audio'] })
 
   end
 
-  def find_or_create_audio_doc(item)
-    retrieve_doc('Audio', item.enclosure_url) || create_audio_doc(item)
+  def find_or_save_audio_doc(item)
+    retrieve_doc('Audio', item.enclosure_url) || save_audio_doc(item)
   end
 
-  def create_audio_doc(item)
+  def save_audio_doc(item)
     adoc = nil
 
     adoc = pmp.doc_of_type('audio')
@@ -144,27 +144,27 @@ class FeedImporter < ApplicationImporter
     sdoc
   end
 
-  def find_or_create_feed_doc(feed)
+  def find_or_save_feed_doc(feed)
     # puts "feed: #{feed.inspect}"
-    retrieve_doc('Feed', feed.id) || create_feed_doc(feed)
+    retrieve_doc('Feed', feed.id) || save_feed_doc(feed)
   end
 
-  def create_feed_doc(feed)
-    sdoc = pmp.doc_of_type('series')
+  def save_feed_doc(feed)
+    sdoc             = pmp.doc_of_type('series')
     sdoc.guid        = find_or_create_guid('Feed', feed.id)
     sdoc.title       = feed.title
 
-    sdoc.teaser      = feed.itunes_subtitle || feed.description
-    sdoc.description = feed.itunes_summary || feed.description
+    sdoc.teaser      = feed.subtitle || feed.description
+    sdoc.description = feed.summary || feed.description
     sdoc.byline      = extract_byline(feed)
 
-    (feed.itunes_keywords || '').split(',').each{|kw| add_tag_to_doc(sdoc, kw)}
+    (feed.keywords || '').split(',').each{|kw| add_tag_to_doc(sdoc, kw)}
 
     add_link_to_doc(sdoc, 'alternate', { href: (feed.url || feed.feed_url) })
 
     # image
-    if !feed.itunes_image.blank?
-      image_doc = find_or_create_image_doc(feed.itunes_image)
+    if !feed.image_url.blank?
+      image_doc = find_or_save_image_doc(feed.image_url)
       add_link_to_doc(sdoc, 'item', { href: image_doc.href, title: image_doc.title, rels: ['urn:collectiondoc:image'] })
     end
 
@@ -177,12 +177,12 @@ class FeedImporter < ApplicationImporter
     sdoc
   end
 
-  def find_or_create_image_doc(image_url)
-    retrieve_doc('Image', image_url) || create_image_doc(image_url)
+  def find_or_save_image_doc(image_url)
+    retrieve_doc('Image', image_url) || save_image_doc(image_url)
   end
 
   # retreive the image and detect features of it (height, width) ?
-  def create_image_doc(image_url)
+  def save_image_doc(image_url)
     idoc = nil
 
     idoc = pmp.doc_of_type('image')
@@ -214,21 +214,8 @@ class FeedImporter < ApplicationImporter
   end
 
   def extract_byline(feed)
-    owners = feed.itunes_owners.collect{|o| o.name.strip }.join(', ') if (feed.itunes_owners && feed.itunes_owners.size > 0)
-    owners || feed.itunes_author || feed.managingEditor
-  end
-
-  def retrieve_feed(rss_url)
-    can_process = true
-
-    # pull the feed
-    feed = Feedjira::Feed.fetch_and_parse(rss_url, {
-      on_success: ->(url, feed){ logger.debug("loaded url: #{url}") } ,
-      on_failure: ->(c, err){ logger.error("c: #{c.response_code}, err: #{err.inspect}"); can_process = false }
-    })
-
-    # puts "can_process: #{can_process}, feed: #{feed.class.inspect}: #{feed.inspect}"
-    can_process ? feed : nil
+    owners = feed.owners.collect{|o| o.name.strip }.join(', ') if (feed.owners && feed.owners.size > 0)
+    owners || feed.author || feed.managing_editor
   end
 
   def find_or_create_guid(type, url)
