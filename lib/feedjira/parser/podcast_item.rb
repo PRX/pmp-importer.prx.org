@@ -8,7 +8,7 @@ module Feedjira
 
       element :title
       element :link, as: :url
-      element :description, as: :summary
+      element :description, as: :description
       element :author
       elements :category, as: :categories
       element :comments
