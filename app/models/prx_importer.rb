@@ -27,6 +27,8 @@ class PRXImporter < ApplicationImporter
   def import_series(prx_series_id)
     self.series = retrieve_series(prx_series_id)
 
+    return unless PRXAccountWhitelist.allow?(series.account.id)
+
     stories = series.stories.get
     while (stories) do
       stories.each do |s|
@@ -44,6 +46,9 @@ class PRXImporter < ApplicationImporter
     logger.debug("import_story: #{prx_story_id}")
 
     self.story = retrieve_story(prx_story_id)
+
+    return unless PRXAccountWhitelist.allow?(story.account.id)
+
     self.doc   = find_or_init_story_doc(story)
 
     set_account

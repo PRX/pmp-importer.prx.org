@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020183504) do
+ActiveRecord::Schema.define(version: 20141114205500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,5 +85,11 @@ ActiveRecord::Schema.define(version: 20141020183504) do
 
   add_index "pmp_guid_mappings", ["guid"], name: "index_pmp_guid_mappings_on_guid", unique: true, using: :btree
   add_index "pmp_guid_mappings", ["source_name", "source_type", "source_id"], name: "by_source", unique: true, using: :btree
+
+  create_table "prx_account_whitelists", force: true do |t|
+    t.integer  "prx_account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
