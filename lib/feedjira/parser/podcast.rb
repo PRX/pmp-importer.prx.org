@@ -30,8 +30,8 @@ module Feedjira
 
       element :image, class: PodcastImage
 
-      element :pubDate, as: :pub_date
-      element :lastBuildDate, as: :last_build_date
+      element :pubDate, as: :pub_date_string
+      element :lastBuildDate, as: :last_built_string
 
       element :"itunes:author", as: :itunes_author
       element :"itunes:block", as: :itunes_block
@@ -60,15 +60,15 @@ module Feedjira
       elements :"media:category", as: :media_categories
 
       def published
-        [last_modified, pub_date, last_built].max
+        [last_modified, pub_date, last_built].compact.max
       end
 
       def pub_date
-        parse_datetime(pub_date)
+        parse_datetime(pub_date_string)
       end
 
       def last_built
-        parse_datetime(last_build_date)
+        parse_datetime(last_built_string)
       end
 
       def parse_datetime(value)
