@@ -69,6 +69,11 @@ describe PRXImporter do
 
     before(:every) {
 
+      # stub the whitelist
+      PRXAccountWhitelist.class_eval do
+        def self.allow?(id); true; end
+      end
+
       if use_webmock?
 
         ENV['PMP_CLIENT_ID'] = ""
