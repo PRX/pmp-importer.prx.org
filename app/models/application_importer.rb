@@ -26,6 +26,10 @@ class ApplicationImporter
     @pmp ||= PMP::Client.new(client_id: pmp_client_id, client_secret: pmp_client_secret, endpoint: pmp_endpoint)
   end
 
+  def reset_pmp
+    @pmp = nil
+  end
+
   def pmp_client_id
     options[:pmp_client_id] || ENV['PMP_CLIENT_ID']
   end
