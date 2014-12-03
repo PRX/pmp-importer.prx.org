@@ -9,6 +9,10 @@ module Feedjira
       attribute :length
       attribute :type
 
+      def to_s
+        "\#<PodcastItemEnclosure url: \"#{url}\", length: \"#{length}\", type: \"#{type}\">"
+      end
+
     end
   end
 
