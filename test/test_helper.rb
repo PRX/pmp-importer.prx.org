@@ -12,6 +12,7 @@ require 'minitest/autorun'
 require 'minitest/spec'
 require 'minitest/pride'
 require 'webmock/minitest'
+require 'sidekiq/testing'
 
 WebMock.allow_net_connect! unless use_webmock?
 

@@ -6,6 +6,17 @@ describe PRXImporter do
 
     let(:prx_importer) { PRXImporter.new }
 
+    before {
+      if use_webmock?
+
+        ENV['PMP_CLIENT_ID'] = ""
+        ENV['PMP_CLIENT_SECRET'] = ""
+        ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
+
+        prx_importer.reset_pmp
+      end
+    }
+
     it 'accepts options' do
       options = {}
       prx_importer = PRXImporter.new(options)
@@ -54,7 +65,9 @@ describe PRXImporter do
 
   describe "imports into pmp" do
 
-    before {
+    let(:prx_importer) { PRXImporter.new }
+
+    before(:every) {
 
       # stub the whitelist
       PRXAccountWhitelist.class_eval do
@@ -66,6 +79,8 @@ describe PRXImporter do
         ENV['PMP_CLIENT_ID'] = ""
         ENV['PMP_CLIENT_SECRET'] = ""
         ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
+
+        prx_importer.reset_pmp
 
         stub_request(:get, "https://hal.prx.org/api/v1/").
           to_return(:status => 200, :body => json_file(:prx_root), :headers => {})
@@ -213,9 +228,9 @@ describe PRXImporter do
 
     }
 
-    let(:prx_importer) { PRXImporter.new }
-
     it "imports a prx piece" do
+      PMPGuidMapping.counter = 0 if use_webmock?
+
       doc = prx_importer.import(prx_story_id: 87683)
 
       doc.title.must_equal "Virginity, Fidelity, and Fertility"

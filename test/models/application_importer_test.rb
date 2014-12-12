@@ -4,6 +4,34 @@ describe ApplicationImporter do
 
   let(:importer) {ApplicationImporter.new }
 
+  before {
+    if use_webmock?
+      ENV['PMP_CLIENT_ID'] = ""
+      ENV['PMP_CLIENT_SECRET'] = ""
+      ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
+
+      importer.reset_pmp
+
+      stub_request(:get, "https://api.pmp.io/").
+        to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
+
+      # pmp stubs
+      pmp_token = {
+        access_token: "thisisnotanaccesstokenno",
+        token_type: "Bearer",
+        token_issue_date: DateTime.now,
+        token_expires_in: 24*60*60
+      }.to_json
+
+      # login
+      stub_request(:post, "https://api.pmp.io/auth/access_token").
+        with(:body => {"grant_type"=>"client_credentials"},
+             :headers => {'Accept'=>'application/json', 'Authorization'=>'Basic Og==', 'Content-Type'=>'application/x-www-form-urlencoded', 'Host'=>'api.pmp.io:443'}).
+        to_return(:status => 200, :body => pmp_token, :headers => {'Content-Type' => 'application/json; charset=utf-8'})
+
+    end
+  }
+
   it 'accepts options' do
     options = {}
     ApplicationImporter.new(options).options.must_equal options
@@ -50,27 +78,6 @@ describe ApplicationImporter do
   it 'finds the first pmp doc that matches conditions' do
 
     if use_webmock?
-
-      ENV['PMP_CLIENT_ID'] = ""
-      ENV['PMP_CLIENT_SECRET'] = ""
-      ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
-
-      stub_request(:get, "https://api.pmp.io/").
-        to_return(:status => 200, :body => json_file(:pmp_root), :headers => {})
-
-      # pmp stubs
-      pmp_token = {
-        access_token: "thisisnotanaccesstokenno",
-        token_type: "Bearer",
-        token_issue_date: DateTime.now,
-        token_expires_in: 24*60*60
-      }.to_json
-
-      # login
-      stub_request(:post, "https://api.pmp.io/auth/access_token").
-        with(:body => {"grant_type"=>"client_credentials"},
-             :headers => {'Accept'=>'application/json', 'Authorization'=>'Basic Og==', 'Content-Type'=>'application/x-www-form-urlencoded', 'Host'=>'api.pmp.io:443'}).
-        to_return(:status => 200, :body => pmp_token, :headers => {'Content-Type' => 'application/json; charset=utf-8'})
 
       stub_request(:get, "https://api.pmp.io/docs").
         to_return(:status => 200, :body => '{"items":[{"attributes":{"a":"1"}}]}', :headers => {})

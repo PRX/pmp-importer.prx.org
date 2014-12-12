@@ -27,14 +27,6 @@ describe FeedImporter do
         ENV['PMP_CLIENT_SECRET'] = ""
         ENV['PMP_ENDPOINT'] = 'https://api.pmp.io/'
 
-        FeedImporter.class_eval do
-          def retrieve_feed(url)
-            feed_file = test_file("/fixtures/99percentinvisible.xml")
-            feed = Feedjira::Feed.parse(feed_file)
-            feed
-          end
-        end
-
         # pmp stubs
         pmp_token = {
           access_token: "thisisnotanaccesstokenno",
@@ -56,15 +48,49 @@ describe FeedImporter do
         stub_request(:get, "https://api.pmp.io/docs?itag=rss:http://99percentinvisible.prx.org").
           to_return(:status => 200, :body => "", :headers => {})
 
+        stub_request(:get, "http://feeds.99percentinvisible.org/99percentinvisible").
+          to_return(:status => 200, :body => test_file('/fixtures/99percentinvisible.xml'), :headers => { 'Expires' => 1.day.since.httpdate, 'Date' => Time.now.httpdate })
+
+
+        stub_request(:put, "https://publish.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a1").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"http://feeds.99percentinvisible.org/99percentinvisible\"}]},\"attributes\":{\"guid\":\"9996db7a-93e6-4987-9313-4d70d74051a1\",\"title\":null,\"teaser\":null,\"description\":null,\"byline\":null,\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"feed:\"]}}").
+          to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a1"}', :headers => {})
+
+        stub_request(:put, "https://publish.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a7").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"http://feeds.99percentinvisible.org/99percentinvisible\"}]},\"attributes\":{\"guid\":\"9996db7a-93e6-4987-9313-4d70d74051a7\",\"title\":null,\"teaser\":null,\"description\":null,\"byline\":null,\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"feed:\"]}}").
+          to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a7"}', :headers => {})
+
+
+
+
+        # stub the guid to a predictable value
+        PMPGuidMapping.class_eval do
+
+          cattr_accessor :counter
+
+          def self.next_counter
+            self.counter = self.counter.to_i + 1
+          end
+
+          def self.new_guid
+            '9996db7a-93e6-4987-9313-4d70d74051a' + next_counter.to_s
+          end
+
+        end
+
       end
     }
 
     let(:rss_importer) { FeedImporter.new }
 
-    it "imports a prx piece" do
-      feed = Feed.create(feed_url: "http://feeds.99percentinvisible.org/99percentinvisible")
-      items = FeedImporter.new.import(feed_id: feed.id)
+    it "imports a feed" do
+      PMPGuidMapping.counter = 0 if use_webmock?
 
+      feed = Feed.create(feed_url: "http://feeds.99percentinvisible.org/99percentinvisible")
+      feed.sync
+      FeedImporter.new.import(feed_id: feed.id)
+
+      feed.entries
     end
 
   end

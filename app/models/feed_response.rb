@@ -16,16 +16,16 @@ class FeedResponse < ActiveRecord::Base
 
   FARADAY_RESPONSE_ATTRIBUTES = [:url, :status, :body, :request, :request_headers, :response_headers]
 
-  serialize :request
-  serialize :request_headers
-  serialize :response_headers
+  serialize :request, JSON
+  serialize :request_headers, JSON
+  serialize :response_headers, JSON
 
   def self.for_response(response)
     self.new(response.to_hash.slice(*FARADAY_RESPONSE_ATTRIBUTES)).tap do |f|
       f.now
       f.url           = f.url.to_s
       f.etag          = f.headers['ETag']
-      f.last_modified = f.headers['Last-Modified']
+      f.last_modified = Time.httpdate(f.headers['Last-Modified']) if f.headers['Last-Modified']
       f.fix_max_age
     end
   end
@@ -50,7 +50,7 @@ class FeedResponse < ActiveRecord::Base
   #
   # Returns true if the response status code is 304.
   def not_modified?
-    status == 304
+    status.to_i == 304
   end
 
   # Internal: Gets the response age in seconds.
@@ -136,9 +136,9 @@ class FeedResponse < ActiveRecord::Base
   #
   # Returns nothing.
   def fix_max_age
-    if headers.key? 'Age'
+    if headers && headers.key?('Age')
       cache_control.normalize_max_ages(headers['Age'].to_i)
-      headers.delete 'Age'
+      headers.delete('Age')
       headers['Cache-Control'] = cache_control.to_s
     end
   end
