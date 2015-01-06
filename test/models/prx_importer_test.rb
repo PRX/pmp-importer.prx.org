@@ -65,14 +65,15 @@ describe PRXImporter do
 
   describe "imports into pmp" do
 
-    let(:prx_importer) { PRXImporter.new }
+    let(:prx_importer) do
+      pi = PRXImporter.new
+      def pi.whitelisted?(aid)
+        true
+      end
+      pi
+    end
 
     before(:every) {
-
-      # stub the whitelist
-      PRXAccountWhitelist.class_eval do
-        def self.allow?(id); true; end
-      end
 
       if use_webmock?
 

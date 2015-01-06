@@ -13,6 +13,10 @@ class PRXImporter < ApplicationImporter
     'prx'
   end
 
+  def whitelisted?(account_id)
+    PRXAccountWhitelist.allow?(account_id)
+  end
+
   def import(options={})
     super
 
@@ -27,7 +31,7 @@ class PRXImporter < ApplicationImporter
   def import_series(prx_series_id)
     self.series = retrieve_series(prx_series_id)
 
-    return unless PRXAccountWhitelist.allow?(series.account.id)
+    return unless whitelisted?(series.account.id)
 
     stories = series.stories.get
     while (stories) do
@@ -47,7 +51,7 @@ class PRXImporter < ApplicationImporter
 
     self.story = retrieve_story(prx_story_id)
 
-    return unless PRXAccountWhitelist.allow?(story.account.id)
+    return unless whitelisted?(story.account.id)
 
     self.doc   = find_or_init_story_doc(story)
 
