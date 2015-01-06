@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0',  group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',            group: :development
 
-gem 'pmp', '~> 0.5.4'
+gem 'pmp', '~> 0.5'
 # gem 'pmp', github: 'PRX/pmp'
 
 gem 'hyperresource'
@@ -43,7 +43,7 @@ gem 'sidekiq'
 group :test do
   gem 'minitest-spec-rails'
   gem 'factory_girl_rails'
-  gem 'webmock' #, github: 'bblimke/webmock'
+  gem 'webmock'
   gem 'minitest-reporters', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'simplecov', require: false
@@ -56,7 +56,7 @@ end
 
 group :development, :production, :staging do
   gem 'sinatra' # for sidekiq
-  gem 'autoscaler', github: 'PRX/autoscaler'
+  gem 'autoscaler', github: 'JustinLove/autoscaler'
   gem 'foreman'
   gem 'unicorn'
 end
