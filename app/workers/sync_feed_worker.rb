@@ -3,7 +3,7 @@ class SyncFeedWorker
 
   sidekiq_options retry: 5, backtrace: true
 
-  def process(feed_id)
+  def perform(feed_id)
     ActiveRecord::Base.connection_pool.with_connection do
       Feed.find(feed_id).sync
     end
