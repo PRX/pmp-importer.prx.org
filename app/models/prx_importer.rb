@@ -312,7 +312,7 @@ class PRXImporter < ApplicationImporter
   end
 
   def prx_api_endpoint
-    options[:prx_api_endpoint] || 'https://hal.prx.org/api/v1/'
+    options[:prx_api_endpoint] || 'https://cms.prx.org/api/v1/'
   end
 
   def prx_web_endpoint
