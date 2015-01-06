@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: pmp-importer_production
-  username: pmp-importer
-  password: <%= ENV['PMP-IMPORTER_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
