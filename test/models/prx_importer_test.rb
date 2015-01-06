@@ -28,11 +28,11 @@ describe PRXImporter do
     end
 
     it 'creates prx url endpoint and path' do
-      prx_importer.prx_url('foo').must_equal 'https://hal.prx.org/api/v1/foo'
+      prx_importer.prx_url('foo').must_equal 'https://cms.prx.org/api/v1/foo'
     end
 
     it 'creates a tag value for a prx object' do
-      prx_importer.prx_tag('https://hal.prx.org/api/v1/foos/1').must_equal "prx:foos-1"
+      prx_importer.prx_tag('https://cms.prx.org/api/v1/foos/1').must_equal "prx:foos-1"
     end
 
     it 'links to a prx web page' do
@@ -46,7 +46,7 @@ describe PRXImporter do
     end
 
     it 'prx api endpoint is default or option' do
-      prx_importer.prx_api_endpoint.must_equal 'https://hal.prx.org/api/v1/'
+      prx_importer.prx_api_endpoint.must_equal 'https://cms.prx.org/api/v1/'
       prx_importer.options[:prx_api_endpoint] = 'https://test.prx.org/'
       prx_importer.prx_api_endpoint.must_equal 'https://test.prx.org/'
     end
@@ -58,7 +58,7 @@ describe PRXImporter do
     it 'wraps urls with count redirect' do
       url = prx_importer.count_audio_url('/audio_files/blah/1/test.mp3', 123, 456, 'thisis-aguid-fortesting')
       if use_webmock?
-        url.must_equal "https://count.prx.org/redirect?action=request&action_value=%7B%22audioFileId%22%3A123%2C%22pieceId%22%3A456%7D&location=https%3A%2F%2Fhal.prx.org%2Faudio_files%2Fblah%2F1%2Ftest.mp3&referrer=https%3A%2F%2Fapi.pmp.io%2Fdocs%2Fthisis-aguid-fortesting"
+        url.must_equal "https://count.prx.org/redirect?action=request&action_value=%7B%22audioFileId%22%3A123%2C%22pieceId%22%3A456%7D&location=https%3A%2F%2Fcms.prx.org%2Faudio_files%2Fblah%2F1%2Ftest.mp3&referrer=https%3A%2F%2Fapi.pmp.io%2Fdocs%2Fthisis-aguid-fortesting"
       end
     end
   end
@@ -82,10 +82,10 @@ describe PRXImporter do
 
         prx_importer.reset_pmp
 
-        stub_request(:get, "https://hal.prx.org/api/v1/").
+        stub_request(:get, "https://cms.prx.org/api/v1/").
           to_return(:status => 200, :body => json_file(:prx_root), :headers => {})
 
-        stub_request(:get, "https://hal.prx.org/api/v1/stories/87683").
+        stub_request(:get, "https://cms.prx.org/api/v1/stories/87683").
           to_return(:status => 200, :body => json_file(:prx_story), :headers => {})
 
         # pmp stubs
@@ -115,7 +115,7 @@ describe PRXImporter do
         # Account
 
         # prx account
-        stub_request(:get, "https://hal.prx.org/api/v1/accounts/45139").
+        stub_request(:get, "https://cms.prx.org/api/v1/accounts/45139").
           to_return(:status => 200, :body => json_file(:prx_account), :headers => {})
 
         # find account by tag
@@ -130,7 +130,7 @@ describe PRXImporter do
         # Series
 
         # prx series
-        stub_request(:get, "https://hal.prx.org/api/v1/series/32832").
+        stub_request(:get, "https://cms.prx.org/api/v1/series/32832").
           to_return(:status => 200, :body => json_file(:prx_series), :headers => {})
 
         # find series by tag
@@ -138,7 +138,7 @@ describe PRXImporter do
           to_return(:status => 200, :body => "", :headers => {})
 
         # prx series image
-        stub_request(:get, "https://hal.prx.org/api/v1/series_images/8696").
+        stub_request(:get, "https://cms.prx.org/api/v1/series_images/8696").
           to_return(:status => 200, :body => json_file(:prx_series_image), :headers => {})
 
         # find series image by tag
@@ -147,7 +147,7 @@ describe PRXImporter do
 
         # create image for series
         stub_request(:put, "https://publish.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b4").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/image\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://hal.prx.org/pub/e56ce22b1bce78de79993ebcccf76611/0/web/series_image/8696/medium/WEEKLY_LOGO.jpg\",\"type\":\"image/jpeg\",\"meta\":{\"crop\":\"medium\"}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b4\",\"title\":\"\",\"byline\":\"\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:series_images-8696\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/image\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://cms.prx.org/pub/e56ce22b1bce78de79993ebcccf76611/0/web/series_image/8696/medium/WEEKLY_LOGO.jpg\",\"type\":\"image/jpeg\",\"meta\":{\"crop\":\"medium\"}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b4\",\"title\":\"\",\"byline\":\"\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:series_images-8696\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b4"}', :headers => {})
 
         # create property for series
@@ -159,7 +159,7 @@ describe PRXImporter do
         # Image
 
         # prx image file
-        stub_request(:get, "https://hal.prx.org/api/v1/story_images/203874").
+        stub_request(:get, "https://cms.prx.org/api/v1/story_images/203874").
           to_return(:status => 200, :body => json_file(:prx_story_image), :headers => {})
 
         # find story image by tag
@@ -168,13 +168,13 @@ describe PRXImporter do
 
         # create image for story
         stub_request(:put, "https://publish.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b5").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/image\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://hal.prx.org/pub/f8b82b49a679ab9a621791bc9b752ff2/0/web/story_image/203874/medium/Moth_ElnaBaker_1301.jpg\",\"type\":\"image/jpeg\",\"meta\":{\"crop\":\"medium\"}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b5\",\"title\":\"Elna Baker\",\"byline\":\"Elna Baker\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:story_images-203874\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/image\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://cms.prx.org/pub/f8b82b49a679ab9a621791bc9b752ff2/0/web/story_image/203874/medium/Moth_ElnaBaker_1301.jpg\",\"type\":\"image/jpeg\",\"meta\":{\"crop\":\"medium\"}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b5\",\"title\":\"Elna Baker\",\"byline\":\"Elna Baker\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:story_images-203874\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b5"}', :headers => {})
 
         # Audio
 
         # prx audio file
-        stub_request(:get, "https://hal.prx.org/api/v1/audio_files/451642").
+        stub_request(:get, "https://cms.prx.org/api/v1/audio_files/451642").
           to_return(:status => 200, :body => json_file(:prx_audio_file), :headers => {})
 
         # find audio by tag
@@ -183,7 +183,7 @@ describe PRXImporter do
 
         # create audio
         stub_request(:put, "https://publish.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b6").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/audio\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://count.prx.org/redirect?action=request\\u0026action_value=%7B%22audioFileId%22%3A451642%2C%22pieceId%22%3A87683%7D\\u0026location=https%3A%2F%2Fhal.prx.org%2Fpub%2F472875466d225aca0480000fea4b5fc2%2F0%2Fweb%2Faudio_file%2F451642%2Fbroadcast%2FMoth1301GarrisonFinal.mp3\\u0026prx_story_id=87683\\u0026referrer=https%3A%2F%2Fapi.pmp.io%2Fdocs%2F9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"type\":\"audio/mpeg\",\"meta\":{\"duration\":3179,\"size\":101617830}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"title\":\"Moth 1301 Single File\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:audio_files-451642\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/audio\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://count.prx.org/redirect?action=request\\u0026action_value=%7B%22audioFileId%22%3A451642%2C%22pieceId%22%3A87683%7D\\u0026location=https%3A%2F%2Fcms.prx.org%2Fpub%2F472875466d225aca0480000fea4b5fc2%2F0%2Fweb%2Faudio_file%2F451642%2Fbroadcast%2FMoth1301GarrisonFinal.mp3\\u0026prx_story_id=87683\\u0026referrer=https%3A%2F%2Fapi.pmp.io%2Fdocs%2F9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"type\":\"audio/mpeg\",\"meta\":{\"duration\":3179,\"size\":101617830}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"title\":\"Moth 1301 Single File\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:audio_files-451642\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b6"}', :headers => {})
 
         # ... Story Finish
