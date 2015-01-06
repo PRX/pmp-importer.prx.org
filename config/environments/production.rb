@@ -80,26 +80,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  require 'autoscaler/sidekiq'
-  require 'autoscaler/heroku_scaler'
-  Sidekiq.configure_client do |config|
-    config.client_middleware do |chain|
-      chain.add Autoscaler::Sidekiq::Client, 'default' => Autoscaler::HerokuScaler.new
-    end
-  end
-
+  # configure the db conn pool
   Sidekiq.configure_server do |config|
-
-    database_url = ENV['DATABASE_URL']
-    if(database_url)
+    if(database_url = ENV['DATABASE_URL'])
       ENV['DATABASE_URL'] = "#{database_url}?pool=12"
       ActiveRecord::Base.establish_connection
     end
-
-    config.server_middleware do |chain|
-      chain.add(Autoscaler::Sidekiq::Server, Autoscaler::HerokuScaler.new, 300)
-    end
   end
-
-
 end

@@ -56,7 +56,6 @@ end
 
 group :development, :production, :staging do
   gem 'sinatra' # for sidekiq
-  gem 'autoscaler', github: 'JustinLove/autoscaler'
   gem 'foreman'
   gem 'unicorn'
 end
