@@ -234,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   coveralls

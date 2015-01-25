@@ -30,6 +30,8 @@ gem 'pmp', '~> 0.5'
 
 gem 'hyperresource'
 
+gem 'addressable'
+
 # for rss feeds
 gem 'feedjira'
 
