@@ -1,5 +1,7 @@
 # each entry, determine if new (e.g. new entry id)
 require 'object_digest'
+require 'addressable/uri'
+
 
 class Feed < ActiveRecord::Base
 
@@ -103,7 +105,7 @@ class Feed < ActiveRecord::Base
   end
 
   def retrieve
-    http_response = connection.get(uri.path)
+    http_response = connection.get(uri.path, uri.query_values)
     response = FeedResponse.for_response(http_response)
     self.responses << response
 
@@ -125,7 +127,7 @@ class Feed < ActiveRecord::Base
 
   def feed_http_response(last_response=nil)
     http_response = connection.get do |req|
-      req.url uri.path
+      req.url uri.path, uri.query_values
       req.headers['If-Modified-Since'] = last_response.last_modified if last_response.try(:last_modified)
       req.headers['If-None-Match']     = last_response.etag if last_response.try(:etag)
     end
@@ -134,7 +136,7 @@ class Feed < ActiveRecord::Base
   end
 
   def uri
-    @uri ||= URI.parse(feed_url)
+    @uri ||= Addressable::URI.parse(feed_url)
   end
 
   def connection
