@@ -240,7 +240,8 @@ class PRXImporter < ApplicationImporter
     href = audio.enclosure.href
     type = audio.body['_links']['enclosure']['type']
 
-    enclosure_url = count_audio_url(href, audio.id, prx_piece_id, adoc.guid)
+    # enclosure_url = count_audio_url(href, audio.id, prx_piece_id, adoc.guid)
+    enclosure_url = prx_web_link(href)
 
     add_link_to_doc(adoc, 'enclosure', { href: enclosure_url, type: type, meta: {duration: audio.duration, size: audio.size} })
 
@@ -336,7 +337,7 @@ class PRXImporter < ApplicationImporter
   end
 
   def prx_web_link(path)
-    "#{prx_web_endpoint}#{path}"
+    URI.join(prx_web_endpoint, path).to_s
   end
 
   def tag_for_url(source, url)
@@ -353,5 +354,4 @@ class PRXImporter < ApplicationImporter
   def find_or_create_guid(type, prx_obj)
     PMPGuidMapping.find_or_create_guid(source_name, type, prx_url(prx_obj.self.href))
   end
-
 end

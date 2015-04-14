@@ -184,7 +184,7 @@ describe PRXImporter do
 
         # create audio
         stub_request(:put, "https://publish.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b6").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/audio\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://count.prx.org/redirect?action=request\\u0026action_value=%7B%22audioFileId%22%3A451642%2C%22pieceId%22%3A87683%7D\\u0026location=https%3A%2F%2Fcms.prx.org%2Fpub%2F472875466d225aca0480000fea4b5fc2%2F0%2Fweb%2Faudio_file%2F451642%2Fbroadcast%2FMoth1301GarrisonFinal.mp3\\u0026prx_story_id=87683\\u0026referrer=https%3A%2F%2Fapi.pmp.io%2Fdocs%2F9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"type\":\"audio/mpeg\",\"meta\":{\"duration\":3179,\"size\":101617830}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"title\":\"Moth 1301 Single File\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:audio_files-451642\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/audio\",\"type\":\"application/vnd.collection.doc+json\"}],\"enclosure\":[{\"href\":\"https://www.prx.org/pub/472875466d225aca0480000fea4b5fc2/0/web/audio_file/451642/broadcast/Moth1301GarrisonFinal.mp3\",\"type\":\"audio/mpeg\",\"meta\":{\"duration\":3179,\"size\":101617830}}]},\"attributes\":{\"guid\":\"9ff6db7a-93e6-4987-9313-4d70d74051b6\",\"title\":\"Moth 1301 Single File\",\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"prx:audio_files-451642\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9ff6db7a-93e6-4987-9313-4d70d74051b6"}', :headers => {})
 
         # ... Story Finish
