@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.10'
 # Use postgers as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -42,6 +42,8 @@ gem 'faraday'
 
 gem 'sidekiq'
 
+gem 'fastimage'
+
 group :test do
   gem 'minitest-spec-rails'
   gem 'factory_girl_rails'
@@ -61,5 +63,3 @@ group :development, :production, :staging do
   gem 'foreman'
   gem 'unicorn'
 end
-
-ruby "2.1.4"
