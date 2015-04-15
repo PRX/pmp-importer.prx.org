@@ -17,5 +17,4 @@ class PMPGuidMapping < ActiveRecord::Base
   def self.new_guid
     SecureRandom.uuid
   end
-
 end
