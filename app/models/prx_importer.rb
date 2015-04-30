@@ -37,7 +37,7 @@ class PRXImporter < ApplicationImporter
     while (stories) do
       stories.each do |s|
         if async
-          PRXStoryModifiedWorker.perform_later(s.id)
+          PRXStoryModifiedWorker.perform_async(s.id)
         else
           PRXImporter.new.import_story(s.id)
         end
