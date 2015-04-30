@@ -240,10 +240,7 @@ class PRXImporter < ApplicationImporter
     href = audio.enclosure.href
     type = audio.body['_links']['enclosure']['type']
 
-    # enclosure_url = count_audio_url(href, audio.id, prx_piece_id, adoc.guid)
-    enclosure_url = prx_web_link(href)
-
-    add_link_to_doc(adoc, 'enclosure', { href: enclosure_url, type: type, meta: {duration: audio.duration, size: audio.size} })
+    add_link_to_doc(adoc, 'enclosure', { href: prx_url(href), type: type, meta: {duration: audio.duration, size: audio.size} })
 
     set_standard_tags(adoc, audio.self.href)
 
