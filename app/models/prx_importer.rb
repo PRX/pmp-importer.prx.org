@@ -24,11 +24,11 @@ class PRXImporter < ApplicationImporter
     if options[:prx_story_id]
       import_story(options[:prx_story_id])
     elsif options[:prx_series_id]
-      import_series(options[:prx_series_id])
+      import_series(options[:prx_series_id], options[:async])
     end
   end
 
-  def import_series(prx_series_id)
+  def import_series(prx_series_id, async = false)
     self.series = retrieve_series(prx_series_id)
 
     return unless whitelisted?(series.account.id)
@@ -36,7 +36,11 @@ class PRXImporter < ApplicationImporter
     stories = series.stories.get
     while (stories) do
       stories.each do |s|
-        PRXImporter.new.import_story(s.id)
+        if async
+          PRXStoryModifiedWorker.perform_later(s.id)
+        else
+          PRXImporter.new.import_story(s.id)
+        end
       end
       stories = stories.links[:next] ? stories.next.get : nil
     end
