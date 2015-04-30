@@ -44,6 +44,8 @@ gem 'sidekiq'
 
 gem 'fastimage'
 
+gem 'dotenv-rails'
+
 group :test do
   gem 'minitest-spec-rails'
   gem 'factory_girl_rails'
