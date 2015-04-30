@@ -29,6 +29,8 @@ class PRXImporter < ApplicationImporter
   end
 
   def import_series(prx_series_id, async = false)
+    logger.debug("import_series: #{prx_series_id}")
+
     self.series = retrieve_series(prx_series_id)
 
     return unless whitelisted?(series.account.id)
@@ -37,6 +39,7 @@ class PRXImporter < ApplicationImporter
     while (stories) do
       stories.each do |s|
         if async
+          logger.debug("(async) import_story: #{s.id}")
           PRXStoryModifiedWorker.perform_async(s.id)
         else
           PRXImporter.new.import_story(s.id)
