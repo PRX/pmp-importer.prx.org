@@ -75,7 +75,15 @@ class PRXImporter < ApplicationImporter
   end
 
   def set_profile
-    add_link_to_doc(doc, 'profile', { href: pmp.profile_href_for_type('story'), type: 'application/vnd.collection.doc+json' })
+    ## if we want to set based on membership in a series
+    # profile = if story.links[:series]
+    #             'story'
+    #           else
+    #             'episode'
+    #           end
+    profile = 'story'
+
+    add_link_to_doc(doc, 'profile', { href: pmp.profile_href_for_type(profile), type: 'application/vnd.collection.doc+json' })
   end
 
   def set_account
