@@ -83,8 +83,6 @@ class ApplicationImporter
   end
 
   def set_standard_tags(tag_doc, url)
-    add_tag_to_doc(tag_doc, distributor_tag)
-
     add_itag_to_doc(tag_doc, "#{distributor_tag.downcase}_test") unless Rails.env.production?
     add_itag_to_doc(tag_doc, tag_for_url(source_name, url))
   end
