@@ -58,6 +58,7 @@ class PRXImporter < ApplicationImporter
     # reset the links in the doc
     doc.links = {}
 
+    set_profile
     set_account
     set_series
     set_images
@@ -71,6 +72,10 @@ class PRXImporter < ApplicationImporter
     logger.debug("import_story: #{prx_story_id} saved as: #{doc.guid}")
 
     return doc
+  end
+
+  def set_profile
+    add_link_to_doc(doc, 'profile', { href: pmp.profile_href_for_type('story'), type: 'application/vnd.collection.doc+json' })
   end
 
   def set_account
@@ -279,6 +284,10 @@ class PRXImporter < ApplicationImporter
 
   def set_tags
     logger.debug("set_tags")
+
+    # reset tags before adding them
+    doc.tags = []
+    doc.itags = []
 
     set_standard_tags(doc, story.self.href)
     Array(story.attributes[:tags]).each{|t| add_tag_to_doc(doc, t) }
