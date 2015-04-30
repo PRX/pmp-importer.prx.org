@@ -55,6 +55,9 @@ class PRXImporter < ApplicationImporter
 
     self.doc   = find_or_init_story_doc(story)
 
+    # reset the links in the doc
+    doc.links = {}
+
     set_account
     set_series
     set_images
