@@ -53,11 +53,11 @@ describe FeedImporter do
 
 
         stub_request(:put, "https://publish.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a1").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"http://feeds.99percentinvisible.org/99percentinvisible\"}]},\"attributes\":{\"guid\":\"9996db7a-93e6-4987-9313-4d70d74051a1\",\"title\":null,\"teaser\":null,\"description\":null,\"byline\":null,\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"feed:\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"http://feeds.99percentinvisible.org/99percentinvisible\"}]},\"attributes\":{\"guid\":\"9996db7a-93e6-4987-9313-4d70d74051a1\",\"title\":null,\"teaser\":null,\"description\":null,\"byline\":null,\"itags\":[\"prx_test\",\"feed:\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a1"}', :headers => {})
 
         stub_request(:put, "https://publish.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a7").
-          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"http://feeds.99percentinvisible.org/99percentinvisible\"}]},\"attributes\":{\"guid\":\"9996db7a-93e6-4987-9313-4d70d74051a7\",\"title\":null,\"teaser\":null,\"description\":null,\"byline\":null,\"tags\":[\"PRX\"],\"itags\":[\"prx_test\",\"feed:\"]}}").
+          with(:body => "{\"version\":\"1.0\",\"links\":{\"profile\":[{\"href\":\"https://api.pmp.io/profiles/series\",\"type\":\"application/vnd.collection.doc+json\"}],\"alternate\":[{\"href\":\"http://feeds.99percentinvisible.org/99percentinvisible\"}]},\"attributes\":{\"guid\":\"9996db7a-93e6-4987-9313-4d70d74051a7\",\"title\":null,\"teaser\":null,\"description\":null,\"byline\":null,\"itags\":[\"prx_test\",\"feed:\"]}}").
           to_return(:status => 200, :body => '{"url":"https://api.pmp.io/docs/9996db7a-93e6-4987-9313-4d70d74051a7"}', :headers => {})
 
 

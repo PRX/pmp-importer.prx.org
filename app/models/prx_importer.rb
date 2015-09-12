@@ -29,6 +29,8 @@ class PRXImporter < ApplicationImporter
   end
 
   def import_series(prx_series_id, async = false)
+    logger.debug("import_series: #{prx_series_id}")
+
     self.series = retrieve_series(prx_series_id)
 
     return unless whitelisted?(series.account.id)
@@ -37,7 +39,8 @@ class PRXImporter < ApplicationImporter
     while (stories) do
       stories.each do |s|
         if async
-          PRXStoryModifiedWorker.perform_later(s.id)
+          logger.debug("(async) import_story: #{s.id}")
+          PRXStoryModifiedWorker.perform_async(s.id)
         else
           PRXImporter.new.import_story(s.id)
         end
@@ -55,9 +58,23 @@ class PRXImporter < ApplicationImporter
 
     self.story = retrieve_story(prx_story_id)
 
+    if story.nil?
+      delete_story(prx_story_id)
+    else
+      update_story
+    end
+  end
+
+  def delete_story(prx_story_id)
+    story_url = prx_url('stories', prx_story_id)
+    sdoc = retrieve_doc('Story', story_url)
+    sdoc.delete if sdoc
+  end
+
+  def update_story
     return unless whitelisted?(story.account.id)
 
-    self.doc   = find_or_init_story_doc(story)
+    self.doc = find_or_init_story_doc(story)
 
     # reset the links in the doc
     doc.links = {}
@@ -73,7 +90,7 @@ class PRXImporter < ApplicationImporter
     set_tags
 
     doc.save
-    logger.debug("import_story: #{prx_story_id} saved as: #{doc.guid}")
+    logger.debug("import_story: #{story.id} saved as: #{doc.guid}")
 
     return doc
   end
@@ -307,6 +324,8 @@ class PRXImporter < ApplicationImporter
 
   def retrieve_story(prx_story_id)
     prx.get.story.first.where(id: prx_story_id).get
+  rescue HyperResource::ClientError
+    nil
   end
 
   def find_or_init_story_doc(story)
