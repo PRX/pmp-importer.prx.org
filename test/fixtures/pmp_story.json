@@ -1,0 +1,519 @@
+{
+  "version": "1.0",
+  "href": "https://api.pmp.io/docs/11111111-1111-1111-1111-11111111111",
+  "attributes": {
+    "created": "2014-10-02T21:06:40+00:00",
+    "modified": "2015-04-30T19:50:46+00:00",
+    "valid": {
+      "from": "2014-06-17T21:27:15+00:00",
+      "to": "3014-06-17T21:27:15+00:00"
+    },
+    "hreflang": "en",
+    "guid": "11111111-1111-1111-1111-11111111111",
+    "title": "Chuck Leavell and Jon Cleary",
+    "teaser": "Chuck Leavell and Jon Cleary",
+    "description": "Meet two piano professors from the South with two differing styles. First up, from Macon, GA,&nbsp;Chuck Leavell&nbsp;has played in a few of Rock's most iconic bands, from the Allman Brothers to the Rolling Stones. And while piano might be his day job, he's also a keeper of a Georgia forest and an honorary forest ranger! We talk to Chuck about his love of the keys and the trees. Then, it's a lesson in New Orleans funk a la keyboard with&nbsp;Jon Cleary, who breaks down the elements and reveals the Latin tinge to New Orleans piano favorites.",
+    "contentencoded": "<span>Meet two piano professors from the South with two differing styles. First up, from Macon, GA,&nbsp;</span><strong>Chuck Leavell</strong><span>&nbsp;has played in a few of Rock's most iconic bands, from the Allman Brothers to the Rolling Stones. And while piano might be his day job, he's also a keeper of a Georgia forest and an honorary forest ranger! We talk to Chuck about his love of the keys and the trees. Then, it's a lesson in New Orleans funk a la keyboard with&nbsp;</span><strong>Jon Cleary</strong><span>, who breaks down the elements and reveals the Latin tinge to New Orleans piano favorites.</span>",
+    "byline": "American Routes",
+    "published": "2014-06-17T21:27:15+00:00",
+    "tags": [],
+    "itags": ["prx:stories-121149"]
+  },
+  "links": {
+    "profile": [{
+      "href": "https://api.pmp.io/profiles/story",
+      "type": "application/vnd.collection.doc+json"
+    }],
+    "creator": [{
+      "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+    }],
+    "owner": [{
+      "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+    }],
+    "collection": [{
+      "href": "https://api.pmp.io/docs/ee84fee0-19f8-4b7f-8a0b-5b69e84d1f7e",
+      "title": "American Routes",
+      "rels": ["urn:collectiondoc:collection:property"]
+    }, {
+      "href": "https://api.pmp.io/docs/2e0df178-6f00-46e8-bef2-8c5072ef4aa5",
+      "title": "American Routes",
+      "rels": ["urn:collectiondoc:collection:series"]
+    }],
+    "item": [{
+      "href": "https://api.pmp.io/docs/360af77c-c698-4bdc-b554-cf6c5e4346da",
+      "title": "Chuck Leavell",
+      "rels": ["urn:collectiondoc:image"]
+    }, {
+      "href": "https://api.pmp.io/docs/a102c089-8201-480d-bace-5684591360be",
+      "title": "AR0618segmentA",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/373454cd-4fbb-441c-bce1-6cc3b6a59664",
+      "title": "AR0618cutaway1",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/61b47ee4-1bcf-44d3-84f5-9c610c848a8c",
+      "title": "AR0618segmentB",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/47469e69-a2e0-4ffd-a173-fff55e493946",
+      "title": "AR0618cutaway2",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/6ab899bf-ebe6-4a9d-b2c5-6adead3b2efe",
+      "title": "AR0618segmentC",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/92d2087b-1b2c-4ea3-80fa-179ad10f1dbc",
+      "title": "AR0618cutaway3",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/5dc6c17f-2968-417b-a69f-1857a8b7bab9",
+      "title": "AR0618segmentD",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/d2ca553e-5443-4ec5-89f9-404aabfb0ab4",
+      "title": "AR0618cutaway4",
+      "rels": ["urn:collectiondoc:audio"]
+    }, {
+      "href": "https://api.pmp.io/docs/533e303c-a843-4d4a-b242-57cd26a9d814",
+      "title": "AR0618segmentE",
+      "rels": ["urn:collectiondoc:audio"]
+    }],
+    "alternate": [{
+      "href": "https://www.prx.org/pieces/121149"
+    }],
+    "navigation": [{
+      "rels": ["self"],
+      "href": "https://api.pmp.io/docs/11111111-1111-1111-1111-11111111111",
+      "totalitems": 11,
+      "totalpages": 2,
+      "pagenum": 1
+    }, {
+      "rels": ["next"],
+      "href": "https://api.pmp.io/docs/11111111-1111-1111-1111-11111111111?offset=10",
+      "pagenum": 2
+    }, {
+      "rels": ["first"],
+      "href": "https://api.pmp.io/docs/11111111-1111-1111-1111-11111111111",
+      "pagenum": 1
+    }, {
+      "rels": ["last"],
+      "href": "https://api.pmp.io/docs/11111111-1111-1111-1111-11111111111?offset=10",
+      "pagenum": 2
+    }]
+  },
+  "items": [{
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/360af77c-c698-4bdc-b554-cf6c5e4346da",
+    "attributes": {
+      "created": "2014-10-02T21:06:17+00:00",
+      "modified": "2014-10-02T21:06:17+00:00",
+      "valid": {
+        "from": "2014-10-02T21:06:17+00:00",
+        "to": "3014-10-02T21:06:17+00:00"
+      },
+      "hreflang": "en",
+      "guid": "360af77c-c698-4bdc-b554-cf6c5e4346da",
+      "title": "Chuck Leavell",
+      "byline": "Chuck Leavell",
+      "tags": ["PRX"],
+      "itags": ["prx:story_images-292666"],
+      "published": "2014-10-02T21:06:17+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/image",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://hal.prx.org/pub/e7a137a5eb9296f8e48d0c2585ffa9f9/0/web/story_image/292666/medium/Cleavell_web.jpg",
+        "type": "image/jpeg",
+        "meta": {
+          "crop": "medium"
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/360af77c-c698-4bdc-b554-cf6c5e4346da"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/a102c089-8201-480d-bace-5684591360be",
+    "attributes": {
+      "created": "2015-04-30T19:50:38+00:00",
+      "modified": "2015-04-30T19:50:38+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:38+00:00",
+        "to": "3015-04-30T19:50:38+00:00"
+      },
+      "hreflang": "en",
+      "guid": "a102c089-8201-480d-bace-5684591360be",
+      "title": "AR0618segmentA",
+      "itags": ["prx:audio_files-689726"],
+      "published": "2015-04-30T19:50:38+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/e69b6bc208ec6e64ee6c3c42730804fc/0/web/audio_file/689726/broadcast/AR0618segmentA.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 793,
+          "size": 25364795
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/a102c089-8201-480d-bace-5684591360be"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/373454cd-4fbb-441c-bce1-6cc3b6a59664",
+    "attributes": {
+      "created": "2015-04-30T19:50:39+00:00",
+      "modified": "2015-04-30T19:50:39+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:39+00:00",
+        "to": "3015-04-30T19:50:39+00:00"
+      },
+      "hreflang": "en",
+      "guid": "373454cd-4fbb-441c-bce1-6cc3b6a59664",
+      "title": "AR0618cutaway1",
+      "itags": ["prx:audio_files-689727"],
+      "published": "2015-04-30T19:50:39+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/c77fdb0c545a086160c65fffe81c73e3/0/web/audio_file/689727/broadcast/AR0618cutaway1.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 61,
+          "size": 1953900
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/373454cd-4fbb-441c-bce1-6cc3b6a59664"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/61b47ee4-1bcf-44d3-84f5-9c610c848a8c",
+    "attributes": {
+      "created": "2015-04-30T19:50:39+00:00",
+      "modified": "2015-04-30T19:50:40+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:39+00:00",
+        "to": "3015-04-30T19:50:39+00:00"
+      },
+      "hreflang": "en",
+      "guid": "61b47ee4-1bcf-44d3-84f5-9c610c848a8c",
+      "title": "AR0618segmentB",
+      "itags": ["prx:audio_files-689729"],
+      "published": "2015-04-30T19:50:39+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/a666a9806397418134e5e19c3950ca14/0/web/audio_file/689729/broadcast/AR0618segmentB.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 1163,
+          "size": 37194240
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/61b47ee4-1bcf-44d3-84f5-9c610c848a8c"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/47469e69-a2e0-4ffd-a173-fff55e493946",
+    "attributes": {
+      "created": "2015-04-30T19:50:40+00:00",
+      "modified": "2015-04-30T19:50:40+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:40+00:00",
+        "to": "3015-04-30T19:50:40+00:00"
+      },
+      "hreflang": "en",
+      "guid": "47469e69-a2e0-4ffd-a173-fff55e493946",
+      "title": "AR0618cutaway2",
+      "itags": ["prx:audio_files-689717"],
+      "published": "2015-04-30T19:50:40+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/b14164ac51b62319b8dfc1e36861f16f/0/web/audio_file/689717/broadcast/AR0618cutaway2.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 61,
+          "size": 1966425
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/47469e69-a2e0-4ffd-a173-fff55e493946"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/6ab899bf-ebe6-4a9d-b2c5-6adead3b2efe",
+    "attributes": {
+      "created": "2015-04-30T19:50:41+00:00",
+      "modified": "2015-04-30T19:50:41+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:41+00:00",
+        "to": "3015-04-30T19:50:41+00:00"
+      },
+      "hreflang": "en",
+      "guid": "6ab899bf-ebe6-4a9d-b2c5-6adead3b2efe",
+      "title": "AR0618segmentC",
+      "itags": ["prx:audio_files-689718"],
+      "published": "2015-04-30T19:50:41+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/363e88d83be0810a39c6ab995e023a30/0/web/audio_file/689718/broadcast/AR0618segmentC.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 1459,
+          "size": 46658130
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/6ab899bf-ebe6-4a9d-b2c5-6adead3b2efe"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/92d2087b-1b2c-4ea3-80fa-179ad10f1dbc",
+    "attributes": {
+      "created": "2015-04-30T19:50:41+00:00",
+      "modified": "2015-04-30T19:50:42+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:41+00:00",
+        "to": "3015-04-30T19:50:41+00:00"
+      },
+      "hreflang": "en",
+      "guid": "92d2087b-1b2c-4ea3-80fa-179ad10f1dbc",
+      "title": "AR0618cutaway3",
+      "itags": ["prx:audio_files-689720"],
+      "published": "2015-04-30T19:50:41+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/3bc77740cf4f792d459b098febc220b7/0/web/audio_file/689720/broadcast/AR0618cutaway3.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 60,
+          "size": 1938035
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/92d2087b-1b2c-4ea3-80fa-179ad10f1dbc"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/5dc6c17f-2968-417b-a69f-1857a8b7bab9",
+    "attributes": {
+      "created": "2015-04-30T19:50:42+00:00",
+      "modified": "2015-04-30T19:50:42+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:42+00:00",
+        "to": "3015-04-30T19:50:42+00:00"
+      },
+      "hreflang": "en",
+      "guid": "5dc6c17f-2968-417b-a69f-1857a8b7bab9",
+      "title": "AR0618segmentD",
+      "itags": ["prx:audio_files-689722"],
+      "published": "2015-04-30T19:50:42+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/c3be7fb15a627edd56a76588332114d4/0/web/audio_file/689722/broadcast/AR0618segmentD.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 1074,
+          "size": 34350230
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/5dc6c17f-2968-417b-a69f-1857a8b7bab9"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/d2ca553e-5443-4ec5-89f9-404aabfb0ab4",
+    "attributes": {
+      "created": "2015-04-30T19:50:43+00:00",
+      "modified": "2015-04-30T19:50:43+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:43+00:00",
+        "to": "3015-04-30T19:50:43+00:00"
+      },
+      "hreflang": "en",
+      "guid": "d2ca553e-5443-4ec5-89f9-404aabfb0ab4",
+      "title": "AR0618cutaway4",
+      "itags": ["prx:audio_files-689723"],
+      "published": "2015-04-30T19:50:43+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/aceb4841d3a626b0e5e8833efd619987/0/web/audio_file/689723/broadcast/AR0618cutaway4.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 61,
+          "size": 1958910
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/d2ca553e-5443-4ec5-89f9-404aabfb0ab4"
+      }]
+    },
+    "scope": "read"
+  }, {
+    "version": "1.0",
+    "href": "https://api.pmp.io/docs/533e303c-a843-4d4a-b242-57cd26a9d814",
+    "attributes": {
+      "created": "2015-04-30T19:50:44+00:00",
+      "modified": "2015-04-30T19:50:44+00:00",
+      "valid": {
+        "from": "2015-04-30T19:50:44+00:00",
+        "to": "3015-04-30T19:50:44+00:00"
+      },
+      "hreflang": "en",
+      "guid": "533e303c-a843-4d4a-b242-57cd26a9d814",
+      "title": "AR0618segmentE",
+      "itags": ["prx:audio_files-689724"],
+      "published": "2015-04-30T19:50:44+00:00"
+    },
+    "links": {
+      "profile": [{
+        "href": "https://api.pmp.io/profiles/audio",
+        "type": "application/vnd.collection.doc+json"
+      }],
+      "creator": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "owner": [{
+        "href": "https://api.pmp.io/docs/609a539c-9177-4aa7-acde-c10b77a6a525"
+      }],
+      "enclosure": [{
+        "href": "https://cms.prx.org/pub/53b6650f1545a45785716d82007528c1/0/web/audio_file/689724/broadcast/AR0618segmentE.mp3",
+        "type": "audio/mpeg",
+        "meta": {
+          "duration": 1205,
+          "size": 38530240
+        }
+      }],
+      "navigation": [{
+        "rels": ["self"],
+        "href": "https://api.pmp.io/docs/533e303c-a843-4d4a-b242-57cd26a9d814"
+      }]
+    },
+    "scope": "read"
+  }],
+  "scope": "read"
+}
